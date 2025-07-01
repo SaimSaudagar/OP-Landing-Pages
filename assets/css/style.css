@@ -1288,6 +1288,32 @@ html, body {
 .op-landing-services {
   background: var(--op-bg);
   padding: 64px 0 32px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.op-services-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.op-services-svg-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
+}
+
+.op-services-content {
+  position: relative;
+  z-index: 10;
 }
 .op-services-inner {
   max-width: 1200px;

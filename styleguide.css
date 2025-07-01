@@ -1,0 +1,6 @@
+:root {
+  --white: rgba(255, 255, 255, 1);
+  --graywhite: rgba(255, 255, 255, 1);
+  --secondary: rgba(255, 81, 0, 1);
+  --card-shadow: 0px 21px 114px 0px rgba(0, 0, 0, 0.18);
+} 
