@@ -1600,11 +1600,13 @@ html, body {
   padding: 60px 0 0 0;
   font-size: 1.1rem;
   opacity: 1;
+
 }
 .op-footer-inner {
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 32px;
+  
 }
 .op-footer-main {
   display: flex;
@@ -1648,6 +1650,7 @@ html, body {
   color: var(--op-grey);
   font-size: 1rem;
   margin-top: 10px;
+  max-width: 700px;
 }
 .op-footer-links {
   display: flex;
@@ -2298,7 +2301,7 @@ html, body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -234vh;
+  bottom: -348vh;
   z-index: 0;
   font-size: 5vw;
   font-weight: 900;
@@ -2323,3 +2326,200 @@ html, body {
   position: relative;
   z-index: 1;
 }
+
+/* === CONTACT PAGE STYLES === */
+
+/* Hero */
+.op-contact-hero {
+  background: linear-gradient(135deg, var(--op-bg) 0%, rgba(24,24,24,0.97) 100%);
+  padding: 100px 0; /* bumped for more breathing room */
+  position: relative;
+  overflow: hidden;
+}
+.op-contact-hero::before {
+  content: '';
+  position: absolute; top:0; left:0; right:0; bottom:0;
+  background: url('../img/background-blur.png') center/cover;
+  opacity: 0.15; z-index:1;
+}
+.op-contact-hero .op-hero-inner {
+  position: relative; z-index:2;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 80px; align-items: center;
+  max-width: 1400px; margin: 0 auto; padding: 0 32px;
+}
+/* … keep the rest of your hero styles unchanged … */
+
+/* Disclaimer Section */
+.op-contact-disclaimer-section {
+  background: rgba(24,24,24,0.95);
+  padding: 60px 0;
+}
+.op-contact-disclaimer-inner {
+  max-width: 1000px; margin: 0 auto; padding: 0 32px;
+}
+.op-contact-disclaimer-box {
+  background: rgba(40,40,40,0.8);
+  border: 2px solid var(--op-orange);
+  border-radius: var(--op-radius);
+  padding: 40px;
+  display: flex; gap:24px; align-items:flex-start;
+}
+.op-contact-disclaimer-icon {
+  font-size: 2.5rem; color: var(--op-orange);
+  flex-shrink:0; margin-top:4px;
+}
+.op-contact-disclaimer-content h3 {
+  font-size:1.4rem; font-weight:600; margin-bottom:16px;
+}
+.op-contact-disclaimer-content p {
+  color: var(--op-grey); font-size:1.1rem;
+  line-height:1.6; margin-bottom:12px;
+}
+.op-contact-disclaimer-content p:last-child { margin-bottom:0; }
+.op-contact-disclaimer-content strong {
+  color: var(--op-white); font-weight:600;
+}
+.op-contact-disclaimer-content .op-orange {
+  color: var(--op-orange); text-decoration:underline;
+  font-weight:500;
+}
+
+/* Contact Form Section */
+.op-contact-form-section {
+  background: var(--op-bg); padding:80px 0;
+}
+.op-contact-form-inner {
+  max-width:1200px; margin:0 auto; padding:0 24px;
+}
+.op-contact-form-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: rgba(24,24,24,0.98);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.45);
+}
+.op-contact-form-content {
+  display: contents;
+}
+.op-contact-form-fields {
+  padding: 48px 40px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.op-contact-form-title {
+  color: var(--op-white);
+  font-size: 1.5rem; /* matched to Figma */
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.op-contact-form-subtitle {
+  color: var(--op-grey);
+  font-size: 1.05rem; /* matched to Figma */
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+.op-contact-form {
+  display: flex; flex-direction: column; gap: 18px;
+}
+.op-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.op-form-row:nth-child(2),
+.op-form-row:nth-child(4) {
+  grid-template-columns: 1fr;
+}
+.op-form-row input,
+.op-form-row textarea {
+  background: rgba(40,40,40,0.92);
+  border: 1.5px solid var(--op-grey-dark);
+  border-radius: 8px;
+  padding: 16px 18px;
+  color: var(--op-white);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.op-form-row input:focus,
+.op-form-row textarea:focus {
+  outline: none;
+  border-color: var(--op-orange);
+  box-shadow: 0 0 0 2px rgba(255,143,0,0.15);
+}
+.op-form-row textarea {
+  resize: vertical; min-height: 100px; grid-column: 1 / -1;
+}
+
+/* Button */
+.op-btn.op-btn-gradient {
+  background: linear-gradient(90deg, #FF8F00 0%, #FF0D00 100%);
+  color: var(--op-white);
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 0;
+  font-size: 1.1rem;
+  width: 100%;
+  margin-top: 8px;
+  box-shadow: 0 4px 16px rgba(255, 143, 0, 0.18);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.op-btn.op-btn-gradient:hover {
+  box-shadow: 0 8px 32px rgba(255, 143, 0, 0.28);
+  transform: translateY(-2px);
+}
+
+/* Image column */
+.op-contact-image {
+  position: relative;
+  min-height: 100%;
+  background: rgba(32,32,32,0.85);
+}
+.op-contact-car-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 24px 24px 0;
+  display: block;
+}
+
+/* Contact Info & Footer… keep your existing styles below here… */
+
+/* Responsive — collapse to one column */
+@media (max-width: 1000px) {
+  .op-contact-form-card {
+    grid-template-columns: 1fr;
+  }
+  .op-contact-image {
+    border-radius: 0 0 24px 24px;
+    padding: 24px 0;
+  }
+  .op-contact-car-img {
+    border-radius: 0 0 24px 24px;
+    max-width: 100%;
+  }
+  .op-contact-form-fields {
+    padding: 40px 24px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .op-contact-form-card {
+    border-radius: 12px;
+  }
+  .op-contact-form-fields {
+    padding: 24px 8px 16px;
+  }
+  .op-contact-form-title {
+    font-size: 1.2rem;
+  }
+  .op-contact-form-subtitle {
+    font-size: 0.95rem;
+  }
+  .op-contact-car-img {
+    border-radius: 0 0 12px 12px;
+  }
+}
+

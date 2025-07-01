@@ -24,24 +24,35 @@
     <div class="op-header-divider"></div>
   </header>
 
-  <!-- Hero/Intro Section -->
+  <!-- Hero Section -->
   <section class="op-contact-hero">
-    <div class="op-contact-hero-inner">
-      <div class="op-contact-hero-content">
+    <div class="op-hero-inner">
+      <div class="op-hero-content">
         <h1 class="op-hero-title">Contact Us</h1>
-        <h2 class="op-orange">Let's Talk Parking Solutions</h2>
-        <p>OnlyPark partners with landlords, centre managers, body corporates and commercial operators to deliver tailored parking technology and enforcement solutions.</p>
-        <p>If you're an existing client or interested in working with us, complete the form below and a member of our team will be in touch.</p>
-        <div class="op-contact-disclaimer">
-          <h3 class="op-orange">&#9888; Non-Compliance Notice-Related Enquiries Disclaimer</h3>
-          <p><strong>Received a Non-Compliance Notice?</strong></p>
-          <p>Please do not use this form to make a payment or lodge an appeal.</p>
-          <p>All parking notice matters MUST be submitted via our <a href="non-compliance.html" class="op-orange">Non-Compliance Notices</a> page, where you can <a href="non-compliance.html" class="op-orange">Make a Payment</a> or <a href="non-compliance.html" class="op-orange">Appeal a Non-Compliance Notice</a>.</p>
-          <p>Enquiries about non-compliance notices sent via this form will not be responded to.</p>
-        </div>
+        <h2 class="op-hero-sub op-orange">Let's Talk Parking Solutions</h2>
+        <p class="op-hero-desc">
+          OnlyPark partners with landlords, centre managers, body corporates and commercial operators to deliver tailored parking technology and enforcement solutions.
+        </p>
+        <p class="op-hero-desc">
+          If you're an existing client or interested in working with us, complete the form below and a member of our team will be in touch.
+        </p>
+        <h3 class="op-hero-sub op-orange">Non-Compliance Notice-Related Enquiries Disclaimer</h3>
+        <p class="op-hero-desc">
+          <strong>Received a Non-Compliance Notice?</strong>
+        </p>
+        <p class="op-hero-desc">Please do not use this form to make a payment or lodge an appeal.</p>
+        <p class="op-hero-desc">
+          All parking notice matters MUST be submitted via our
+          <strong>Non-Compliance Notices</strong>
+          page, where you can
+          <strong>Make a Payment</strong>
+          or
+          <strong>Appeal a Non-Compliance Notice</strong>.
+        </p>
+        <p class="op-hero-desc">Enquiries about non-compliance notices sent via this form will not be responded to.</p>
       </div>
       <div class="op-hero-logo">
-        <img src="assets/img/header_logo.png" alt="OnlyPark Large Logo" class="op-hero-logo-img" />
+        <img src="assets/img/hero-section-logo.svg" alt="OnlyPark" class="op-hero-logo-img" />
       </div>
     </div>
   </section>
@@ -49,35 +60,39 @@
   <!-- Contact Form Section -->
   <section class="op-contact-form-section">
     <div class="op-contact-form-inner">
-      <div class="op-contact-form-box">
-        <form class="op-contact-form">
-          <h2>Contact Us</h2>
-          <p>Let's Talk Parking Solutions</p>
-          <div class="op-form-row">
-            <input type="text" name="name" placeholder="Full Name" required />
-            <input type="text" name="phone" placeholder="Phone Number" required />
+      <div class="op-contact-form-card">
+        <div class="op-contact-form-content">
+          <div class="op-contact-form-fields">
+            <h2 class="op-contact-form-title">Get in Touch</h2>
+            <p class="op-contact-form-subtitle">Send us a message and we'll respond as soon as possible.</p>
+            <form class="op-contact-form">
+              <div class="op-form-row">
+                <input type="text" name="fullName" placeholder="Full Name" required />
+                <input type="tel" name="phone" placeholder="Phone Number" required />
+              </div>
+              <div class="op-form-row">
+                <input type="email" name="email" placeholder="Email Address" required />
+              </div>
+              <div class="op-form-row">
+                <input type="text" name="business" placeholder="Business Name" />
+                <input type="text" name="enquiry" placeholder="Enquiry Type" />
+              </div>
+              <div class="op-form-row">
+                <textarea name="message" placeholder="Message" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="op-btn op-btn-gradient">Send Enquiry</button>
+            </form>
           </div>
-          <div class="op-form-row">
-            <input type="email" name="email" placeholder="Email Address" required />
+          <div class="op-contact-image">
+            <img src="assets/img/car_image.svg" alt="Contact Us" class="op-contact-car-img" />
           </div>
-          <div class="op-form-row">
-            <input type="text" name="business" placeholder="Business Name" />
-            <input type="text" name="enquiry" placeholder="Enquiry Type" />
-          </div>
-          <div class="op-form-row">
-            <textarea name="message" placeholder="Message" rows="3" required></textarea>
-          </div>
-          <button type="submit" class="op-btn op-btn-gradient" style="width:100%;margin-top:10px;">Send Enquiry</button>
-        </form>
-      </div>
-      <div class="op-contact-form-img">
-        <img src="assets/img/contact_placeholder.jpg" alt="Contact Visual" />
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="op-footer">
+  <footer class="op-landing-footer">
     <div class="op-footer-inner">
       <div class="op-footer-main">
         <div class="op-footer-brand">
@@ -98,7 +113,7 @@
               <li><a href="services.html">Services</a></li>
               <li><a href="#why">Why Choose Us?</a></li>
               <li><a href="#infringements">Infringements</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#contact">Contact Us</a></li>
             </ul>
           </div>
           <div class="op-footer-section">
@@ -112,8 +127,8 @@
           <div class="op-footer-section">
             <h4>Contact</h4>
             <ul>
-              <li>info@onlypark.com.au</li>
-              <li>(844) 795-9467</li>
+              <li><span class="op-footer-contact-icon">✉️</span><a href="mailto:info@onlypark.com.au" class="op-footer-link">info@onlypark.com.au</a></li>
+              <li><span class="op-footer-contact-icon">📞</span>(844) 795-9467</li>
             </ul>
           </div>
         </div>
@@ -124,4 +139,4 @@
     </div>
   </footer>
 </body>
-</html> 
+</html>
