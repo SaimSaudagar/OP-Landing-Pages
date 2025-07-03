@@ -2488,7 +2488,7 @@ html, body {
 /* Contact Info & Footer… keep your existing styles below here… */
 
 /* Responsive — collapse to one column */
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
   .op-contact-form-card {
     grid-template-columns: 1fr;
   }
@@ -2522,4 +2522,4 @@ html, body {
     border-radius: 0 0 12px 12px;
   }
 }
-
+ */
