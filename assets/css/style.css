@@ -949,7 +949,7 @@ html {
 :root {
   --op-bg: #131313;
   --op-bg-dark: #181818;
-  --op-bg-box: #191919;
+  --op-bg-box: #121212;
   --op-orange: #ff5c0a;
   --op-orange-light: #ff9900;
   --op-white: #fff;
@@ -1327,6 +1327,15 @@ html, body {
   font-weight: 700;
 }
 .op-services-btn {
+  display: inline-block;
+  margin-top: 48px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.op-services-inner {
+  text-align: left;
+}
+.op-services-btn {
   display: block;
   width: 290px;
   height: 52px;
@@ -1473,7 +1482,6 @@ html, body {
   padding: 64px 0 32px 0;
 }
 .op-partners-inner {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 32px;
 }
@@ -1488,6 +1496,15 @@ html, body {
   gap: 32px;
   align-items: center;
   justify-content: flex-start;
+  width: 100%;
+  overflow: hidden;
+}
+
+.op-partners-svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
 .op-partner-logo-placeholder {
   width: 120px;
@@ -1539,6 +1556,15 @@ html, body {
 .op-pay-appeal-img {
   margin: 32px 0;
   text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.op-pay-appeal-svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
 .op-phones-placeholder {
   width: 220px;
@@ -1573,7 +1599,52 @@ html, body {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 32px;
+  width: 100%;
+  overflow: hidden;
 }
+
+.op-contact-container {
+  position: relative;
+  width: 100%;
+}
+
+.op-contact-svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.op-contact-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 360px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 10;
+}
+
+.op-contact-button:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.op-why-svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.op-tech-svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
 .op-contact-box {
   background: rgba(24,24,24,0.98);
   border: 2px solid var(--op-orange);
@@ -1740,6 +1811,11 @@ html, body {
   }
 }
 @media (max-width: 600px) {
+  .op-contact-button {
+    width: 80px;
+    right: 5%;
+  }
+  
   .op-footer-section {
     min-width: 120px;
   }
@@ -2522,4 +2598,463 @@ html, body {
     border-radius: 0 0 12px 12px;
   }
 }
+
+.op-hero-svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.op-service-svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.op-scan-svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  padding: 0 100px;
+}
+
+/* Group tabs and button in a flex column */
+.op-services-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.op-services-btn {
+  display: inline-block;
+  margin-top: 40px;
+  margin-left: 0;
+  margin-right: 0;
+  width: auto;
+  text-align: center;
+}
+
+/* Remove text-align: left from .op-services-inner if present */
+.op-services-inner {
+  text-align: initial;
+}
+
+/* Remove full width on mobile for the button */
+@media (max-width: 600px) {
+  .op-services-btn {
+    width: auto;
+  }
+}
+
+/* Mobile Responsive Design - Scale Everything Down */
+@media (max-width: 768px) {
+  /* Global scaling - More aggressive font scaling */
+  html {
+    font-size: 12px; /* Scale down base font size more aggressively */
+  }
+  
+  /* Header scaling */
+  .op-header-inner {
+    padding: 0.5rem 1rem;
+  }
+  
+  .op-logo {
+    height: 1.8rem;
+  }
+  
+  .op-nav-link {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+  }
+  
+  /* Hero section scaling */
+  .op-hero-inner {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+  
+  .op-hero-title {
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+  }
+  
+  .op-hero-orange-sub-bg {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .op-hero-desc {
+    font-size: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .op-hero-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.75rem;
+  }
+  
+  .op-hero-logo-img {
+    width: 160px !important;
+    height: 160px !important;
+    max-width: 160px !important;
+  }
+  
+  .op-hero-bottom-title {
+    font-size: 1.25rem;
+    margin: 1.25rem 0;
+  }
+  
+  .op-hero-features {
+    font-size: 0.65rem;
+    gap: 0.4rem;
+  }
+  
+  .op-hero-features .dot {
+    width: 3px;
+    height: 3px;
+  }
+  
+  /* About section scaling */
+  .op-landing-about {
+    padding: 2.5rem 1rem;
+  }
+  
+  .op-about-inner {
+    gap: 1.5rem;
+  }
+  
+  .op-about-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .op-about-content p {
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .op-about-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.75rem;
+  }
+  
+  /* Services section scaling */
+  .op-landing-services {
+    padding: 2.5rem 1rem;
+  }
+  
+  .op-section-title.op-orange {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .op-services-controls {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .op-pill-tab {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+  
+  .op-services-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.75rem;
+  }
+  
+  .op-tech-svg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+  
+  /* Why choose section scaling */
+  .op-landing-why {
+    padding: 2.5rem 1rem;
+  }
+  
+  .op-why-svg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+  
+  /* Partners section scaling */
+  .op-landing-partners {
+    padding: 2.5rem 1rem;
+  }
+  
+  .op-partners-svg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+  
+  /* Pay or appeal section scaling */
+  .op-landing-pay-appeal {
+    padding: 2.5rem 1rem;
+  }
+  
+  .op-pay-appeal-svg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+  
+  /* Contact section scaling */
+  .op-landing-contact {
+    padding: 2.5rem 1rem;
+  }
+  
+  .op-contact-svg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+  
+  .op-contact-button {
+    width: 160px;
+    height: auto;
+  }
+  
+  /* Footer scaling */
+  .op-landing-footer {
+    padding: 1.5rem 1rem 0.75rem;
+  }
+  
+  .op-footer-main {
+    gap: 1.5rem;
+  }
+  
+  .op-footer-info p {
+    font-size: 0.65rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .op-footer-section h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .op-footer-section ul li {
+    font-size: 0.65rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .op-footer-bottom p {
+    font-size: 0.65rem;
+  }
+}
+
+/* Even more aggressive scaling for very small mobile devices */
+@media (max-width: 480px) {
+  /* Global scaling - Ultra aggressive */
+  html {
+    font-size: 10px; /* Scale down base font size even more */
+  }
+  
+  /* Header scaling */
+  .op-logo {
+    height: 1.5rem;
+  }
+  
+  .op-nav-link {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.5rem;
+  }
+  
+  /* Hero section scaling */
+  .op-hero-inner {
+    padding: 1rem 0.75rem;
+    gap: 1rem;
+  }
+  
+  .op-hero-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .op-hero-orange-sub-bg {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .op-hero-desc {
+    font-size: 0.65rem;
+    margin-bottom: 1rem;
+  }
+  
+  .op-hero-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.65rem;
+  }
+  
+  .op-hero-logo-img {
+    width: 120px !important;
+    height: 120px !important;
+    max-width: 120px !important;
+  }
+  
+  .op-hero-bottom-title {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .op-hero-features {
+    font-size: 0.55rem;
+    gap: 0.3rem;
+  }
+  
+  .op-hero-features .dot {
+    width: 2px;
+    height: 2px;
+  }
+  
+  /* About section scaling */
+  .op-landing-about {
+    padding: 2rem 0.75rem;
+  }
+  
+  .op-about-inner {
+    gap: 1rem;
+  }
+  
+  .op-about-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .op-about-content p {
+    font-size: 0.65rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .op-about-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.65rem;
+  }
+  
+  /* Services section scaling */
+  .op-landing-services {
+    padding: 2rem 0.75rem;
+  }
+  
+  .op-section-title.op-orange {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .op-services-controls {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .op-pill-tab {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.65rem;
+  }
+  
+  .op-services-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.65rem;
+  }
+  
+  .op-tech-svg {
+    max-width: 400px;
+  }
+  
+  /* All SVG sections */
+  .op-why-svg,
+  .op-partners-svg,
+  .op-pay-appeal-svg,
+  .op-contact-svg {
+    max-width: 400px;
+  }
+  
+  .op-contact-button {
+    width: 120px;
+  }
+  
+  /* Footer scaling */
+  .op-landing-footer {
+    padding: 1rem 0.75rem 0.5rem;
+  }
+  
+  .op-footer-main {
+    gap: 1rem;
+  }
+  
+  .op-footer-info p {
+    font-size: 0.55rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .op-footer-section h4 {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .op-footer-section ul li {
+    font-size: 0.55rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .op-footer-bottom p {
+    font-size: 0.55rem;
+  }
+}
+
+/* Services page specific mobile scaling */
+@media (max-width: 768px) {
+  .op-services-hero {
+    padding: 1.5rem 1rem;
+  }
+  
+  .op-hero-svg {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  
+  .op-service-tabs-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .op-service-tabs {
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+  
+  .op-tab {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.65rem;
+  }
+  
+  .op-service-svg {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  
+  .op-pay-by-app {
+    padding: 1.5rem 1rem;
+  }
+  
+  .op-scan-svg {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding: 0 30px;
+  }
+}
+
+
 
