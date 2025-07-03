@@ -1042,11 +1042,11 @@ html, body {
   justify-content: space-between;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 64px 32px 0 32px;
-  min-height: 520px;
+  padding: 64px 32px 32px 32px;
+
 }
 .op-hero-content {
-  flex: 1 1 600px;
+  flex: 1 1;
   max-width: 699px;
   display: flex;
   flex-direction: column;
@@ -1185,6 +1185,33 @@ html, body {
     width: 220px;
     height: 220px;
     max-width: 80vw;
+  }
+}
+
+/* Override for mobile to maintain side-by-side layout */
+@media (max-width: 768px) {
+  .op-hero-inner {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 2rem 1rem !important;
+    gap: 0.5rem !important;
+  }
+  .op-hero-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin-right: 0 !important;
+  }
+  .op-hero-logo {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 0.5rem !important;
+  }
+  .op-hero-logo-img {
+    width: 60px !important;
+    height: 60px !important;
+    max-width: 60px !important;
   }
 }
 @media (max-width: 800px) {
@@ -2684,7 +2711,6 @@ html, body {
   
   .op-hero-orange-sub-bg {
     font-size: 0.85rem;
-    padding: 0.6rem 0.8rem;
     margin-bottom: 0.75rem;
   }
   
@@ -2699,9 +2725,9 @@ html, body {
   }
   
   .op-hero-logo-img {
-    width: 160px !important;
-    height: 160px !important;
-    max-width: 160px !important;
+    width: 60px !important;
+    height: 60px !important;
+    max-width: 60px !important;
   }
   
   .op-hero-bottom-title {
@@ -2872,35 +2898,30 @@ html, body {
   
   /* Hero section scaling */
   .op-hero-inner {
-    padding: 1rem 0.75rem;
-    gap: 1rem;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 1.5rem 0.75rem !important;
+    gap: 0.5rem !important;
   }
   
-  .op-hero-title {
-    font-size: 1.75rem;
-    margin-bottom: 0.5rem;
+  .op-hero-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin-right: 0 !important;
   }
   
-  .op-hero-orange-sub-bg {
-    font-size: 0.75rem;
-    padding: 0.5rem 0.6rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .op-hero-desc {
-    font-size: 0.65rem;
-    margin-bottom: 1rem;
-  }
-  
-  .op-hero-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.65rem;
+  .op-hero-logo {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 0.5rem !important;
   }
   
   .op-hero-logo-img {
-    width: 120px !important;
-    height: 120px !important;
-    max-width: 120px !important;
+    width: 60px !important;
+    height: 60px !important;
+    max-width: 60px !important;
   }
   
   .op-hero-bottom-title {
