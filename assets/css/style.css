@@ -1191,22 +1191,23 @@ html, body {
 /* Override for mobile to maintain side-by-side layout */
 @media (max-width: 768px) {
   .op-hero-inner {
-    flex-direction: column !important;
+    flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    padding: 2rem 1rem !important;
     gap: 0.5rem !important;
   }
   .op-hero-content {
-    width: 100% !important;
+    flex: 1 1 0 !important;
     max-width: none !important;
     margin-right: 0 !important;
   }
   .op-hero-logo {
-    width: 100% !important;
+    flex-shrink: 0 !important;
+    margin-top: 0 !important;
+    margin-left: 0.5rem !important;
     display: flex !important;
-    justify-content: center !important;
-    margin-top: 0.5rem !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
   }
   .op-hero-logo-img {
     width: 60px !important;
@@ -1528,6 +1529,12 @@ html, body {
 }
 
 .op-partners-svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+.op-hero-svg {
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -3074,6 +3081,14 @@ html, body {
     max-width: 400px;
     height: auto;
     padding: 0 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .op-hero-logo-img {
+    width: 40px !important;
+    height: 40px !important;
+    max-width: 40px !important;
   }
 }
 
