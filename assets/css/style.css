@@ -1936,7 +1936,7 @@ html, body {
 .op-nc-hero .op-hero-inner {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 40px 32px;
   display: grid;
   grid-template-columns: 1fr 400px;
   gap: 60px;
@@ -2011,10 +2011,14 @@ html, body {
   cursor: pointer;
 }
 
-.op-nc-pay-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+.mobile-only {
+  display: none !important;
 }
+
+/* .op-nc-pay-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 24px #FF8F00;
+} */
 
 .op-nc-pay-card-highlight {
   background: #181818;
@@ -2325,6 +2329,11 @@ html, body {
   text-align: center;
   max-width: 900px;
   margin: 50px auto;
+}
+
+.op-nc-pay-card.selected {
+  box-shadow: 0 0 12px #FF8F00 !important;
+  transform: translateY(-2px); /* optional “lift” */
 }
 
 /* Responsive Design */

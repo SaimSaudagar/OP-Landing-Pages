@@ -318,3 +318,29 @@ const debouncedScrollHandler = debounce(() => {
 }, 10);
 
 window.addEventListener("scroll", debouncedScrollHandler);
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Only run on mobile view
+  if (window.innerWidth <= 800) {
+    const cards = document.querySelectorAll('.op-nc-pay-card');
+    
+    // Set first card as selected by default
+    if (cards.length > 0) {
+      cards[0].classList.add('selected');
+    }
+    
+    cards.forEach(card => {
+      card.addEventListener('click', function () {
+        cards.forEach(c => c.classList.remove('selected'));
+        this.classList.add('selected');
+      });
+    });
+  }
+});
+
+// Inject CSS for selected card box-shadow on mobile
+(function() {
+  var style = document.createElement('style');
+  style.innerHTML = `@media (max-width: 800px) { .op-nc-pay-card.selected { box-shadow: 0 0 12px #FF8F00 !important; } }`;
+  document.head.appendChild(style);
+})();

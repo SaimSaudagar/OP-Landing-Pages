@@ -47,7 +47,7 @@
   <section class="op-nc-pay-appeal">
     <div class="op-nc-pay-appeal-inner">
       <div class="op-nc-pay-appeal-cards">
-        <div class="op-nc-pay-card op-nc-pay-card-highlight">
+        <div class="op-nc-pay-card">
           <div class="op-nc-pay-icon">💳</div>
           <div class="op-nc-pay-title">PAY</div>
           <div class="op-nc-pay-desc">A NON-COMPLIANCE NOTICE</div>
@@ -268,5 +268,22 @@
       element.classList.toggle('expanded');
     }
   </script>
+
+<script>
+  (function initPayCards() {
+    const cards = document.querySelectorAll('.op-nc-pay-card')
+    if (!cards.length) return
+
+    cards[0].classList.add('selected')
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        cards.forEach(c => c.classList.remove('selected'))
+        card.classList.add('selected')
+      })
+    })
+  })()
+</script>
+
+
 </body>
 </html>

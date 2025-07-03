@@ -301,9 +301,15 @@
         gap: 12px;
     }
 
-    .op-nc-pay-card,
-    .op-nc-pay-card-highlight {
-        padding: 24px;
+    .op-nc-pay-card {
+        padding: 10px;
+        transition: box-shadow 0.2s, transform 0.2s;
+        cursor: pointer;
+    }
+
+    .op-nc-pay-card.selected {
+        box-shadow: 0 0 12px #FF8F00 !important;
+        transform: translateY(-2px); /* optional “lift” */
     }
 
     .op-nc-pay-title,
@@ -317,6 +323,7 @@
 
     .op-nc-pay-icon {
         font-size: 10px;
+        margin-bottom: 4px;
     }
 
     .op-nc-pay-info {
@@ -502,7 +509,7 @@
         align-items: center;
       }
       
-      /* “— Contact Us” */
+      /* "— Contact Us" */
       .op-mobile-cta-pre {
         font-family: Inter, sans-serif;
         font-weight: 600;
