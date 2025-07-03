@@ -11,11 +11,12 @@
     .op-header-logo-nav {
         display: flex;
         align-items: center;
-        justify-content: space-between; /* logo at left, burger/nav at right */
+        justify-content: space-between;
+        /* logo at left, burger/nav at right */
         padding: 12px 16px;
         height: auto;
         gap: 0;
-      }
+    }
 
     /* === HEADER & NAV === */
     .op-header-inner {
@@ -160,10 +161,12 @@
     }
 
     .op-btn.op-btn-gradient {
-        padding: 10px 0;
-        font-size: 1rem;
+        padding: 4px 4px;
+        font-size: 8px;
         border-radius: 6px;
         margin-bottom: 14px;
+        text-decoration: none;
+        border-radius: 4px;
     }
 
     .op-contact-image {
@@ -180,7 +183,7 @@
 
 
     .op-logo {
-       margin-top: 10px;
+        margin-top: 10px;
     }
 
     /* === FOOTER === */
@@ -218,4 +221,321 @@
     .op-footer-section ul li {
         margin-bottom: 8px;
     }
+
+    /* Hide the mobile-only component by default */
+    .mobile-only {
+        display: none;
+    }
+
+
+
+    /* ——— HEADER / NAV ——— */
+    /* .op-header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 16px;
+    }
+
+    .op-header-logo-nav {
+        display: flex;
+        align-items: center;
+        gap: 0;
+    }
+
+    .op-nav {
+        display: flex;
+        gap: 12px;
+    }
+
+    .op-nav-link {
+        font-size: 0.85rem;
+        padding: 4px 6px;
+    } */
+
+    /* ——— HERO (NC Notice) ——— */
+    .op-nc-hero {
+        padding: 25px 12px;
+    }
+
+    .op-nc-hero .op-hero-inner {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        /* 2/3 text, 1/3 logo */
+        gap: 16px;
+        align-items: start;
+        padding: 0;
+        text-align: left;
+    }
+
+    .op-nc-hero .op-hero-title {
+        font-size: 2rem;
+        margin-bottom: 0.5em;
+    }
+
+    .op-nc-hero .op-hero-sub {
+        font-size: 1.2rem;
+        margin-bottom: 0.5em;
+    }
+
+    .op-nc-hero .op-hero-desc {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    /* .op-nc-hero .op-hero-logo-img {
+        width: 80%;
+        max-width: 150px;
+        opacity: 1;
+    } */
+
+    /* ——— PAY / APPEAL CARDS ——— */
+    .op-nc-pay-appeal-inner {
+        padding: 24px 16px;
+    }
+
+    .op-nc-pay-appeal-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* keep two columns */
+        gap: 12px;
+    }
+
+    .op-nc-pay-card,
+    .op-nc-pay-card-highlight {
+        padding: 24px;
+    }
+
+    .op-nc-pay-title,
+    .op-nc-pay-desc {
+        font-size: 8px;
+    }
+
+    .op-nc-pay-title {
+        margin-bottom: 0;
+    }
+
+    .op-nc-pay-icon {
+        font-size: 10px;
+    }
+
+    .op-nc-pay-info {
+        font-size: 8px;
+        line-height: 1.4;
+    }
+
+    .op-nc-important-info {
+        padding: 0;
+    }
+
+    /* ——— IMPORTANT INFO ——— */
+    .op-nc-important-inner {
+        padding: 24px 16px;
+    }
+
+    .op-nc-important-list li {
+        font-size: 0.875rem;
+        margin-bottom: 12px;
+    }
+
+    /* ——— ENFORCEMENT OVERVIEW ——— */
+    .op-nc-enforcement-inner {
+        padding: 24px 16px;
+    }
+
+    .op-nc-enforcement h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75em;
+    }
+
+    .op-nc-enforcement p {
+        font-size: 0.9rem;
+        margin-bottom: 1em;
+    }
+
+    .op-btn-orange {
+        padding: 6px 16px;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .op-nc-enforcement-features {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* two columns on mobile */
+        gap: 12px;
+        padding: 0 16px 24px;
+    }
+
+    .op-nc-enforcement-card {
+        padding: 4px;
+        border-radius: 4px;
+        border: none;
+    }
+
+    .op-feature-icon {
+        font-size: 16px;
+        margin-bottom: 4px
+    }
+
+    .op-feature-title {
+        font-size: 6px;
+    }
+
+    .op-feature-text {
+        font-size: 6px;
+    }
+
+    /* ——— FAQ ——— */
+    .op-nc-faq-inner {
+        padding: 24px 16px;
+    }
+
+    .op-nc-faq {
+        padding: 0;
+    }
+
+    .op-nc-faq h2 {
+        font-size: 24px;
+        margin-bottom: 0.75em;
+    }
+
+    .op-nc-faq-list {
+        margin-bottom: 1em;
+    }
+
+    .op-nc-faq-item {
+        padding: 8px 0;
+    }
+
+    .op-nc-faq-q {
+        font-size: 8px;
+        padding: 12px 0;
+    }
+
+    .op-nc-faq-item.expanded .op-nc-faq-q {
+        padding: 0;
+        align-items: flex-start !important;
+        min-width: 200px;
+    }
+
+    .op-nc-faq-num {
+        font-size: 8px;
+    }
+
+    .op-nc-faq-note {
+        font-size: 10px;
+    }
+
+    .op-nc-faq-note-desc {
+        font-size: 8px;
+        margin: 0;
+    }
+
+    .op-nc-faq-item.expanded .op-nc-faq-a {
+        font-size: 8px;
+        padding: 0;
+    }
+
+    .op-nc-faq-a {
+        font-size: 8px;
+        padding: 12px 0;
+    }
+
+    ——— FOOTER ——— .op-landing-footer {
+        padding: 24px 16px 8px;
+    }
+
+    .op-footer-inner {
+        padding: 0 16px;
+        font-size: 0.85rem;
+    }
+
+    .op-footer-main {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .op-footer-links {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .op-footer-section h4 {
+        font-size: 1rem;
+    }
+
+    .op-footer-section ul li {
+        margin-bottom: 8px;
+    }
+
+    .op-footer-bottom {
+        font-size: 0.75rem;
+    }
+
+    /* ——— SHOW MOBILE-ONLY COMPONENT ——— */
+    .mobile-only {
+        display: block;
+    }
+
+    .op-nc-enforcement-logo,
+    .op-nc-enforcement-logo-img {
+        display: none !important;
+    }
+
+    .op-mobile-cta-action{
+        font-size: 8px;
+    }
+
+    .op-mobile-cta {
+        background: rgba(24,24,24,0.9);
+        border-radius: 16px;
+        padding: 16px;
+        margin: 24px 16px;
+        box-shadow: 0 0 24px rgba(255,143,0,0.5);
+      }
+      
+      .op-mobile-cta-inner {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        align-items: center;
+      }
+      
+      /* “— Contact Us” */
+      .op-mobile-cta-pre {
+        font-family: Inter, sans-serif;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 7.31px;
+        color: var(--op-orange);
+        margin: 0 0 4px;
+      }
+      
+      /* Main headline */
+      .op-mobile-cta-title {
+        font-family: Inter, sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        color: #fff;
+        margin: 0 0 6px;
+      }
+      
+      /* Description text */
+      .op-mobile-cta-desc {
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 12px;
+        color: var(--op-grey);
+        margin: 0;
+      }
+      
+      /* Button */
+      .op-mobile-cta-btn {
+        font-size: 8px;
+        padding: 6px 12px;
+        white-space: nowrap;
+      }
 }
