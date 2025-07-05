@@ -1,0 +1,470 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #121212;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+.header {
+    background: #121212;
+    box-shadow: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease, background 0.3s ease, backdrop-filter 0.3s ease;
+    border-bottom: 1px solid;
+    border-image-source: linear-gradient(90deg, rgba(255, 81, 0, 0.05) 14.9%, #FF5100 50%, rgba(255, 81, 0, 0.05) 82.21%);
+    border-image-slice: 1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem 0.2rem 2rem;
+    min-height: 80px;
+}
+
+.logo {
+    display: block;
+    vertical-align: middle;
+    margin-right: 12px;
+    width: 39px;
+    height: 38px;
+}
+
+.brand-text {
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24.3px;
+    line-height: 51.98px;
+    letter-spacing: -0.05em;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin-left: 2rem;
+}
+
+.nav-link {
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 14.4px;
+    letter-spacing: 0px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    vertical-align: middle;
+    transition: color 0.3s, background 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background: none;
+    box-shadow: none;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 14.4px;
+    letter-spacing: 0px;
+    text-transform: capitalize;
+    vertical-align: middle;
+    background: linear-gradient(90deg, #FF5100 0%, #FF0D00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: #ffd700;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffd700;
+}
+
+.footer-section p {
+    color: #bdc3c7;
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #34495e;
+    color: #bdc3c7;
+}
+
+/* Non-Compliance Page Specific Styles */
+.compliance-overview {
+    padding: 80px 0;
+    background: #121212;
+}
+
+.overview-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.overview-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.overview-text p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.overview-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Compliance Types */
+.compliance-types {
+    padding: 80px 0;
+    background: #121212;
+}
+
+.compliance-types h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.compliance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.compliance-card {
+    background: #1e1e1e;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #667eea;
+}
+
+.compliance-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.compliance-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.compliance-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.compliance-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.compliance-solutions {
+    list-style: none;
+    padding-left: 0;
+}
+
+.compliance-solutions li {
+    padding: 0.5rem 0;
+    color: #555;
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.compliance-solutions li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Solutions Section */
+.solutions {
+    padding: 80px 0;
+    background: #121212;
+}
+
+.solutions h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.solutions-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.solution-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #1e1e1e;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    border: 1px solid #333;
+}
+
+.solution-item:hover {
+    transform: translateY(-5px);
+    background: #2a2a2a;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.solution-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.solution-text h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.solution-text p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design for Non-Compliance */
+@media (max-width: 768px) {
+    .overview-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .overview-text h2 {
+        font-size: 2rem;
+    }
+
+    .overview-stats {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .stat-item {
+        padding: 1.5rem;
+        flex: 1;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .compliance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .compliance-card {
+        padding: 2rem;
+    }
+
+    .solutions-content {
+        grid-template-columns: 1fr;
+    }
+
+    .solution-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+
+    .cta-section p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .overview-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .overview-stats {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        padding: 1rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .compliance-types h2,
+    .solutions h2,
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .compliance-card {
+        padding: 1.5rem;
+    }
+
+    .compliance-icon {
+        font-size: 2.5rem;
+    }
+
+    .compliance-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .solution-item {
+        padding: 1.5rem;
+    }
+
+    .solution-icon {
+        font-size: 2rem;
+    }
+
+    .solution-text h3 {
+        font-size: 1.2rem;
+    }
+} 
