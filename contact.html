@@ -5,183 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - OnlyPark</title>
     <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/contact-mobile.css">
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
             <div class="nav-brand">
-                <img src="assets/logo.svg" alt="OnlyPark Logo" class="logo">
+                <img src="./assets/logo.svg" alt="OnlyPark Logo" class="logo">
                 <span class="brand-text">OnlyPark</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
-                <li><a href="service.html" class="nav-link" id="nav-services">Services</a></li>
-                <li><a href="non-compliance.html" class="nav-link" id="nav-compliance">Non-Compliance</a></li>
-                <li><a href="contact.html" class="nav-link" id="nav-contact">Contact Us</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="non-compliance.html" class="nav-link">Non-Compliance</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </nav>
     </header>
 
     <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Contact Us</h1>
-                <p>Get in touch with our team for parking solutions and support</p>
-            </div>
-        </section>
-
-        <section class="contact-content">
-            <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h2>Get In Touch</h2>
-                        <p>Ready to transform your parking management? Our team is here to help you find the perfect solution for your needs.</p>
-                        
-                        <div class="contact-methods">
-                            <div class="contact-method">
-                                <div class="method-icon">📧</div>
-                                <div class="method-details">
-                                    <h3>Email Us</h3>
-                                    <p>info@onlypark.com</p>
-                                    <p>support@onlypark.com</p>
-                                </div>
-                            </div>
-
-                            <div class="contact-method">
-                                <div class="method-icon">📞</div>
-                                <div class="method-details">
-                                    <h3>Call Us</h3>
-                                    <p>Main: (555) 123-4567</p>
-                                    <p>Support: (555) 123-4568</p>
-                                </div>
-                            </div>
-
-                            <div class="contact-method">
-                                <div class="method-icon">📍</div>
-                                <div class="method-details">
-                                    <h3>Visit Us</h3>
-                                    <p>123 Parking Street</p>
-                                    <p>City, State 12345</p>
-                                </div>
-                            </div>
-
-                            <div class="contact-method">
-                                <div class="method-icon">⏰</div>
-                                <div class="method-details">
-                                    <h3>Business Hours</h3>
-                                    <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                                    <p>Saturday: 9:00 AM - 3:00 PM</p>
-                                </div>
-                            </div>
-                        </div>
+        <div class="hero-responsive-wrapper">
+            <section class="hero custom-hero">
+                <div class="hero-inner">
+                    <div class="hero-left">
+                        <h1 class="hero-heading">Contact Us</h1>
+                        <h2 class="hero-subheading">Let's Talk Parking Solutions</h2>
+                        <p class="hero-description">OnlyPark partners with landlords, centre managers, body corporates and commercial operators to deliver tailored parking technology and enforcement solutions.</p>
+                        <p class="hero-description">If you're an existing client or interested in working with us, complete the form below and a member of our team will be in touch.</p>
+                        <h2 class="hero-subheading">🚫 Non-Compliance Notice-Related Enquiries Disclaimer</h2>
+                        <p class="hero-description">Received a Non-Compliance Notice?</p>
+                        <p class="hero-description">Please do not use this form to make a payment or lodge an appeal.</p>
+                        <p class="hero-description">All parking notice matters MUST be submitted via our Non-Compliance Notices page, where you can Make a Payment or Appeal a Non-Compliance Notice.</p>
+                        <p class="hero-description">Enquiries about non-compliance notices sent via this form will not be responded to.</p>
                     </div>
+                    <div class="hero-right">
+                        <img src="assets/contact/hero-logo.svg" alt="OnlyPark Hero Logo" class="hero-logo-svg" />
+                    </div>
+                </div>
+            </section>
+        </div>
 
-                    <div class="contact-form">
-                        <h2>Send Us a Message</h2>
+        <div class="contact-section">
+            <div class="contact-section-wrapper">
+                <div class="contact-inner">
+                    <div class="contact-form-wrapper">
+                        <h1 class="hero-heading">Get in Touch</h1>
                         <form class="form">
-                            <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="name" required>
+                            <div class="form-group two-columns">
+                                <input type="text" id="fullName" placeholder="Full Name" required>
+                                <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
                             </div>
-
                             <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="emailAddress" placeholder="Email Address" required>
                             </div>
-
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="company">Company Name</label>
-                                <input type="text" id="company" name="company">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="service">Service Interest</label>
-                                <select id="service" name="service">
-                                    <option value="">Select a service</option>
-                                    <option value="smart-parking">Smart Parking Management</option>
-                                    <option value="compliance">Compliance Management</option>
-                                    <option value="analytics">Analytics & Reporting</option>
-                                    <option value="consultation">Consultation</option>
-                                    <option value="other">Other</option>
+                            <div class="form-group two-columns">
+                                <input type="text" id="businessName" placeholder="Business Name" required>
+                                <select id="enquiryType" required>
+                                    <option value="" disabled selected>Enquiry Type</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="sales">Sales</option>
+                                    <option value="support">Support</option>
+                                    <option value="partnership">Partnership</option>
                                 </select>
                             </div>
-
                             <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your parking management needs..."></textarea>
+                                <textarea id="message" placeholder="Message" required></textarea>
                             </div>
-
-                            <button type="submit" class="submit-button">Send Message</button>
+                            <button type="submit" class="submit-button">Send Enquiry</button>
                         </form>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="faq-section">
-            <div class="container">
-                <h2>Frequently Asked Questions</h2>
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <h3>How quickly can you implement a parking management system?</h3>
-                        <p>Implementation time varies based on the complexity of your needs. Simple systems can be operational within 2-4 weeks, while comprehensive solutions may take 6-8 weeks.</p>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3>Do you provide ongoing support and maintenance?</h3>
-                        <p>Yes, we offer comprehensive support packages including 24/7 technical support, regular maintenance, and system updates to ensure optimal performance.</p>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3>Can your system integrate with existing infrastructure?</h3>
-                        <p>Absolutely! Our systems are designed to integrate seamlessly with existing parking infrastructure and can work with most current hardware and software solutions.</p>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3>What compliance regulations do you support?</h3>
-                        <p>We support all major parking compliance regulations including ADA requirements, local municipal codes, and industry-specific standards.</p>
+                    <div class="contact-image-wrapper">
+                        <img src="assets/contact/Image box.svg" alt="Contact Us" class="contact-image desktop-only">
+                        <img src="assets/contact/Image box.png" alt="Contact Us" class="contact-image mobile-only">
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>OnlyPark</h3>
-                    <p>Your parking solution partner</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="service.html">Services</a></li>
-                        <li><a href="non-compliance.html">Non-Compliance</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>Email: info@onlypark.com</p>
-                    <p>Phone: (555) 123-4567</p>
-                </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>OnlyPark</h3>
+                <p>Your parking solution partner</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 OnlyPark. All rights reserved.</p>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="non-compliance.html">Non-Compliance</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: info@onlypark.com.au</p>
+                <p>Phone: (844) 795-9467</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright 2025 | All rights reserved.</p>
         </div>
     </footer>
 
