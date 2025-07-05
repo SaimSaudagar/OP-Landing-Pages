@@ -691,5 +691,5 @@ body {
   margin-top: 0;
   position: relative;
   top: -25vw;
-  z-index: 1;
+  z-index: -1;
 }
