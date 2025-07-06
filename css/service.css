@@ -13,20 +13,18 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    width: 90vw;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2vw;
 }
 
 /* Header and Navigation */
 .header {
     background: #121212;
-    box-shadow: none;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    transition: transform 0.3s ease, background 0.3s ease, backdrop-filter 0.3s ease;
     border-bottom: 1px solid;
     border-image-source: linear-gradient(90deg, rgba(255, 81, 0, 0.05) 14.9%, #FF5100 50%, rgba(255, 81, 0, 0.05) 82.21%);
     border-image-slice: 1;
@@ -36,85 +34,41 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 2rem 0.2rem 2rem;
-    min-height: 80px;
+    padding: 0.5vw 2vw 0.2vw 2vw;
+    height: 7vw;
 }
 
 .logo {
-    display: block;
-    vertical-align: middle;
-    margin-right: 12px;
-    width: 39px;
-    height: 38px;
+    width: 3vw;
+    height: 3vw;
+    margin-right: 1vw;
 }
 
 .brand-text {
-    font-family: 'Inter', Arial, sans-serif;
+    font-size: 2vw;
     font-weight: 500;
-    font-style: normal;
-    font-size: 24.3px;
-    line-height: 51.98px;
-    letter-spacing: -0.05em;
     color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    display: inline-block;
 }
 
 .nav-menu {
     display: flex;
+    gap: 2vw;
     list-style: none;
-    gap: 2rem;
-    margin-left: 2rem;
 }
 
 .nav-link {
-    font-family: 'Inter', Arial, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 14.4px;
-    letter-spacing: 0px;
+    font-size: 1.2vw;
     color: #fff;
     text-decoration: none;
-    text-transform: capitalize;
-    vertical-align: middle;
-    transition: color 0.3s, background 0.3s;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    background: none;
-    box-shadow: none;
+    padding: 0.5vw 1vw;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    font-family: 'Inter', Arial, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 14.4px;
-    letter-spacing: 0px;
-    text-transform: capitalize;
-    vertical-align: middle;
     background: linear-gradient(90deg, #FF5100 0%, #FF0D00 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    color: transparent;
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 3px 0;
-    transition: 0.3s;
 }
 
 .nav-brand {
