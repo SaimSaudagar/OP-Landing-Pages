@@ -143,38 +143,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Header scroll effect - hide/show on scroll
-// Always keep header background solid black
-
+// Header scroll effect - transparent when at top, solid when scrolling
 document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.header');
-    let lastScrollTop = 0;
-    const scrollThreshold = 100; // Minimum scroll before hiding header
+    const scrollThreshold = 50; // Threshold for background change
     
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        // Always keep background solid black
-        header.style.background = '#121212';
-        header.style.backdropFilter = 'none';
-        
-        // Hide/show header based on scroll direction
-        if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
-            // Scrolling down - hide header
-            header.style.transform = 'translateY(-100%)';
-        } else if (scrollTop < lastScrollTop) {
-            // Scrolling up - show header
-            header.style.transform = 'translateY(0)';
-        }
-        
-        lastScrollTop = scrollTop;
-    });
-    
-    // Show header when at top of page
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop <= scrollThreshold) {
-            header.style.transform = 'translateY(0)';
+        // Change background based on scroll position
+        if (scrollTop > scrollThreshold) {
+            // Scrolled down - make header solid
+            header.style.background = '#121212';
+            header.style.backdropFilter = 'blur(10px)';
+            header.style.transition = 'background 0.3s ease, backdrop-filter 0.3s ease';
+        } else {
+            // At top - make header transparent
+            header.style.background = 'transparent';
+            header.style.backdropFilter = 'none';
+            header.style.transition = 'background 0.3s ease, backdrop-filter 0.3s ease';
         }
     });
 });
@@ -297,4 +284,75 @@ document.addEventListener('DOMContentLoaded', function() {
     current = (current + 1) % words.length;
     showWord(current);
   }, 2000);
+});
+
+// Service Tabs Bar Logic
+const tabImageMap = {
+    'scan-stay': {
+        svg: 'assets/service/scan-stay.svg',
+        png: 'assets/service/scan-stay.png'
+    },
+    'digital-permits': {
+        svg: 'assets/service/digital-permits.svg',
+        png: 'assets/service/digital-permits.png'
+    },
+    'dashboard': {
+        svg: 'assets/service/dashboard.svg',
+        png: 'assets/service/dashboard.png'
+    },
+    'lpr-patrol': {
+        svg: 'assets/service/lpr-patrol.svg',
+        png: 'assets/service/lpr-patrol.png'
+    },
+    'car-park': {
+        svg: 'assets/service/car-park.svg',
+        png: 'assets/service/car-park.png'
+    },
+    'equipment': {
+        svg: 'assets/service/equipment.svg',
+        png: 'assets/service/equipment.png'
+    },
+    'body-corporate': {
+        svg: 'assets/service/body-corporate.svg',
+        png: 'assets/service/body-corporate.png'
+    },
+    'consulting': {
+        svg: 'assets/service/consulting.svg',
+        png: 'assets/service/consulting.png'
+    },
+    'packages': {
+        svg: 'assets/service/packages.svg',
+        png: 'assets/service/packages.png'
+    }
+};
+
+function updateServiceImage(tabKey) {
+    const container = document.getElementById('service-image-container');
+    if (!container) return;
+    const isMobile = window.innerWidth <= 768;
+    const imgSrc = isMobile ? tabImageMap[tabKey].png : tabImageMap[tabKey].svg;
+    container.innerHTML = `<img src="${imgSrc}" alt="${tabKey}"/>`;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.service-tab');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            tabs.forEach(t => t.classList.remove('selected'));
+            this.classList.add('selected');
+            updateServiceImage(this.getAttribute('data-tab'));
+        });
+    });
+    // Show initial image
+    const selected = document.querySelector('.service-tab.selected');
+    if (selected) {
+        updateServiceImage(selected.getAttribute('data-tab'));
+    }
+    // Update image on resize
+    window.addEventListener('resize', function() {
+        const selected = document.querySelector('.service-tab.selected');
+        if (selected) {
+            updateServiceImage(selected.getAttribute('data-tab'));
+        }
+    });
 }); 

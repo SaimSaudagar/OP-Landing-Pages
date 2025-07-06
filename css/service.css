@@ -20,9 +20,10 @@ body {
 
 /* Header and Navigation */
 .header {
-    background: #121212;
-    position: fixed;
+    background: transparent;
+    position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid;
@@ -74,6 +75,186 @@ body {
 .nav-brand {
     display: flex;
     align-items: center;
+}
+
+/* Hero Section */
+.hero-responsive-wrapper {
+    width: 100vw;
+    aspect-ratio: 16/9;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../assets/service/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0;
+}
+
+.hero.custom-hero {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0;
+    gap: 0;
+    padding: 6vw 4.6vw 4.6vw 4.6vw;
+}
+
+.hero-left, .hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-left {
+    width: 70%;
+    height: 100%;
+    justify-content: flex-start;
+    padding-top: 2vw;
+}
+
+.hero-right {
+    width: 30%;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.hero-logo-svg {
+    width: 28vw;
+    height: 28vw;
+    object-fit: contain;
+    display: block;
+    opacity: 0.7;
+    margin-bottom: 35%;
+}
+
+.hero-heading-anim {
+    font-size: 4.4vw;
+    line-height: 1.05;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #EBEBEB;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.hero-heading-gradient-wrapper {
+    height: 1em;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+.hero-heading-gradient-text {
+    font-size: inherit;
+    line-height: 1.05;
+    position: static;
+    width: 100%;
+    opacity: 1;
+    background: linear-gradient(78.33deg, #FF8F00 15.54%, #FF5100 69.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.hero-subheading {
+    font-size: 1.65vw;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin: 0.5vw 0 0 0;
+    padding: 0;
+    width: 65%;
+}
+
+.hero-description {
+    font-size: 1.1vw;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    background: none;
+    margin: 0.5vw 0 0 0;
+    padding: 0;
+    width: 65%;
+}
+
+.hero-cta.cta-button {
+    font-size: 1.2vw;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 100%);
+    border: none;
+    border-radius: 0.4em;
+    padding: 0.7em 2em;
+    min-width: 0;
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(255, 143, 0, 0.08);
+    text-decoration: none;
+    display: inline-block;
+    margin: 2vw 0 0 0;
+}
+
+.hero-cta.cta-button:hover {
+    box-shadow: 0 4px 16px rgba(255, 81, 0, 0.16);
+}
+
+/* Additional Hero Overrides */
+.hero.custom-hero {
+    background: transparent;
+}
+
+.hero-subheading {
+    background: none;
+    color: transparent;
+    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: inline;
+    padding: 0;
+    border-radius: 0;
+}
+
+.hero-description {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+.hero-cta.cta-button {
+    min-width: 0;
+    width: auto;
 }
 
 /* Footer */
@@ -335,73 +516,85 @@ body {
     margin-right: auto;
 }
 
-/* Responsive Design for Services */
-@media (max-width: 768px) {
-    .page-header h1 {
-        font-size: 2.5rem;
-    }
-
-    .page-header p {
-        font-size: 1.1rem;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .service-card {
-        padding: 2rem;
-    }
-
-    .service-card.featured {
-        transform: none;
-    }
-
-    .service-card.featured:hover {
-        transform: translateY(-10px);
-    }
-
-    .additional-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .cta-section h2 {
-        font-size: 2rem;
-    }
-
-    .cta-section p {
-        font-size: 1.1rem;
-    }
+/* Service Tabs Bar Styles */
+.service-tabs-bar {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 3.6vw;
+    padding-right: 3.6vw;
+    gap: 0.9vw;
+    justify-content: center;
+    margin: 2.08vw 0 1.56vw 0;
+}
+.service-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.52vw;
+    border-radius: 0.94vw;
+    border-width: 0.052vw;
+    border-style: solid;
+    border-color: #575757;
+    background: transparent;
+    color: #fff;
+    font-size: 1.2vw;
+    font-weight: 400;
+    font-family: inherit;
+    padding: 0.52vw 1.04vw;
+    width: auto;
+    min-width: fit-content;
+    height: 2.9vw;
+    cursor: pointer;
+    opacity: 1;
+    transition: border-image-source 0.2s, border-color 0.2s, color 0.2s;
+    outline: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.service-tab.selected {
+    border-image: linear-gradient(90deg, #FF8F00 0%, #FF0D00 100%);
+    border-image-slice: 1;
+    border-width: 0.052vw;
+    border-style: solid;
+    color: #FF8F00;
+    font-weight: 600;
+    background: rgba(255, 143, 0, 0.08);
+}
+#service-image-container {
+    width: 100%;
+    height: auto;
+    margin-top: -8vw;
+    position: relative;
+    z-index: -1;
 }
 
-@media (max-width: 480px) {
-    .page-header h1 {
-        font-size: 2rem;
-    }
+#service-image-container img {
+    width: 100%;
+    height: auto;
+}
 
-    .page-header p {
-        font-size: 1rem;
-    }
+.pay-image {
+    width: 100%;
+    height: auto;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    padding-top: 10vw;
+}
 
-    .service-card {
-        padding: 1.5rem;
-    }
+/* Desktop and Mobile Image Display */
+.desktop-only { display: block !important; }
+.mobile-only { display: none !important; }
+@media (max-width: 768px) {
+    .desktop-only { display: none !important; }
+    .mobile-only { display: block !important; }
+}
 
-    .service-icon {
-        font-size: 3rem;
-    }
-
-    .service-card h3 {
-        font-size: 1.5rem;
-    }
-
-    .price {
-        font-size: 2rem;
-    }
-
-    .additional-services h2,
-    .cta-section h2 {
-        font-size: 1.8rem;
-    }
-} 
+/* Start of Selection */
+.contact-image {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
