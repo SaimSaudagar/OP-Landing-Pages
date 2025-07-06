@@ -111,7 +111,7 @@ body {
     position: relative;
     padding: 0;
     gap: 0;
-    padding: 6vw 4.6vw 4.6vw 4.6vw;
+    padding: 10% 4.6vw 4.6vw 4.6vw;
 }
 
 .hero-left, .hero-right {
