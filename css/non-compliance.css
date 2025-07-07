@@ -233,10 +233,11 @@ body {
 
 .action-card:hover {
     background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 2vw rgba(255, 81, 0, 0.3);
 }
 
 .action-card.highlighted {
-    box-shadow: 0 0 2vw rgba(255, 81, 0, 0.3);
+    /* Removed permanent shadow - now appears on hover for both cards */
 }
 
 .action-card img {
