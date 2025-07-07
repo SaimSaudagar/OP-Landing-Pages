@@ -8,7 +8,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
     background-color: #121212;
 }
 
@@ -271,10 +270,11 @@ body {
 .contact-section {
     position: relative;
     width: 100%;
-    background-image: url('../assets/home/service-logo.svg');
-    background-repeat: no-repeat;
-    background-position: 105% -55%;
-    background-size: auto 70%;
+}
+
+.contact-logo {
+    height: 90vh;
+    width: auto;
 }
 
 .contact-button-container {
@@ -461,6 +461,28 @@ body {
     transform: translateX(-50%);
     z-index: -1;
     pointer-events: none;
+}
+
+.glow-background-services {
+    position: absolute;
+    top: 400%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.service-logo-background {
+    position: absolute;
+    top: -18%;
+    right: -3%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.service-logo-bg-svg {
+    height: 70vh;
+    width: auto;
 }
 
 .glow-svg {
@@ -729,10 +751,6 @@ body {
 
 .services-image-switcher {
     position: relative;
-    background-image: url('../assets/glow.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 80%;
 }
 
 .services-switch-img { display: none !important; }
