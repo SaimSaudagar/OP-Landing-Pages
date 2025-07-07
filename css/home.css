@@ -15,6 +15,7 @@ body {
 /* Smooth scrolling for the entire page */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Page load animation */
@@ -724,7 +725,7 @@ html {
 
 .service-logo-background {
     position: absolute;
-    top: 0%;
+    top: 15%;
     right: 0%;
     transform: translateX(15%) translateY(-50%);
     z-index: -1;

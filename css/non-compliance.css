@@ -16,6 +16,7 @@ body {
 /* Smooth scrolling for the entire page */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Page load animation */
