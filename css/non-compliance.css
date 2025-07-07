@@ -234,8 +234,8 @@ body {
 }
 
 .action-card img {
-    width: 4vw;
-    height: 4vw;
+    width: 2.5vw;
+    height: 2.5vw;
     margin-bottom: 2vw;
 }
 
@@ -395,9 +395,14 @@ body {
 }
 
 .service-card img {
-    width: 3vw;
-    height: 3vw;
-    margin-bottom: 1.5vw;
+  /* width: 3vw;
+  height: 3vw; */
+  display: block;
+  object-fit: contain;
+  background: none;
+  padding: 0;
+  border: none;
+  padding-left: 0;
 }
 
 .service-card h3 {

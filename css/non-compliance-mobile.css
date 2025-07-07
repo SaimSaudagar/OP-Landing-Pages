@@ -1,5 +1,34 @@
 /* Mobile Styles for Non-Compliance Page */
 
+/* Mobile Action Cards and Services Grid */
+@media (max-width: 768px) {
+    .action-card img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+    
+    .service-card img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .action-card img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 0.8rem;
+    }
+    
+    .service-card img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 0.8rem;
+    }
+}
+
 /* Mobile Navigation */
 @media (max-width: 768px) {
     .navbar {
