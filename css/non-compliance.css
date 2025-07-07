@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-    width: 90vw;
+    width: 100%;
     padding: 3%;
 
 }
@@ -43,11 +43,6 @@ body {
     align-items: center;
     padding: 0.5vw 2vw 0.2vw 2vw;
     height: 7vw;
-}
-
-.nav-brand {
-    display: flex;
-    align-items: center;
 }
 
 .logo {
@@ -81,6 +76,11 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
 }
 
 /* Hero Section */
@@ -261,7 +261,11 @@ body {
 }
 
 .important-info h2 {
-    font-size: 2vw;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1.8vw;
+    line-height: 100%;
+    letter-spacing: 0%;
     color: #FF5100;
     margin-bottom: 2vw;
 }
@@ -271,8 +275,11 @@ body {
 }
 
 .info-list li {
-    font-size: 1.4vw;
     font-weight: 500;
+    font-style: normal;
+    font-size: 1.5vw;
+    line-height: 100%;
+    letter-spacing: 0%;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 1.5vw;
     padding-left: 2vw;
@@ -293,11 +300,13 @@ body {
 }
 
 .enforcement-overview h2 {
-    font-size: 2.5vw;
-    font-family: 'Inter', sans-serif;
     font-weight: 600;
+    font-style: normal;
+    font-size: 3.2vw;
+    line-height: 3.1vw;
+    letter-spacing: 0%;
     margin-bottom: 1.5vw;
-    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 100%);
+    background: linear-gradient(90.09deg, #FF8F00 0.08%, #FF0D00 60.01%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -319,47 +328,17 @@ body {
 .enforcement-overview > *:not(.enforcement-logo-bg) {
     position: relative;
     z-index: 1;
-}
-
-/* Enforcement Overview Gradient Heading and Logo */
-.enforcement-overview {
-    position: relative;
-}
-
-.enforcement-overview h2 {
-    font-size: 2.5vw;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    margin-bottom: 1.5vw;
-    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
 }
 
 .enforcement-description {
-    font-size: 1.2vw;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1vw;
+    line-height: 100%;
+    letter-spacing: 0%;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 1.5vw;
     max-width: 60%;
-}
-
-.enforcement-logo-bg {
-    position: absolute;
-    top: 0;
-    right: 2vw;
-    width: 22vw;
-    height: auto;
-    opacity: 0.12;
-    z-index: 0;
-    pointer-events: none;
-    user-select: none;
-}
-
-.enforcement-overview > *:not(.enforcement-logo-bg) {
-    position: relative;
-    z-index: 1;
 } 
 
 .enforcement-cta {
