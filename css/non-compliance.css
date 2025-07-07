@@ -389,6 +389,23 @@ body {
     display: block;
 }
 
+/* Important Notes */   
+.important-notes {
+    margin: 5vw 0;
+    text-align: center;
+}
+
+.important-notes h2 {
+    font-size: 1.5vw;
+    color: #FF5100;
+    font-style: italic;
+}
+
+.important-notes p {
+    font-size: 1vw;
+    color: #fff;
+}
+
 /* Desktop and Mobile Image Display */
 .desktop-only { display: block !important; }
 .mobile-only { display: none !important; }
