@@ -409,6 +409,9 @@ body {
 /* FAQ Section */
 .faq-section {
     margin: 5vw 0;
+    position: relative; /* Add this */
+    z-index: 1;         /* Ensure stacking context */
+    overflow: visible;  /* Allow glow to extend if needed */
 }
 
 .faq-section h2 {
@@ -648,3 +651,42 @@ body {
   background-clip: text;
 }
 
+.glow-background {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.glow-background-partners {
+    position: absolute;
+    top: -75%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.glow-background-services {
+    position: absolute;
+    top: 0;
+    left: 80%;
+    transform: translateX(-50%) translateY(-30%); /* Adjust Y as needed */
+    width: 100%;
+    z-index: 0; /* Behind FAQ content */
+    pointer-events: none;
+}
+
+.faq-section .container {
+    position: relative;
+    z-index: 2; /* Above the glow */
+}
+
+.glow-svg {
+    width: 100vw;
+    height: auto;
+    opacity: 0.2;
+    filter: blur(100px);
+}
