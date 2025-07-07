@@ -116,7 +116,7 @@ body {
 .hero-left, .hero-right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     padding: 0;
     margin: 0;
@@ -146,7 +146,7 @@ body {
 }
 
 .hero-heading-anim {
-    font-size: 5vw;
+    font-size: 4.4vw;
     line-height: 1.05;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
@@ -188,41 +188,35 @@ body {
 }
 
 .hero-subheading {
-    font-size: 2vw;
+    font-size: 1.65vw;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    color: #FF5100;
     margin: 0.5vw 0 0 0;
     padding: 0;
     width: 80%;
 }
 
 .hero-description {
-    font-size: 1.5vw;
+    font-size: 1.1vw;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: #fff;
     background: none;
     margin: 0.5vw 0 0 0;
     padding: 0;
-    width: 90%;
+    width: 65%;
 }
 
 .hero-cta.cta-button {
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     font-family: 'Inter', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     color: #fff;
     background: linear-gradient(90deg, #FF8F00 0%, #FF5100 100%);
     border: none;
     border-radius: 0.4em;
-    padding: 0.7em 2em;
-    min-width: 0;
-    width: auto;
+    align-content: center;
     text-align: center;
     cursor: pointer;
     transition: box-shadow 0.2s;
@@ -230,6 +224,9 @@ body {
     text-decoration: none;
     display: inline-block;
     margin: 1vw 0 0 0;
+    width: 20vw;
+    height: 3vw;
+    margin-top: 3vw;
 }
 
 .hero-cta.cta-button:hover {
@@ -244,6 +241,7 @@ body {
 .parking-image {
     width: 100%;
     height: auto;
+    padding-bottom: 5%;
 }
 
 .why-image {
@@ -268,6 +266,46 @@ body {
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+.contact-section {
+    position: relative;
+    width: 100%;
+    background-image: url('../assets/home/service-logo.svg');
+    background-repeat: no-repeat;
+    background-position: 105% -55%;
+    background-size: auto 70%;
+}
+
+.contact-button-container {
+    position: absolute;
+    bottom: 45%;
+    right: 15%;
+    z-index: 10;
+}
+
+.contact-team-btn {
+    display: inline-block;
+    background: linear-gradient(86.19deg, #FF8F00 3.12%, #FF0D00 96.88%);
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.4vw;
+    padding: 1.2vw 1.8vw;
+    width: 23.5vw;
+    height: 4.5vw;
+    border-radius: 0.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6vw;
+}
+
+.contact-team-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 143, 0, 0.3);
+    background: linear-gradient(86.19deg, #FF9F20 3.12%, #FF1D10 96.88%);
 }
 /* End of Selection */
 
@@ -554,18 +592,13 @@ body {
     margin-top: 2vw;
 }
 .hero.custom-hero {
-    background: #121212;
+    background: transparent;
     padding-top: 10%;
 }
 
 .hero-subheading {
     background: none;
-    color: transparent;
-    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    color: #FF5100;
     display: inline;
     padding: 0;
     border-radius: 0;
@@ -575,11 +608,6 @@ body {
     background: none;
     padding: 0;
     border-radius: 0;
-}
-
-.hero-cta.cta-button {
-    min-width: 0;
-    width: auto;
 }
 
 .services-section {
@@ -712,4 +740,32 @@ body {
   position: relative;
   top: -25vw;
   z-index: -1;
+}
+
+.learn-more-button-container {
+    position: absolute;
+    bottom: 28%;
+    right: 31.5%;
+    z-index: 10;
+}
+
+.learn-more-btn {
+    font-size: 1.4vw;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 100%);
+    border: none;
+    border-radius: 0.4em;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(255, 143, 0, 0.08);
+    text-decoration: none;
+    display: inline-block;
+    margin: 1vw 0 0 0;
+    width: 20vw;
+    height: 3vw;
+    margin-top: 3vw;
 }

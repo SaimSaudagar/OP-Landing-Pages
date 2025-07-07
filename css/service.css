@@ -101,6 +101,8 @@ body {
     background: transparent;
     padding: 0;
     margin: 0;
+    background: #121212;
+    padding-top: 10%;
 }
 
 .hero-inner {
@@ -111,7 +113,7 @@ body {
     position: relative;
     padding: 0;
     gap: 0;
-    padding: 10% 4.6vw 4.6vw 4.6vw;
+    padding: 3%;
 }
 
 .hero-left, .hero-right {
@@ -127,14 +129,13 @@ body {
     width: 70%;
     height: 100%;
     justify-content: flex-start;
-    padding-top: 2vw;
 }
 
 .hero-right {
     width: 30%;
     height: 100%;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .hero-logo-svg {
@@ -259,52 +260,113 @@ body {
 
 /* Footer */
 .footer {
-    background: #2c3e50;
-    color: white;
-    padding: 3rem 0 1rem;
+    background-image: url('../assets/service/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 3vw 0 1vw 0;
+    font-size: 1vw;
+    letter-spacing: 0.01vw;
 }
 
-.footer-content {
+.footer-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
+    grid-template-columns: 2.8fr 1.2fr 1.2fr 1.8fr;
+    gap: 3vw;
+    width: 90vw;
+    margin: 0 auto;
+    align-items: flex-start;
 }
 
-.footer-section h3,
-.footer-section h4 {
-    margin-bottom: 1rem;
-    color: #ffd700;
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
 }
 
-.footer-section ul {
+.footer-logo-row {
+    display: flex;
+    align-items: center;
+    gap: 0.7vw;
+    margin-bottom: 1vw;
+}
+
+.footer-logo-svg {
+    width: 2.2vw;
+    height: 2.2vw;
+}
+
+.footer-brand-text {
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.05vw;
+}
+
+.footer-info p {
+    margin: 0 0 0.5vw 0;
+    color: #ccc;
+    font-size: 1vw;
+}
+
+.footer-link.highlight {
+    color: #FF8F00;
+    text-decoration: underline;
+}
+
+.footer-note {
+    color: #aaa;
+    font-size: 0.85vw;
+    margin-top: 0.5vw;
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 1.1vw;
+    font-weight: 600;
+    margin-bottom: 1vw;
+}
+
+.footer-col ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7vw;
 }
 
-.footer-section ul li {
-    margin-bottom: 0.5rem;
+.footer-col ul li {
+    color: #ccc;
+    font-size: 1vw;
 }
 
-.footer-section ul li a {
-    color: #bdc3c7;
+.footer-col ul li a {
+    color: #ccc;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.2s;
 }
 
-.footer-section ul li a:hover {
-    color: #ffd700;
+.footer-col ul li a:hover,
+.footer-link.highlight:hover {
+    color: #FF8F00;
 }
 
-.footer-section p {
-    color: #bdc3c7;
-    margin-bottom: 0.5rem;
+.footer-icon {
+    color: #FF8F00;
+    font-size: 1.1vw;
+    vertical-align: middle;
+    margin-right: 0.5vw;
 }
 
 .footer-bottom {
     text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid #34495e;
-    color: #bdc3c7;
+    padding-top: 2vw;
+    border-top: 0.1vw solid #333;
+    color: #aaa;
+    font-size: 0.95vw;
+    margin-top: 2vw;
 }
 
 /* Service Page Specific Styles */
@@ -597,4 +659,40 @@ body {
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+.contact-section {
+    position: relative;
+    width: 100%;
+}
+
+.contact-button-container {
+    position: absolute;
+    bottom: 45%;
+    right: 15%;
+    z-index: 10;
+}
+
+.contact-team-btn {
+    display: inline-block;
+    background: linear-gradient(86.19deg, #FF8F00 3.12%, #FF0D00 96.88%);
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.4vw;
+    padding: 1.2vw 1.8vw;
+    width: 23.5vw;
+    height: 4.5vw;
+    border-radius: 0.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6vw;
+}
+
+.contact-team-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 143, 0, 0.3);
+    background: linear-gradient(86.19deg, #FF9F20 3.12%, #FF1D10 96.88%);
 }

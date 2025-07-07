@@ -436,3 +436,114 @@ body {
 
     /* All font sizes and spacing already use vw units, so they scale automatically */
 } 
+
+/* Footer */
+.footer {
+    background-image: url('../assets/service/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 3vw 0 1vw 0;
+    font-size: 1vw;
+    letter-spacing: 0.01vw;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2.8fr 1.2fr 1.2fr 1.8fr;
+    gap: 3vw;
+    width: 90vw;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.footer-logo-row {
+    display: flex;
+    align-items: center;
+    gap: 0.7vw;
+    margin-bottom: 1vw;
+}
+
+.footer-logo-svg {
+    width: 2.2vw;
+    height: 2.2vw;
+}
+
+.footer-brand-text {
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.05vw;
+}
+
+.footer-info p {
+    margin: 0 0 0.5vw 0;
+    color: #ccc;
+    font-size: 1vw;
+}
+
+.footer-link.highlight {
+    color: #FF8F00;
+    text-decoration: underline;
+}
+
+.footer-note {
+    color: #aaa;
+    font-size: 0.85vw;
+    margin-top: 0.5vw;
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 1.1vw;
+    font-weight: 600;
+    margin-bottom: 1vw;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7vw;
+}
+
+.footer-col ul li {
+    color: #ccc;
+    font-size: 1vw;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-col ul li a:hover,
+.footer-link.highlight:hover {
+    color: #FF8F00;
+}
+
+.footer-icon {
+    color: #FF8F00;
+    font-size: 1.1vw;
+    vertical-align: middle;
+    margin-right: 0.5vw;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2vw;
+    border-top: 0.1vw solid #333;
+    color: #aaa;
+    font-size: 0.95vw;
+    margin-top: 2vw;
+}
