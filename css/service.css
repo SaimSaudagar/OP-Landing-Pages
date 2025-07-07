@@ -137,9 +137,9 @@ html {
     left: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid;
-    border-image-source: linear-gradient(90deg, rgba(255, 81, 0, 0.05) 14.9%, #FF5100 50%, rgba(255, 81, 0, 0.05) 82.21%);
-    border-image-slice: 1;
+    /* border-bottom: 1px solid; */
+    /* border-image-source: linear-gradient(90deg, rgba(255, 81, 0, 0.05) 14.9%, #FF5100 50%, rgba(255, 81, 0, 0.05) 82.21%); */
+    /* border-image-slice: 1; */
     animation: fadeInUp 1s ease 0.2s both;
 }
 
