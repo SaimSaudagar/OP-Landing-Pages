@@ -225,7 +225,6 @@ body {
     margin: 1vw 0 0 0;
     width: 20vw;
     height: 3vw;
-    margin-top: 3vw;
 }
 
 .hero-cta.cta-button:hover {
@@ -465,7 +464,7 @@ body {
 
 .glow-background-services {
     position: absolute;
-    top: 400%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: -1;
@@ -474,15 +473,15 @@ body {
 
 .service-logo-background {
     position: absolute;
-    top: -18%;
-    right: -3%;
+    top: 0%;
+    right: 0%;
+    transform: translateX(15%) translateY(-50%);
     z-index: -1;
     pointer-events: none;
 }
 
 .service-logo-bg-svg {
-    height: 70vh;
-    width: auto;
+    width: 30vw;
 }
 
 .glow-svg {
@@ -613,6 +612,29 @@ body {
     font-size: 0.95vw;
     margin-top: 2vw;
 }
+
+.footer-bg-text {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: -1vw; /* Adjust so it sits just under the footer, or 0 for very bottom */
+  z-index: -1; /* Lower than footer */
+  text-align: center;
+  font-size: 5vw; /* Responsive size */
+  font-weight: 800;
+  color: #ff5100;
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+  white-space: nowrap;
+  width: 100vw;
+  /* Optional: gradient text */
+  background: linear-gradient(90deg, #ff5100 0%, #ff0d00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 .hero.custom-hero {
     background: transparent;
     padding-top: 10%;
@@ -639,6 +661,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     padding: 4vw 0 4vw 0;
+    position: relative;
 }
 
 .services-inner {
