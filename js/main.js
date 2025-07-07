@@ -40,10 +40,128 @@ function initializeMobileNavigation() {
     }
 }
 
+// Page load animation
+function initializePageLoadAnimation() {
+    document.body.style.opacity = '0';
+    
+    window.addEventListener('load', function() {
+        setTimeout(() => {
+            document.body.style.transition = 'opacity 0.5s ease';
+            document.body.style.opacity = '1';
+        }, 100);
+    });
+}
+
+// Parallax scrolling effect
+function initializeParallaxEffect() {
+    const parallaxElements = document.querySelectorAll('.glow-svg, .hero-logo-svg, .service-logo-svg');
+    
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const parallax = scrolled * 0.2;
+        
+        parallaxElements.forEach(element => {
+            element.style.transform = `translateY(${parallax}px)`;
+        });
+    });
+}
+
+// Enhanced scroll animations
+function initializeAdvancedScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    // Staggered animation for multiple elements
+    const staggeredObserver = new IntersectionObserver(function(entries) {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('animate-in');
+                }, index * 100); // 100ms delay between each element
+                staggeredObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Apply staggered animations to service buttons
+    const serviceButtons = document.querySelectorAll('.service-btn');
+    serviceButtons.forEach(btn => {
+        btn.classList.add('animate-prepare');
+        staggeredObserver.observe(btn);
+    });
+
+    // Add CSS classes for animation states
+    const style = document.createElement('style');
+    style.textContent = `
+        .animate-prepare {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .animate-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Button ripple effect
+function initializeButtonRippleEffect() {
+    const buttons = document.querySelectorAll('.cta-button, .contact-team-btn, .learn-more-btn, .service-btn');
+    
+    buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.classList.add('ripple-effect');
+            
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+
+    // Add ripple effect CSS
+    const style = document.createElement('style');
+    style.textContent = `
+        .ripple-effect {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+        }
+        @keyframes ripple {
+            to {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+}
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     setActiveNavigation();
     initializeMobileNavigation();
+    initializePageLoadAnimation();
+    initializeParallaxEffect();
+    initializeAdvancedScrollAnimations();
+    initializeButtonRippleEffect();
 });
 
 // Smooth scrolling for anchor links
@@ -116,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Scroll animations
+// Enhanced scroll animations for images and sections
 document.addEventListener('DOMContentLoaded', function() {
     const observerOptions = {
         threshold: 0.1,
@@ -128,17 +246,26 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
+                
+                // Add special effects for different element types
+                if (entry.target.classList.contains('glow-svg')) {
+                    entry.target.style.filter = 'blur(1px) brightness(1.2)';
+                }
+                
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
     // Observe elements for animation
-    const animateElements = document.querySelectorAll('.feature-card, .service-card, .compliance-card, .additional-item, .faq-item, .contact-method');
+    const animateElements = document.querySelectorAll('.feature-card, .service-card, .compliance-card, .additional-item, .faq-item, .contact-method, .parking-image, .about-image, .why-image, .appeal-image, .partners-image, .contact-image, .services-section');
     
-    animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    animateElements.forEach((el, index) => {
+        if (!el.style.opacity) { // Only set if not already set by CSS animations
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = `opacity 0.8s ease ${index * 0.1}s, transform 0.8s ease ${index * 0.1}s`;
+        }
         observer.observe(el);
     });
 });
@@ -271,19 +398,38 @@ function animateHeroWords() {
 }
 document.addEventListener('DOMContentLoaded', animateHeroWords);
 
+// Enhanced hero word animation with smooth transitions
 document.addEventListener('DOMContentLoaded', function() {
   const words = document.querySelectorAll('.hero-heading-gradient-wrapper .hero-heading-gradient-text');
   let current = 0;
+  
+  if (words.length === 0) return;
+  
   function showWord(idx) {
     words.forEach((el, i) => {
-      el.classList.toggle('active', i === idx);
+      if (i === idx) {
+        el.classList.add('active');
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      } else {
+        el.classList.remove('active');
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+      }
     });
   }
+  
+  // Initialize all words with transitions
+  words.forEach(word => {
+    word.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  });
+  
   showWord(current);
+  
   setInterval(() => {
     current = (current + 1) % words.length;
     showWord(current);
-  }, 2000);
+  }, 3000); // Increased duration for better readability
 });
 
 // Service Tabs Bar Logic
