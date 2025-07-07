@@ -20,9 +20,10 @@ body {
 
 /* Header */
 .header {
-    background: #121212;
-    position: fixed;
+    background: transparent;
+    position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid;
