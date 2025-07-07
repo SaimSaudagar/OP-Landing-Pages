@@ -3,21 +3,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: clip;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: #121212;
-    overflow-x: hidden; /* Prevent horizontal scroll from animations */
-}
-
-/* Smooth scrolling for the entire page */
-html {
-    scroll-behavior: smooth;
+    opacity: 0;
+    animation: pageLoad 0.8s ease 0.1s both;
     overflow-x: hidden;
 }
-
 /* Page load animation */
 @keyframes pageLoad {
     0% {
