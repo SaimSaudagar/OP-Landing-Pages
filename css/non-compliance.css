@@ -12,10 +12,16 @@ body {
     background-color: #121212;
 }
 
+.important-info-container {
+    width: 67vw;
+    padding: 3%;
+
+}
+
 .container {
     width: 90vw;
-    margin: 0 auto;
-    padding: 0 2vw;
+    padding: 3%;
+
 }
 
 /* Header and Navigation */
@@ -206,7 +212,7 @@ body {
 .action-cards {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 40vw));
-    gap: 3vw;
+    gap: 10vw;
     margin: 4vw 0;
     justify-content: center;
     align-items: stretch;
@@ -265,7 +271,8 @@ body {
 }
 
 .info-list li {
-    font-size: 1.1vw;
+    font-size: 1.4vw;
+    font-weight: 500;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 1.5vw;
     padding-left: 2vw;
