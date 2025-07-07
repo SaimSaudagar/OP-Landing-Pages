@@ -79,15 +79,20 @@ body {
 
 /* Main Content */
 main {
-    padding-top: 7vw;
+    padding-top: 0;
 }
 
 /* Hero Section */
 .hero-responsive-wrapper {
     width: 100vw;
-    aspect-ratio: 16/7;
+    aspect-ratio: 16/9;
     position: relative;
     overflow: hidden;
+    background-image: url('../assets/service/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0;
 }
 
 .hero.custom-hero {
@@ -98,9 +103,10 @@ main {
     display: flex;
     align-items: stretch;
     justify-content: stretch;
-    background: #121212;
+    background: transparent;
     padding: 0;
     margin: 0;
+    padding-top: 10%;
 }
 
 .hero-inner {
@@ -126,6 +132,8 @@ main {
 .hero-left {
     width: 70%;
     height: 100%;
+    justify-content: flex-start;
+    padding-top: 2vw;
 }
 
 .hero-right {
@@ -136,39 +144,43 @@ main {
 }
 
 .hero-logo-svg {
-    width: 100%;
-    height: 100%;
+    width: 28vw;
+    height: 28vw;
     object-fit: contain;
     display: block;
     opacity: 0.7;
+    margin-bottom: 35%;
 }
 
 .hero-heading {
-    font-size: 5vw;
+    font-size: 4.4vw;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    color: #fff;
+    color: #EBEBEB;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .hero-subheading {
-    font-size: 2vw;
+    font-size: 1.65vw;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     color: #FF5100;
-    margin: 1vw 0;
+    margin: 0.5vw 0 0 0;
     padding: 0;
+    width: 65%;
 }
 
 .hero-description {
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: #fff;
-    margin: 0.5vw 0;
+    background: none;
+    margin: 0.5vw 0 0 0;
     padding: 0;
-    width: 90%;
+    width: 65%;
 }
 
 /* Contact Section */
@@ -456,35 +468,111 @@ main {
 
 /* Footer */
 .footer {
-    margin-top: 5vw;
-    padding: 3vw 5vw;
-    border-top: 0.1vw solid rgba(255, 255, 255, 0.1);
+    background-image: url('../assets/service/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 3vw 0 1vw 0;
+    font-size: 1vw;
+    letter-spacing: 0.01vw;
 }
 
-.footer-content {
+.footer-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 2.8fr 1.2fr 1.2fr 1.8fr;
     gap: 3vw;
+    width: 90vw;
+    margin: 0 auto;
+    align-items: flex-start;
 }
 
-.footer-section h3,
-.footer-section h4 {
-    font-size: 1.5vw;
-    color: #FF5100;
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.footer-logo-row {
+    display: flex;
+    align-items: center;
+    gap: 0.7vw;
     margin-bottom: 1vw;
 }
 
-.footer-section p,
-.footer-section a {
+.footer-logo-svg {
+    width: 2.2vw;
+    height: 2.2vw;
+}
+
+.footer-brand-text {
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.05vw;
+}
+
+.footer-info p {
+    margin: 0 0 0.5vw 0;
+    color: #ccc;
     font-size: 1vw;
-    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-link.highlight {
+    color: #FF8F00;
+    text-decoration: underline;
+}
+
+.footer-note {
+    color: #aaa;
+    font-size: 0.85vw;
+    margin-top: 0.5vw;
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 1.1vw;
+    font-weight: 600;
+    margin-bottom: 1vw;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7vw;
+}
+
+.footer-col ul li {
+    color: #ccc;
+    font-size: 1vw;
+}
+
+.footer-col ul li a {
+    color: #ccc;
     text-decoration: none;
-    margin-bottom: 0.5vw;
+    transition: color 0.2s;
+}
+
+.footer-col ul li a:hover,
+.footer-link.highlight:hover {
+    color: #FF8F00;
+}
+
+.footer-icon {
+    color: #FF8F00;
+    font-size: 1.1vw;
+    vertical-align: middle;
+    margin-right: 0.5vw;
 }
 
 .footer-bottom {
-    margin-top: 2vw;
     text-align: center;
-    font-size: 1vw;
-    color: rgba(255, 255, 255, 0.5);
+    padding-top: 2vw;
+    border-top: 0.1vw solid #333;
+    color: #aaa;
+    font-size: 0.95vw;
+    margin-top: 2vw;
 } 

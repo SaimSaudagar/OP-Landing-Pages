@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - OnlyPark</title>
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/home-mobile.css">
 </head>
 <body>
     <header class="header">
@@ -59,6 +58,9 @@
                 </div>
                 <img src="assets/home/about.svg" alt="OnlyPark Hero Logo" class="about-image desktop-only" />
                 <img src="assets/home/about.png" alt="OnlyPark Hero Logo" class="about-image mobile-only" />
+                <div class="learn-more-button-container">
+                    <a href="contact.html" class="learn-more-btn">Learn More About Us</a>
+                </div> 
             </div>
         </section>
         
@@ -70,7 +72,7 @@
                         <button class="service-btn selected" id="tech-btn">Technology Solutions</button>
                         <button class="service-btn" id="ops-btn">Operational Services</button>
                     </div>
-                    <button class="explore-btn">Explore Our Services</button>
+                    <a href="service.html" class="cta-button hero-cta">Explore Our Services</a>
                     <div class="services-image-switcher">
                         <img src="assets/home/tech.svg" alt="Technology Solutions" class="services-switch-img desktop-only tech-img active" style="width: 90vw; height: 100%; padding-top: 10%;" />
                         <img src="assets/home/tech.png" alt="Technology Solutions" class="services-switch-img mobile-only tech-img active" style="width: 90vw; height: 100%; padding-top: 10%;" />
@@ -120,13 +122,16 @@
             </div>
         </section>
         
-        <section>
+        <section class="appeal-section">
             <img src="assets/home/appeal.svg" alt="OnlyPark Hero Logo" class="appeal-image desktop-only" />
             <img src="assets/home/appeal.png" alt="OnlyPark Hero Logo" class="appeal-image mobile-only" />
         </section>
 
-        <section>
+        <section class="contact-section">
             <img src="assets/home/contact.svg" alt="OnlyPark Hero Logo" class="contact-image desktop-only" />
+            <div class="contact-button-container">
+                <a href="contact.html" class="contact-team-btn">Contact Our Team</a>
+            </div>
             <img src="assets/home/contact.png" alt="OnlyPark Hero Logo" class="contact-image mobile-only" />
         </section>
     </main>
