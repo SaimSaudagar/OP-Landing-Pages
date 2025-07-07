@@ -576,3 +576,26 @@ main {
     font-size: 0.95vw;
     margin-top: 2vw;
 } 
+
+.footer-bg-text {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: -1vw; /* Adjust so it sits just under the footer, or 0 for very bottom */
+  z-index: -1; /* Lower than footer */
+  text-align: center;
+  font-size: 5vw; /* Responsive size */
+  font-weight: 800;
+  color: #ff5100;
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+  white-space: nowrap;
+  width: 100vw;
+  /* Optional: gradient text */
+  background: linear-gradient(90deg, #ff5100 0%, #ff0d00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
