@@ -205,7 +205,6 @@ html {
     left: 50%;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #FF5100 0%, #FF0D00 100%);
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
@@ -311,6 +310,7 @@ html {
     margin: 0;
     padding: 0;
     width: 120%;
+    text-decoration: none;
 }
 
 .hero-heading-gradient-wrapper {
@@ -336,6 +336,7 @@ html {
     text-fill-color: transparent;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
+    text-decoration: none;
 }
 
 .hero-heading-gradient-text.active {
@@ -352,6 +353,7 @@ html {
     margin: 0.5vw 0 0 0;
     padding: 0;
     width: 80%;
+    text-decoration: none;
     animation: fadeInUp 1s ease 1.4s both;
 }
 
