@@ -848,13 +848,12 @@ html {
     box-shadow: 0 4px 15px rgba(255, 143, 0, 0.2);
 }
 .service-tab.selected {
-    border-image: linear-gradient(90deg, #FF8F00 0%, #FF0D00 100%);
-    border-image-slice: 1;
+    color: #fff;
+    background: linear-gradient(90deg, #FF0D00 0%, #FF8F00 100%);
     border-width: 0.052vw;
     border-style: solid;
-    color: #FF8F00;
     font-weight: 600;
-    background: rgba(255, 143, 0, 0.08);
+  
 }
 #service-image-container {
     width: 100%;
