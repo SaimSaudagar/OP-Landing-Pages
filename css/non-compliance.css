@@ -16,6 +16,7 @@ body {
 /* Smooth scrolling for the entire page */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Page load animation */
@@ -124,7 +125,7 @@ html {
 }
 
 .important-info-container {
-    width: 67vw;
+    width: 70vw;
     padding: 3%;
 }
 
@@ -141,9 +142,9 @@ html {
     left: 0;
     width: 100%;
     z-index: 1000;
-    /* border-bottom: 1px solid; */
-    /* border-image-source: linear-gradient(90deg, rgba(255, 81, 0, 0.05) 14.9%, #FF5100 50%, rgba(255, 81, 0, 0.05) 82.21%); */
-    /* border-image-slice: 1; */
+    border-bottom: 1px solid;
+    border-image-source: linear-gradient(90deg, rgba(255, 81, 0, 0.05) 14.9%, #FF5100 50%, rgba(255, 81, 0, 0.05) 82.21%);
+    border-image-slice: 1;
     animation: fadeInUp 1s ease 0.2s both;
 }
 
@@ -197,7 +198,6 @@ html {
     left: 50%;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #FF5100 0%, #FF0D00 100%);
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
@@ -307,6 +307,7 @@ html {
     margin: 0;
     padding: 0;
     width: 120%;
+    text-decoration: none;
     animation: fadeInUp 1s ease 1.2s both;
 }
 
@@ -318,6 +319,7 @@ html {
     margin: 0.5vw 0 0 0;
     padding: 0;
     width: 80%;
+    text-decoration: none;
     animation: fadeInUp 1s ease 1.4s both;
 }
 
