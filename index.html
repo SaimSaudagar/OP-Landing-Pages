@@ -77,8 +77,8 @@
                     </div>
                     <a href="service.html" class="cta-button hero-cta">Explore Our Services</a>
                     <div class="services-image-switcher">
-                        <img src="assets/home/tech.svg" alt="Technology Solutions" class="services-switch-img desktop-only tech-img active" style="width: 90vw; height: 100%; padding-top: 10%;" />
-                        <img src="assets/home/tech.png" alt="Technology Solutions" class="services-switch-img mobile-only tech-img active" style="width: 90vw; height: 100%; padding-top: 10%;" />
+                        <img src="assets/home/tech.svg" alt="Technology Solutions" class="services-switch-img desktop-only tech-img active" style="width: 90vw; height: 100%;" />
+                        <img src="assets/home/tech.png" alt="Technology Solutions" class="services-switch-img mobile-only tech-img active" style="width: 90vw; height: 100%;" />
                         <img src="assets/home/ops.svg" alt="Operational Services" class="services-switch-img desktop-only ops-img ops-img-up" style="width: 90vw; height: 100%; padding-top: 10%;" />
                         <img src="assets/home/ops.png" alt="Operational Services" class="services-switch-img mobile-only ops-img ops-img-up" style="width: 90vw; height: 100%; padding-top: 10%;" />
                     </div>
@@ -95,18 +95,21 @@
         const opsBtn = document.getElementById('ops-btn');
         const techImgs = document.querySelectorAll('.tech-img');
         const opsImgs = document.querySelectorAll('.ops-img');
+        const servicesImageSwitcher = document.querySelector('.services-image-switcher');
 
         techBtn.addEventListener('click', function() {
             techBtn.classList.add('selected');
             opsBtn.classList.remove('selected');
             techImgs.forEach(img => img.classList.add('active'));
             opsImgs.forEach(img => img.classList.remove('active'));
+            servicesImageSwitcher.classList.remove('ops-active');
         });
         opsBtn.addEventListener('click', function() {
             opsBtn.classList.add('selected');
             techBtn.classList.remove('selected');
             opsImgs.forEach(img => img.classList.add('active'));
             techImgs.forEach(img => img.classList.remove('active'));
+            servicesImageSwitcher.classList.add('ops-active');
         });
         </script>
 

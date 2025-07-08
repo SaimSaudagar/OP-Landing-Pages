@@ -466,6 +466,7 @@ html {
     height: auto;
     display: block;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .contact-section {
@@ -932,6 +933,8 @@ html {
     align-items: flex-start;
     justify-content: space-between;
     gap: 4vw;
+    height: 45vw;
+    z-index: -1;
 }
 
 .services-left {
@@ -980,6 +983,7 @@ html {
     letter-spacing: 0;
     position: relative;
     overflow: hidden;
+    z-index: 10;
 }
 
 .service-btn::before {
@@ -1004,10 +1008,45 @@ html {
 
 .service-btn.selected {
     color: #FF8F00;
+    background: linear-gradient(90deg, #FF0D00 0%, #FF8F00 100%);
+    border: none;
+    border-radius: 0.6vw;
+    position: relative;
+    padding: 0.83vw 2.13vw; /* Increased padding to account for the "border" effect */
+}
+
+.service-btn.selected::before {
+    content: '';
+    position: absolute;
+    top: 0.13vw;
+    left: 0.13vw;
+    right: 0.13vw;
+    bottom: 0.13vw;
     background: rgba(255, 143, 0, 0.05);
-    border-image: linear-gradient(90deg, #FF0D00 0%, #FF8F00 100%);
-    border-image-slice: 1;
-    border-width: 0.13vw;
+    border-radius: calc(0.6vw - 0.13vw);
+    z-index: 1;
+}
+
+.service-btn.selected {
+    color: #fff;
+    background: linear-gradient(90deg, #FF0D00 0%, #FF8F00 100%);
+    border: none;
+    border-radius: 0.6vw;
+    position: relative;
+    padding: 0.83vw 2.13vw; /* Increased padding to account for the "border" effect */
+    z-index: 2;
+}
+
+.service-btn.selected::before {
+    content: '';
+    position: absolute;
+    top: 0.13vw;
+    left: 0.13vw;
+    right: 0.13vw;
+    bottom: 0.13vw;
+    background: rgba(255, 143, 0, 0.05);
+    border-radius: calc(0.6vw - 0.13vw);
+    z-index: 1;
 }
 
 .service-btn:not(.selected) {
@@ -1033,6 +1072,7 @@ html {
     cursor: pointer;
     letter-spacing: 0;
     transition: background 0.2s, color 0.2s;
+    z-index: 10;
 }
 
 .explore-btn:hover {
@@ -1056,6 +1096,7 @@ html {
 
 .services-image-switcher {
     position: relative;
+
 }
 
 .services-switch-img { display: none !important; }
@@ -1069,7 +1110,7 @@ html {
 .ops-img-up {
   margin-top: 0;
   position: relative;
-  top: -25vw;
+  top: 0;
   z-index: -1;
 }
 
@@ -1126,3 +1167,9 @@ html {
 .learn-more-btn:hover::before {
     left: 100%;
 }
+
+.services-image-switcher.ops-active {
+    position: relative;
+    top: -25vw;
+}
+
