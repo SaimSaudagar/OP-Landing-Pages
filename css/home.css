@@ -137,7 +137,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid;
+    border-bottom: 0.5px solid;
     border-image-source: linear-gradient(90deg, rgba(255, 81, 0, 0.05) 14.9%, #FF5100 50%, rgba(255, 81, 0, 0.05) 82.21%);
     border-image-slice: 1;
     animation: fadeInUp 1s ease 0.2s both;
@@ -147,8 +147,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5vw 2vw 0.2vw 2vw;
-    height: 7vw;
+    padding: 0.5vw 2vw 1.2vw 2vw;
+    height: 5.5vw;
 }
 
 .nav-brand {
@@ -160,7 +160,7 @@ body {
 .logo {
     width: 3vw;
     height: 3vw;
-    margin-right: 1vw;
+    margin-right: 0.5vw;
     transition: transform 0.3s ease;
 }
 
@@ -169,8 +169,7 @@ body {
 }
 
 .brand-text {
-    font-size: 2vw;
-    font-weight: 500;
+    font-size: 1.7vw;
     color: #fff;
     transition: color 0.3s ease;
 }
@@ -184,13 +183,14 @@ body {
 
 .nav-menu {
     display: flex;
-    gap: 2vw;
+    gap: 0.5vw;
     list-style: none;
     animation: fadeInRight 1s ease 0.6s both;
+    padding-bottom: 1%;
 }
 
 .nav-link {
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     color: #fff;
     text-decoration: none;
     padding: 0.5vw 1vw;
@@ -217,16 +217,17 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    background: linear-gradient(90deg, #FF5100 0%, #FF0D00 100%);
+    background: linear-gradient(180deg, #FF8F00 3.33%, #FF0D00 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     transform: translateY(-2px);
+    font-weight: 700;
 }
 
 /* Hero Section */
 .hero-responsive-wrapper {
-    width: 100vw;
+    width: 97vw;
     aspect-ratio: 16/7;
     position: relative;
     overflow: hidden;
@@ -258,7 +259,7 @@ body {
     position: relative;
     padding: 0;
     gap: 0;
-    padding: 3%;
+    padding: 2% 3% 0 3%;
 }
 
 .hero-left, .hero-right {
@@ -277,7 +278,7 @@ body {
 }
 
 .hero-right {
-    width: 30%;
+    width: auto;
     height: 100%;
 }
 
@@ -289,11 +290,11 @@ body {
 
 .hero-logo-svg {
     width: 100%;
-    height: 100%;
+    height: 95%;
     object-fit: contain;
     display: block;
     opacity: 0.7;
-    animation: float 3s ease-in-out infinite;
+    transform: translateY(-15px) !important;
     transition: transform 0.3s ease;
 }
 
@@ -347,35 +348,58 @@ body {
 }
 
 .hero-subheading {
-    font-size: 1.65vw;
+    font-size: 1.75vw;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     color: #FF5100;
-    margin: 0.5vw 0 0 0;
+    margin: 1vw 0 0 0;
     padding: 0;
-    width: 80%;
+    width: 70%;
     text-decoration: none;
     animation: fadeInUp 1s ease 1.4s both;
+    line-height: normal;
 }
 
 .hero-description {
-    font-size: 1.1vw;
     animation: fadeInUp 1s ease 1.6s both;
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
     color: #fff;
     background: none;
-    margin: 0.5vw 0 0 0;
+    margin: 1vw 0 0 0;
     padding: 0;
-    width: 65%;
+    width: 70%;
 }
 
 .hero-cta.cta-button {
-    font-size: 1.4vw;
+    font-size: 1.3vw;
     font-family: 'Inter', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     color: #fff;
-    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 100%);
+    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 50%);
+    background-size: 200% 100%;
+    border: none;
+    border-radius: 0.4em;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 143, 0, 0.08);
+    text-decoration: none;
+    display: inline-block;
+    margin: 3.5vw 0 0 0;
+    width: 19vw;
+    height: 3.3vw;
+    animation: fadeInUp 1s ease 1.8s both;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-cta.cta-button {
+    font-size: 1.3vw;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 25%);
     background-size: 200% 100%;
     border: none;
     border-radius: 0.4em;
@@ -388,11 +412,12 @@ body {
     display: inline-block;
     margin: 1vw 0 0 0;
     width: 20vw;
-    height: 3vw;
+    height: 3.5vw;
     animation: fadeInUp 1s ease 1.8s both;
     position: relative;
     overflow: hidden;
 }
+
 
 .hero-cta.cta-button::before {
     content: '';
@@ -423,7 +448,7 @@ body {
 .parking-image {
     width: 100%;
     height: auto;
-    padding-bottom: 5%;
+    padding-bottom: 4%;
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;
     transition: transform 0.3s ease;
@@ -449,7 +474,7 @@ body {
 .appeal-image {
     width: 100%;
     height: auto;
-    padding-top: 10%;
+    padding-top: 5%;
     padding-left: 3%;
     padding-right: 3%;
     opacity: 0;
@@ -463,9 +488,9 @@ body {
 
 /* Start of Selection */
 .contact-image {
-    padding-top: 10%;
+    padding-top: 8%;
     padding-bottom: 10%;
-    width: 80%;
+    width: 95%;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -491,7 +516,7 @@ body {
 
 .contact-team-btn {
     display: inline-block;
-    background: linear-gradient(86.19deg, #FF8F00 3.12%, #FF0D00 96.88%);
+    background: linear-gradient(86.19deg, #FF8F00 0%, #FF0D00 25%);
     color: #ffffff;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
@@ -515,7 +540,7 @@ body {
 
 .contact-team-btn {
     display: inline-block;
-    background: linear-gradient(86.19deg, #FF8F00 3.12%, #FF0D00 96.88%);
+    background: linear-gradient(86.19deg, #FF8F00 0%, #FF0D00 25%);
     background-size: 200% 100%;
     color: #ffffff;
     text-decoration: none;
@@ -679,7 +704,7 @@ body {
 .partners-image {
     width: 100%;
     height: auto;
-    padding-top: 5%;
+    padding-top: 8%;
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;
     transition: transform 0.3s ease;
@@ -708,7 +733,7 @@ body {
 
 .glow-background-partners {
     position: absolute;
-    top: -75%;
+    top: -120%;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
@@ -717,7 +742,7 @@ body {
 
 .glow-background-services {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: -1;
@@ -879,10 +904,10 @@ body {
   position: relative;
   left: 0;
   right: 0;
-  bottom: -1vw; /* Adjust so it sits just under the footer, or 0 for very bottom */
+  bottom: -0.6vw; /* Adjust so it sits just under the footer, or 0 for very bottom */
   z-index: -1; /* Lower than footer */
   text-align: center;
-  font-size: 5vw; /* Responsive size */
+  font-size: 6vw; /* Responsive size */
   font-weight: 800;
   color: #ff5100;
   opacity: 0.5;
@@ -891,8 +916,8 @@ body {
   line-height: 1;
   white-space: nowrap;
   width: 100vw;
-  /* Optional: gradient text */
-  background: linear-gradient(90deg, #ff5100 0%, #ff0d00 100%);
+  /* Gradient text color as requested */
+  background: linear-gradient(90deg, rgba(255, 13, 0, 0.2) 0%, rgba(255, 143, 0, 0.2) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -914,6 +939,11 @@ body {
     background: none;
     padding: 0;
     border-radius: 0;
+    line-height: normal;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2vw;
+    color: #fff;
 }
 
 .services-section {
@@ -922,7 +952,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 4vw 0 4vw 0;
+    padding: 6vw 0 4vw 0;
     position: relative;
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;
@@ -951,7 +981,7 @@ body {
 .services-heading {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: 4vw;
+    font-size: 3.2vw;
     line-height: 1.1;
     letter-spacing: 0;
     background: linear-gradient(90.09deg, #FF8F00 0.08%, #FF0D00 60.01%);
@@ -969,6 +999,7 @@ body {
 
 .service-btn {
     width: 16vw;
+    height: 3vw;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 1.2vw;
@@ -1068,7 +1099,7 @@ body {
     border-width: 0.2vw;
     border-style: solid;
     border: none;
-    background: linear-gradient(86.19deg, #FF8F00 3.12%, #FF0D00 96.88%);
+    background: linear-gradient(86.19deg, #FF8F00 0%, #FF0D00 25%);
     color: #fff;
     box-shadow: 0 0.2vw 1vw 0 rgba(255, 81, 0, 0.08);
     cursor: pointer;
@@ -1090,15 +1121,16 @@ body {
 }
 
 .service-logo-svg {
-    width: 20vw;
+    width: 30vw;
     height: 20vw;
     opacity: 0.3;
-    margin-left: 2vw;
+    margin-left: -30vw;
 }
 
 .services-image-switcher {
     position: relative;
-
+    margin-left: -1%;
+    margin-top: 4vw;
 }
 
 .services-switch-img { display: none !important; }
@@ -1128,7 +1160,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     color: #fff;
-    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 100%);
+    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 25%);
     background-size: 200% 100%;
     border: none;
     border-radius: 0.4em;
