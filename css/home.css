@@ -1226,3 +1226,116 @@ body {
 }
 
 
+/* —————————————————————————— */
+/* Partners Section w/ client_sec background */
+/* —————————————————————————— */
+.container-partners {
+    width: 100%;
+    margin: 0 3vw 0 3vw;
+    padding: 0 5vw;
+}
+
+
+.partners-section {
+    position: relative;
+    overflow: hidden;
+    padding: 0;                /* background handles the spacing */
+  }
+  
+  .partners-bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    z-index: 0;
+  }
+  
+  .partners-overlay {
+    position: relative;
+    z-index: 1;
+    padding: 6vw 0 8vw;        /* adjust top/bottom to taste */
+    text-align: left;
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+  
+  .partners-heading {
+    font-size: 4vw;
+    background: linear-gradient(90.09deg, #FF8F00 0.08%, #FF0D00 30.01%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5vw;
+    animation: fadeInUp 1s ease both;
+  }
+  
+  .partners-subheading {
+    font-size: 1.4vw;
+    color: #FF5100;
+    margin-bottom: 2vw;
+    animation: fadeInUp 1s ease 0.2s both;
+    font-style: italic;
+  }
+  
+  .partners-slider {
+    display: flex;
+    gap: 2vw;
+    overflow-x: auto;
+    padding-bottom: 1vw;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    animation: fadeInUp 1s ease 0.4s both;
+    justify-content: center;
+    padding-top: 2vw;
+    margin-left: -3vw;
+    margin-right: -3vw;
+  }
+  
+  .partners-slider::-webkit-scrollbar {
+    height: 0.5vw;
+  }
+  .partners-slider::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 0.25vw;
+  }
+  
+  .partner-item {
+    flex: 0 0 auto;
+    background: rgba(255,255,255,0.08);
+    border-radius: 3vw;
+    padding: 1.2vw 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+  }
+  .partner-item:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+  
+  .partner-item img {
+    max-height: 4vw;
+    width: auto;
+    display: block;
+  }
+
+  .partners-description {
+    font-size: 1.2vw;
+    width: 50vw;
+    color: #fff;
+    margin-bottom: 2vw;
+    animation: fadeInUp 1s ease 0.2s both;
+  }
+  
+  /* mobile / desktop helpers (you’ve got these already) */
+  /* .desktop-only { display: block !important; }
+  .mobile-only { display: none !important; }
+  @media (max-width: 768px) {
+    .desktop-only { display: none !important; }
+    .mobile-only { display: block !important; }
+  }
+   */
