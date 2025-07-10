@@ -1052,20 +1052,49 @@ body {
     border: none;
     border-radius: 0.6vw;
     position: relative;
-    padding: 0.13vw; /* Padding for the gradient border effect */
+    padding: 2px; /* Default border width */
     z-index: 2;
 }
 
 .service-btn.selected::before {
     content: '';
     position: absolute;
-    top: 0.13vw;
-    left: 0.13vw;
-    width: calc(100% - 0.26vw);
-    height: calc(100% - 0.26vw);
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
     background: #121212; /* Match the body background */
-    border-radius: calc(0.6vw - 0.13vw);
+    border-radius: calc(0.6vw - 2px);
     z-index: -1;
+}
+
+/* Responsive border thickness */
+@media (max-width: 768px) {
+    .service-btn.selected {
+        padding: 1.5px;
+    }
+    
+    .service-btn.selected::before {
+        top: 1.5px;
+        left: 1.5px;
+        width: calc(100% - 3px);
+        height: calc(100% - 3px);
+        border-radius: calc(0.6vw - 1.5px);
+    }
+}
+
+@media (max-width: 480px) {
+    .service-btn.selected {
+        padding: 1px;
+    }
+    
+    .service-btn.selected::before {
+        top: 1px;
+        left: 1px;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        border-radius: calc(0.6vw - 1px);
+    }
 }
 
 .service-btn.selected span {
