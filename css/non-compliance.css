@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #fff;
     background-color: #121212;
@@ -547,7 +547,7 @@ html {
     letter-spacing: 0%;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 1.5vw;
-    max-width: 60%;
+    max-width: 45%;
 } 
 
 .enforcement-cta {

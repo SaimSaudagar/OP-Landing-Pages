@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: #121212;
     opacity: 0;
@@ -231,11 +231,17 @@ body {
     aspect-ratio: 16/7;
     position: relative;
     overflow: hidden;
-    background-image: url('../assets/service/hero-bg.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     animation: scaleIn 1.2s ease 0.8s both;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .hero.custom-hero {
@@ -804,7 +810,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
-    padding: 3vw 0 1vw 0;
+    padding: 5vw 0 3vw 0;
     font-size: 1vw;
     letter-spacing: 0.01vw;
     opacity: 0;
@@ -921,11 +927,10 @@ body {
 
 .footer-bottom {
     text-align: center;
-    padding-top: 2vw;
-
+    padding-top: 3vw;
+    padding-bottom: 2vw;
     color: #aaa;
     font-size: 0.95vw;
- 
 }
 
 .footer-bg-text {
@@ -1047,7 +1052,6 @@ body {
 }
 
 .service-btn.selected {
-    color: #fff;
     background: linear-gradient(90deg, #FF8F00 0%, #FF5100 50%, #FF0D00 100%);
     border: none;
     border-radius: 0.6vw;
@@ -1102,6 +1106,10 @@ body {
     z-index: 1;
     display: block;
     padding: 0.7vw 0.27vw;
+    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 50%, #FF0D00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .service-btn:not(.selected) {

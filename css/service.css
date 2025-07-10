@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: #121212;
     opacity: 0;
@@ -378,7 +378,7 @@ html {
     font-size: 1.1vw;
     margin: 1vw 0 0 0;
     padding: 0;
-    width: 75%;
+    width: 70%;
 }
 
 
@@ -876,7 +876,6 @@ html {
 }
 
 .service-tab.selected {
-    color: #fff;
     background: linear-gradient(90deg, #FF8F00 0%, #FF5100 50%, #FF0D00 100%);
     border: none;
     border-radius: 36px;
@@ -931,7 +930,11 @@ html {
     position: relative;
     z-index: 1;
     display: block;
-    /* padding: 0.47vw 0.99vw; */
+    padding: 0.47vw 0.99vw;
+    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 50%, #FF0D00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 .service-content-wrapper {
     position: relative;
@@ -945,6 +948,7 @@ html {
     position: relative;
     z-index: 2;
     opacity: 1;
+    margin-top: -8vw;
 }
 
 #service-image-container img {
@@ -1012,10 +1016,10 @@ html {
 
 .glow-background-pay {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 85%;
     transform: translateX(-50%) translateY(-50%);
-    z-index: 1;
+    z-index: 0;
     pointer-events: none;
 }
 

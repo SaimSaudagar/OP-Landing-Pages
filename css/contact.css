@@ -93,7 +93,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: #121212;
     opacity: 0;
@@ -352,6 +352,7 @@ main {
 
 /* Contact Section */
 .contact-section {
+    position: relative;
     padding: 0 0 5vw 0;
     background-color: #121212;
     opacity: 0;
@@ -891,22 +892,17 @@ main {
 
 .glow-background-services {
     position: absolute;
-    top: -30%;
-    left: 80%;
-    transform: translateX(-50%) translateY(-30%); /* Adjust Y as needed */
-    width: 100%;
-    z-index: 0; /* Behind FAQ content */
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
     pointer-events: none;
 }
 
-.faq-section .container {
-    position: relative;
-    z-index: 2; /* Above the glow */
-}
-
 .glow-svg {
-    width: 100vw;
+    width: 80vw;
     height: auto;
-    opacity: 0.1;
-    filter: blur(100px);
+    opacity: 0.4;
+    filter: blur(1px);
+    animation: glow 4s ease-in-out infinite;
 }
