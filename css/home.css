@@ -1266,7 +1266,7 @@ body {
   }
   
   .partners-heading {
-    font-size: 4vw;
+    font-size: 4.5vw;
     background: linear-gradient(90.09deg, #FF8F00 0.08%, #FF0D00 30.01%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1332,6 +1332,7 @@ body {
 
   .partners-description {
     font-size: 1.4vw;
+    line-height: 1.5vw;
     width: 51vw;
     color: #fff;
     margin-bottom: 2vw;
