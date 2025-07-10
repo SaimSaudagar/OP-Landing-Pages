@@ -1025,7 +1025,7 @@ body {
     border-radius: 0.6vw;
     border-width: 0.08vw;
     border-style: solid;
-    padding: 0.7vw 2vw;
+    padding: 0.7vw 0.4vw;
     background: transparent;
     color: #FF8F00;
     border-color: #fff;
@@ -1063,7 +1063,7 @@ body {
     border: none;
     border-radius: 0.6vw;
     position: relative;
-    padding: 0.83vw 2.13vw; /* Increased padding to account for the "border" effect */
+    padding: 0.83vw 0.4vw; 
 }
 
 .service-btn.selected::before {
@@ -1084,7 +1084,7 @@ body {
     border: none;
     border-radius: 0.6vw;
     position: relative;
-    padding: 0.83vw 2.13vw; /* Increased padding to account for the "border" effect */
+    padding: 0.83vw 0.4vw; /* Increased padding to account for the "border" effect */
     z-index: 2;
 }
 
