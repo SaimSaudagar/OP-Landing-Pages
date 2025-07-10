@@ -125,13 +125,20 @@ html {
 }
 
 .important-info-container {
-    width: 70vw;
+    width: 65vw;
     padding: 3%;
+    padding-bottom: 0;
 }
 
 .container {
     width: 100%;
     padding: 3%;
+}
+
+.container-enforcement {
+    width: 100%;
+    padding: 3%;
+    padding-top: 0;
 }
 
 /* Header and Navigation */
@@ -374,7 +381,7 @@ html {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 40vw));
     gap: 10vw;
-    margin: 4vw 0;
+    margin: 0;
     justify-content: center;
     align-items: stretch;
     opacity: 0;
@@ -441,7 +448,7 @@ html {
 
 /* Important Information */
 .important-info {
-    margin: 5vw 0;
+    margin: 1vw 0 0 0;
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;
 }
@@ -449,7 +456,7 @@ html {
 .important-info h2 {
     font-weight: 700;
     font-style: italic;
-    font-size: 1.8vw;
+    font-size: 1.5vw;
     line-height: 100%;
     letter-spacing: 0%;
     color: #FF5100;
@@ -463,11 +470,11 @@ html {
 .info-list li {
     font-weight: 500;
     font-style: normal;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     line-height: 100%;
     letter-spacing: 0%;
     color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 1.5vw;
+    /* margin-bottom: 1.5vw; */
     padding-left: 2vw;
     position: relative;
 }
@@ -507,7 +514,7 @@ html {
     right: 2vw;
     width: 22vw;
     height: auto;
-    opacity: 0.12;
+    opacity: 0.25;
     z-index: 0;
     pointer-events: none;
     user-select: none;
@@ -578,7 +585,7 @@ html {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2vw;
+    gap: 3vw;
     margin-top: 3vw;
     opacity: 0;
     animation: fadeInUp 1s ease 0.8s both;
@@ -587,7 +594,7 @@ html {
 .service-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 1vw;
-    padding: 2vw;
+    padding: 1vw 1vw 2vw 1vw;
     min-width: 0;
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
