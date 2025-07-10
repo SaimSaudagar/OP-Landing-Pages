@@ -54,7 +54,7 @@ function initializePageLoadAnimation() {
 
 // Parallax scrolling effect
 function initializeParallaxEffect() {
-    const parallaxElements = document.querySelectorAll('.glow-svg, .hero-logo-svg');
+    const parallaxElements = document.querySelectorAll('.glow-svg');
     
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;

@@ -52,15 +52,6 @@
     }
 }
 
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
 @keyframes pulse {
     0%, 100% {
         transform: scale(1);
@@ -855,7 +846,7 @@ main {
   white-space: nowrap;
   width: 100vw;
   /* Optional: gradient text */
-  background: linear-gradient(90deg, #ff5100 0%, #ff0d00 100%);
+  background: linear-gradient(90deg, rgba(255, 13, 0, 0.2) 0%, rgba(255, 143, 0, 0.2) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
