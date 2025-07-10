@@ -749,6 +749,15 @@ body {
     pointer-events: none;
 }
 
+.glow-background-services-2 {
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
 .service-logo-background {
     position: absolute;
     top: 15%;
@@ -1030,7 +1039,6 @@ body {
     background: transparent;
     color: #FF8F00;
     border-color: #fff;
-    transition: all 0.3s ease;
     cursor: pointer;
     letter-spacing: 0;
     position: relative;
@@ -1038,54 +1046,13 @@ body {
     z-index: 10;
 }
 
-.service-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 143, 0, 0.1), transparent);
-    transition: left 0.5s ease;
-}
-
-.service-btn:hover::before {
-    left: 100%;
-}
-
-.service-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(255, 143, 0, 0.2);
-}
-
-.service-btn.selected {
-    color: #FF8F00;
-    background: linear-gradient(90deg, #FF0D00 0%, #FF8F00 100%);
-    border: none;
-    border-radius: 0.6vw;
-    position: relative;
-    padding: 0.83vw 0.4vw; 
-}
-
-.service-btn.selected::before {
-    content: '';
-    position: absolute;
-    top: 0.13vw;
-    left: 0.13vw;
-    right: 0.13vw;
-    bottom: 0.13vw;
-    background: rgba(255, 143, 0, 0.05);
-    border-radius: calc(0.6vw - 0.13vw);
-    z-index: 1;
-}
-
 .service-btn.selected {
     color: #fff;
-    background: linear-gradient(90deg, #FF0D00 0%, #FF8F00 100%);
+    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 50%, #FF0D00 100%);
     border: none;
     border-radius: 0.6vw;
     position: relative;
-    padding: 0.83vw 0.4vw; /* Increased padding to account for the "border" effect */
+    padding: 0.13vw; /* Padding for the gradient border effect */
     z-index: 2;
 }
 
@@ -1094,11 +1061,18 @@ body {
     position: absolute;
     top: 0.13vw;
     left: 0.13vw;
-    right: 0.13vw;
-    bottom: 0.13vw;
-    background: rgba(255, 143, 0, 0.05);
+    width: calc(100% - 0.26vw);
+    height: calc(100% - 0.26vw);
+    background: #121212; /* Match the body background */
     border-radius: calc(0.6vw - 0.13vw);
+    z-index: -1;
+}
+
+.service-btn.selected span {
+    position: relative;
     z-index: 1;
+    display: block;
+    padding: 0.7vw 0.27vw;
 }
 
 .service-btn:not(.selected) {
@@ -1256,7 +1230,7 @@ body {
   .partners-overlay {
     position: relative;
     z-index: 1;
-    padding: 6vw 0 8vw;        /* adjust top/bottom to taste */
+    padding: 4vw 0 8vw;        /* adjust top/bottom to taste */
     text-align: left;
     margin-left: 3vw;
     margin-right: 3vw;
@@ -1269,45 +1243,48 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    margin-bottom: 0.5vw;
     animation: fadeInUp 1s ease both;
   }
   
   .partners-subheading {
-    font-size: 1.4vw;
+    font-size: 1.8vw;
     color: #FF5100;
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
     animation: fadeInUp 1s ease 0.2s both;
     font-style: italic;
   }
   
   .partners-slider {
-    display: flex;
-    gap: 2vw;
-    overflow-x: auto;
+    overflow: hidden;
     padding-bottom: 1vw;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
     animation: fadeInUp 1s ease 0.4s both;
-    justify-content: center;
-    padding-top: 2vw;
+    padding-top: 4vw;
     margin-left: -3vw;
     margin-right: -3vw;
+    width: 100%;
   }
   
-  .partners-slider::-webkit-scrollbar {
-    height: 0.5vw;
+  .partners-track {
+    display: flex;
+    gap: 2vw;
+    animation: scroll-partners 20s linear infinite;
+    width: max-content;
   }
-  .partners-slider::-webkit-scrollbar-thumb {
-    background: rgba(255,255,255,0.2);
-    border-radius: 0.25vw;
+  
+  @keyframes scroll-partners {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
   
   .partner-item {
     flex: 0 0 auto;
-    background: rgba(255,255,255,0.08);
+    background: #2A2A2A;
     border-radius: 3vw;
-    padding: 1.2vw 3vw;
+    padding: 0.5vw 3vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1325,8 +1302,8 @@ body {
   }
 
   .partners-description {
-    font-size: 1.2vw;
-    width: 50vw;
+    font-size: 1.4vw;
+    width: 51vw;
     color: #fff;
     margin-bottom: 2vw;
     animation: fadeInUp 1s ease 0.2s both;
