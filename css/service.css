@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: #121212;
     opacity: 0;
@@ -948,6 +948,7 @@ html {
     position: relative;
     z-index: 2;
     opacity: 1;
+    margin-top: -8vw;
 }
 
 #service-image-container img {
@@ -1015,7 +1016,7 @@ html {
 
 .glow-background-pay {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 85%;
     transform: translateX(-50%) translateY(-50%);
     z-index: 0;

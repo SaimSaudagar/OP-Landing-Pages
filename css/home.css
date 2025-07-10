@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: #121212;
     opacity: 0;
@@ -231,11 +231,17 @@ body {
     aspect-ratio: 16/7;
     position: relative;
     overflow: hidden;
-    background-image: url('../assets/service/hero-bg.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     animation: scaleIn 1.2s ease 0.8s both;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .hero.custom-hero {
