@@ -174,7 +174,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5vw 2vw 1.2vw 2vw;
+    padding: 0.5vw 2vw 0.5vw 2vw;
     height: 5.5vw;
 }
 
@@ -230,7 +230,7 @@ html {
 
 .nav-link:hover,
 .nav-link.active {
-    background: linear-gradient(180deg, #FF8F00 3.33%, #FF0D00 100%);
+    background: linear-gradient(180deg, #FF8F00 35%, #FF0D00 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -816,6 +816,13 @@ html {
 .footer-info p {
     margin: 0 0 0.5vw 0;
     color: #ccc;
+    font-size: 0.8vw;
+}
+
+.footer-info h3 {
+    margin: 0 0 0.5vw 0;
+    color: #ccc;
+    font-weight: 500;
     font-size: 1vw;
 }
 
@@ -871,11 +878,22 @@ html {
 .footer-bottom {
     text-align: center;
     padding-top: 2vw;
-    border-top: 0.1vw solid #333;
     color: #aaa;
     font-size: 0.95vw;
-    margin-top: 2vw;
+    
 }
+
+.footer-icon img {
+    width: 1.1vw;
+    height: 1.1vw;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.footer-icon img:hover {
+    transform: scale(1.1);
+}
+
 
 .footer-bg-text {
   position: relative;
@@ -884,7 +902,7 @@ html {
   bottom: -1vw; /* Adjust so it sits just under the footer, or 0 for very bottom */
   z-index: -1; /* Lower than footer */
   text-align: center;
-  font-size: 5vw; /* Responsive size */
+  font-size: 6vw; /* Responsive size */
   font-weight: 800;
   color: #ff5100;
   opacity: 0.5;

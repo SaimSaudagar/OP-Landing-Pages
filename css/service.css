@@ -148,8 +148,8 @@ html {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    padding: 0.5vw 2vw 1.2vw 2vw;
+    align-items: center;
+    padding: 0.5vw 2vw 0.5vw 2vw;
     height: 5.5vw;
 }
 
@@ -188,9 +188,7 @@ html {
     gap: 0.5vw;
     list-style: none;
     animation: fadeInRight 1s ease 0.6s both;
-    padding-bottom: 1%;
 }
-
 .nav-link {
     font-size: 1.1vw;
     color: #fff;
@@ -526,6 +524,13 @@ html {
 .footer-info p {
     margin: 0 0 0.5vw 0;
     color: #ccc;
+    font-size: 0.8vw;
+}
+
+.footer-info h3 {
+    margin: 0 0 0.5vw 0;
+    color: #ccc;
+    font-weight: 500;
     font-size: 1vw;
 }
 
@@ -578,13 +583,23 @@ html {
     margin-right: 0.5vw;
 }
 
+.footer-icon img {
+    width: 1.1vw;
+    height: 1.1vw;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.footer-icon img:hover {
+    transform: scale(1.1);
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 2vw;
-    border-top: 0.1vw solid #333;
     color: #aaa;
     font-size: 0.95vw;
-    margin-top: 2vw;
+ 
 }
 
 /* Service Page Specific Styles */
