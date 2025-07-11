@@ -5,17 +5,33 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif !important;
     line-height: 1.6;
     color: #fff;
     background-color: #121212;
     overflow-x: hidden; /* Prevent horizontal scroll from animations */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Force Inter font on all elements */
 * {
     font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* Page container for flexbox layout */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
 }
 
 /* Smooth scrolling for the entire page */
@@ -162,9 +178,7 @@ html {
 /* Header and Navigation */
 .header {
     background: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     z-index: 1000;
     border-bottom: 0.3px solid;
@@ -784,6 +798,7 @@ html {
     letter-spacing: 0.01vw;
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;
+    margin-top: auto;
 }
 
 .footer-container {

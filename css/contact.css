@@ -92,6 +92,11 @@
     overflow-x: clip;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif !important;
     line-height: 1.6;
@@ -99,11 +104,22 @@ body {
     opacity: 0;
     animation: pageLoad 0.8s ease 0.1s both;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Force Inter font on all elements */
 * {
     font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* Page container for flexbox layout */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
 }
 
 .container {
@@ -115,9 +131,7 @@ body {
 /* Header */
 .header {
     background: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     z-index: 1000;
     border-bottom: 0.3px solid;
@@ -716,6 +730,7 @@ main {
     letter-spacing: 0.01vw;
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;
+    margin-top: auto;
 }
 
 .footer-container {
