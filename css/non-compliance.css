@@ -256,7 +256,7 @@ html {
 
 /* Hero Section */
 .hero-responsive-wrapper {
-    width: 97vw;
+    width: 100vw;
     aspect-ratio: 16/7;
     position: relative;
     overflow: hidden;
