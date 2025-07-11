@@ -626,12 +626,12 @@ html {
 .service-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 1vw;
-    padding: 2vw;
+    padding: 2vw 1.5vw;
     min-width: 0;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    width: 22vw;
+    width: auto;
 }
 
 .service-card::before {
@@ -669,7 +669,7 @@ html {
 }
 
 .service-card h3 {
-    font-size: 1.4vw;
+    font-size: 1.3vw;
     margin-bottom: 1vw;
 }
 
