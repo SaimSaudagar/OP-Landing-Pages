@@ -6,12 +6,17 @@
 }
 
 body {
-    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif !important;
     line-height: 1.6;
     background-color: #121212;
     opacity: 0;
     animation: pageLoad 0.8s ease 0.1s both;
     overflow-x: hidden;
+}
+
+/* Force Inter font on all elements */
+* {
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
 /* Smooth scrolling for the entire page */
@@ -139,7 +144,7 @@ html {
     left: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 0.5px solid;
+    border-bottom: 0.3px solid;
     border-image-source: linear-gradient(90deg, rgba(255, 81, 0, 0.05) 14.9%, #FF5100 50%, rgba(255, 81, 0, 0.05) 82.21%);
     border-image-slice: 1;
     animation: fadeInUp 1s ease 0.2s both;
@@ -374,11 +379,11 @@ html {
     border-radius: 0;
     line-height: normal;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.1vw;
     margin: 1vw 0 0 0;
     padding: 0;
-    width: 70%;
+    width: 71%;
 }
 
 
@@ -431,7 +436,7 @@ html {
 }
 
 .service-tabs-wrapper {
-    margin-top: 5.5%;
+    margin-top: 6.5%;
     position: relative;
 }
 
@@ -841,7 +846,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     column-gap: 1vw;
-    row-gap: 2vw;
+    row-gap: 1.5vw;
     justify-content: center;
     margin: -0.8vw 0 0.8vw 0;
     opacity: 0;

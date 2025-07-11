@@ -6,11 +6,16 @@
 }
 
 body {
-    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif !important;
     line-height: 1.6;
     color: #fff;
     background-color: #121212;
     overflow-x: hidden; /* Prevent horizontal scroll from animations */
+}
+
+/* Force Inter font on all elements */
+* {
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
 /* Smooth scrolling for the entire page */
@@ -125,8 +130,7 @@ html {
 }
 
 .important-info-container {
-    width: 65vw;
-    width: 65vw;
+    width: 69vw;;
     padding: 3%;
     padding-bottom: 0;
 }
@@ -163,7 +167,7 @@ html {
     left: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 0.5px solid;
+    border-bottom: 0.3px solid;
     border-image-source: linear-gradient(90deg, rgba(255, 81, 0, 0.05) 14.9%, #FF5100 50%, rgba(255, 81, 0, 0.05) 82.21%);
     border-image-slice: 1;
     animation: fadeInUp 1s ease 0.2s both;
@@ -338,7 +342,7 @@ html {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     color: #FF5100;
-    margin: 0.5vw 0 0 0;
+    margin: 1.5vw 0 0 0;
     padding: 0;
     width: 80%;
     text-decoration: none;
@@ -348,10 +352,10 @@ html {
 .hero-description {
     font-size: 1.1vw;
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     color: #fff;
     background: none;
-    margin: 0.5vw 0 0 0;
+    margin: 0.1vw 0 0 0;
     padding: 0;
     width: 75%;
     animation: fadeInUp 1s ease 1.6s both;
@@ -477,7 +481,7 @@ html {
     line-height: 100%;
     letter-spacing: 0%;
     color: #FF5100;
-    margin-bottom: 2vw;
+    margin-bottom: 1.2vw;
 }
 
 .info-list {
@@ -492,6 +496,7 @@ html {
     color: rgba(255, 255, 255);
     padding-left: 2vw;
     position: relative;
+    font-weight: 400;
 }
 .info-list li::before {
     content: "•";
@@ -540,14 +545,13 @@ html {
 }
 
 .enforcement-description {
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     font-size: 1.1vw;
     line-height: 100%;
     letter-spacing: 0%;
-    color: rgba(255, 255, 255, 0.7);
     margin-bottom: 1.5vw;
-    max-width: 45%;
+    max-width: 46%;
 } 
 
 .enforcement-cta {
@@ -608,12 +612,12 @@ html {
 .service-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 1vw;
-    padding: 2vw 1vw 2vw 1vw;
+    padding: 2vw;
     min-width: 0;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
+    width: 22vw;
 }
 
 .service-card::before {
@@ -656,7 +660,7 @@ html {
 }
 
 .service-card p {
-    font-size: 1vw;
+    font-size: 1.1vw;
     color: #fff;
 }
 
@@ -748,7 +752,7 @@ html {
 }
 
 .important-notes h2 {
-    font-size: 1.8vw;
+    font-size: 1.6vw;
     color: #FF5100;
     font-style: italic;
 }
@@ -757,6 +761,7 @@ html {
     font-size: 1.3vw;
     color: #fff;
     line-height: 1.5vw;
+    padding-top: 1vw;
 }
 
 /* Desktop and Mobile Image Display */
@@ -961,7 +966,7 @@ html {
 }
 
 .last-container {
-    width: 55%;
+    width: 64%;
     padding: 3%;
     padding-top: 0;
     margin: 0 auto;

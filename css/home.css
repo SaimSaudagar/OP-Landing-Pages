@@ -11,12 +11,17 @@ html {
 }
 
 body {
-    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif !important;
     line-height: 1.6;
     background-color: #121212;
     opacity: 0;
     animation: pageLoad 0.8s ease 0.1s both;
     overflow-x: hidden;
+}
+
+/* Force Inter font on all elements */
+* {
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 /* Page load animation */
 @keyframes pageLoad {
@@ -1288,6 +1293,7 @@ body {
     margin-bottom: 1vw;
     animation: fadeInUp 1s ease 0.2s both;
     font-style: italic;
+    margin-top: -0.7vw;
   }
   
   .partners-slider {
@@ -1338,12 +1344,14 @@ body {
   }
 
   .partners-description {
-    font-size: 1.4vw;
-    line-height: 1.5vw;
-    width: 51vw;
+    font-size: 1.8vw;
+    line-height: normal;
+    width: 70vw;
     color: #fff;
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
     animation: fadeInUp 1s ease 0.2s both;
+    /* padding-top: 0.5vw; */
+    font-weight: 200;
   }
   
   /* mobile / desktop helpers (you’ve got these already) */
