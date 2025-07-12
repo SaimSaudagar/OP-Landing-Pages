@@ -260,7 +260,7 @@ body {
     top: 5.5vw;
     left: 0;
     width: 102%;
-    height: 80%;
+    height: 85%;
     object-fit: cover;
     z-index: -1;
 }
@@ -272,7 +272,7 @@ body {
     top: 5.5vw;
     left: 0;
     width: 102%;
-    height: 80%;
+    height: 85%;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 0;
     pointer-events: none;
