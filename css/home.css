@@ -207,7 +207,6 @@ body {
     gap: 0.5vw;
     list-style: none;
     animation: fadeInRight 1s ease 0.6s both;
-    padding-bottom: 1.5vw;
 }
 
 .nav-link {
