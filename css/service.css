@@ -1098,6 +1098,7 @@ html {
 }
 
 #service-image-container {
+    max-width: 1440px;
     width: 100%;
     height: auto;
     position: relative;
@@ -1107,9 +1108,11 @@ html {
 }
 
 #service-image-container img {
+    max-width: 1440px;
     width: 100%;
     height: auto;
     display: block;
+    padding-top: 3vw;
 }
 
 .service-image-button-container {
@@ -1585,7 +1588,7 @@ html {
     .service-image-button-container {
         position: absolute;
         bottom: 47%;
-        right: 76.5%;
+        right: 68.5%;
         z-index: 3;
     }
     
