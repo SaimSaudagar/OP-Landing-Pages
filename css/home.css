@@ -761,6 +761,7 @@ body::-webkit-scrollbar {
     background-position: center;
     background-repeat: no-repeat;
     padding: 2.5vw;
+    z-index: 1;
 }
 
 .partners-section-wrapper {
@@ -799,7 +800,7 @@ body::-webkit-scrollbar {
     top: -100%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 5;
+    z-index: -2;
     pointer-events: none;
 }
 
@@ -814,7 +815,7 @@ body::-webkit-scrollbar {
 
 .glow-background-services {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: -1;
@@ -824,7 +825,7 @@ body::-webkit-scrollbar {
 
 .glow-background-services-2 {
     position: absolute;
-    top: 140%;
+    top: -100%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: -1;
@@ -1903,11 +1904,11 @@ body::-webkit-scrollbar {
     }
     
     .glow-background-services {
-        top: 30%; /* percentage stays same */
+        top: -100%;
     }
     
     .glow-background-services-2 {
-        top: 140%; /* percentage stays same */
+        top: 100%; /* percentage stays same */
     }
     
     .service-logo-background {
