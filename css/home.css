@@ -1596,7 +1596,7 @@ body::-webkit-scrollbar {
     }
     
     .services-inner {
-        width: 1080px; /* 90vw at 1440px */
+        width: 100vw; /* 90vw at 1440px */
         gap: 48px; /* 4vw at 1440px */
         height: 648px; /* Fixed height instead of 45vw */
         max-width: 1440px;
@@ -1608,7 +1608,7 @@ body::-webkit-scrollbar {
     }
     
     .services-heading {
-        font-size: 38.4px; /* 3.2vw at 1440px */
+        font-size: 64px; /* 3.2vw at 1440px */
     }
     
     .services-buttons {
@@ -1661,12 +1661,12 @@ body::-webkit-scrollbar {
     
     .services-image-switcher {
         margin-top: 48px; /* 4vw at 1440px */
-        max-width: 1000px; /* Constrain the switcher container */
+        max-width: 1440px; /* Constrain the switcher container */
     }
     
     .services-image-switcher img,
     .services-switch-img {
-        max-width: 1000px; /* Constrain all images in switcher */
+        max-width: 1440px; /* Constrain all images in switcher */
         width: 100%;
         height: auto;
     }
