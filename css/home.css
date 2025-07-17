@@ -760,6 +760,7 @@ body::-webkit-scrollbar {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding: 2.5vw;
 }
 
 .partners-section-wrapper {
@@ -1557,7 +1558,6 @@ body::-webkit-scrollbar {
     .hero-logo-svg {
         width: 100%;
         height: 95%;
-        max-width: 280px; /* Smaller size to prevent movement */
     }
     
     .hero-left {
@@ -1565,7 +1565,7 @@ body::-webkit-scrollbar {
         flex-direction: column !important;
         justify-content: flex-start !important;
         align-items: flex-start !important;
-        width: 70% !important;
+        width: 65% !important;
         height: 380px !important; /* Fixed height to override base styles */
         position: relative;
         padding: 0 !important;
@@ -1685,8 +1685,8 @@ body::-webkit-scrollbar {
     
     .learn-more-button-container {
         position: absolute;
-        bottom: 20%;
-        left: 50%;
+        bottom: 30%;
+        left: 50.2%;
         z-index: 10;
         transform: translateX(-25px);
     }
@@ -1797,6 +1797,7 @@ body::-webkit-scrollbar {
         display: flex;
         justify-content: center;
         position: relative;
+        padding: 100px;
     }
     
     .about-section-wrapper .about-image,
