@@ -1216,7 +1216,7 @@ html {
     .mobile-only { display: block !important; }
 
     .service-content-wrapper {
-        background-image: url('../assets/service/scan_bg.png');
+        background-image: url('../assets/service/scan_bg.svg');
     }
 }
 
@@ -1417,6 +1417,10 @@ html {
         display: flex;
         justify-content: center;
         position: relative;
+        background-image: url('../assets/service/scan_bg.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     .service-content-wrapper .scan-image {
