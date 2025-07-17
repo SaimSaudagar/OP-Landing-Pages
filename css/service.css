@@ -1073,9 +1073,10 @@ html {
     background-clip: text;
 }
 .service-content-wrapper {
+    width: 100vw; /* Keep full width for background */
+    display: flex;
+    justify-content: center;
     position: relative;
-    width: 100%;
-    margin-top: 0;
     background-image: url('../assets/service/scan_bg.svg');
     background-size: cover;
     background-position: center;
