@@ -1040,11 +1040,11 @@ html {
     }
     
     .service-tab.selected::before {
-        top: 1.5px;
-        left: 1.5px;
-        width: calc(100% - 3px);
-        height: calc(100% - 3px);
-        border-radius: calc(36px - 1.5px);
+        top: 1px;
+        left: 1px;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        border-radius: calc(24px - 1px);
     }
 }
 
