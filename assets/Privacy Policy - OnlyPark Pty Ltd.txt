@@ -1,0 +1,220 @@
+Privacy Policy - OnlyPark Pty Ltd
+1. Introduction
+OnlyPark Pty Ltd ("we," "our," "us") is committed to protecting the privacy of individuals. This Privacy
+Policy outlines how we collect, use, disclose, and protect personal information in compliance with the
+Privacy Act 1988 (Cth) and the Information Privacy Act 2009 (Qld).
+Definitions
+For the purposes of this Privacy Policy:
+•
+•
+•
+
+•
+•
+
+•
+•
+
+“OnlyPark”, “we”, “us”, or “our” refers to OnlyPark Pty Ltd (ABN 19 677 432 870).
+“You”, “your”, or “user” means any individual using our services or website, including visitors,
+customers, guests, or drivers.
+“Services” refers to any parking-related technology, operational, or enforcement service offered
+by OnlyPark, including QR check-in, digital permits, LPR patrols, car park management, and
+consultancy.
+“Non-Compliance Notice” refers to a notice issued due to a breach of the clearly displayed
+Terms of Entry at a privately managed car park, which may include a request for payment.
+“Personal Information” means any information or opinion about an identified individual, or an
+individual who is reasonably identifiable, whether the information is true or not and whether it
+is recorded in a material form or not, as defined under the Privacy Act 1988 (Cth).
+“Terms of Entry” means the signage displayed at each private car park site outlining the
+conditions under which a vehicle may remain parked.
+“Appeal” refers to a user-submitted request to review or cancel a non-compliance notice.
+
+2. Collection of Personal Information
+We collect this information to manage parking permissions, verify compliance with terms of entry,
+communicate with registered drivers, and support the enforcement of non-compliance notices issued at
+privately managed car parks. The types of personal information we collect include:
+●
+●
+●
+●
+●
+●
+
+Vehicle registration number
+Email address
+Phone number
+Name
+Payment details (if applicable)
+Information relating to your dealings or enquiries with us
+
+●
+
+We collect this information to manage parking compliance and ensure vehicles are registered
+on-site.
+
+3. Types of Information Collected
+Personal Information:
+Personal information is information that identifies an individual. The types of personal information we
+collect include:
+●
+●
+●
+●
+●
+●
+●
+●
+●
+●
+
+Full name
+Mailing address
+Email address
+Date of birth
+Mobile telephone number
+Vehicle details
+Username and password
+Payment details (credit, debit, or bank account information)
+Information relating to your dealings with us
+Other information provided by you
+
+Non-Personal Information:
+Non-personal information is data that does not identify an individual. This includes:
+●
+●
+●
+●
+
+Browser type
+IP address
+URL of previous websites visited
+Parking patterns and usage
+
+4. Collection Methods
+We collect personal information in several ways, including:
+●
+●
+●
+●
+
+Directly from you when you use our QR Code Visitor/Customer parking solution
+When you contact us with enquiries
+From third parties to protect against potential fraud (e.g., verification services)
+From publicly available sources
+
+5. Use of Personal Information
+We use personal information to:
+●
+●
+●
+●
+●
+●
+●
+●
+
+Verify vehicle registration on-site
+Communicate with users regarding their parking
+Provide reports to car park operators
+Ensure compliance with site terms and conditions
+Facilitate the delivery of products or services
+Provide customer support services
+Improve and manage our services
+Conduct direct marketing
+
+We may also use personal information to investigate, issue, or manage non-compliance notices; review
+appeals; and recover unpaid amounts in accordance with our terms and local legislation.
+Personal information provided during appeals is used primarily to review and respond to the noncompliance notice. However, where applicable, we may also use this information to issue follow-up
+communications, such as reminder notices or final demands. In certain cases, we may share relevant
+information with third-party recovery agencies for the purpose of pursuing unpaid amounts in
+accordance with applicable legislation.
+All appeal data is stored securely and may be retained for audit, enforcement, or legal compliance
+purposes.
+6. Disclosure of Personal Information
+We disclose personal information to car park operators for the purposes of:
+●
+●
+●
+●
+●
+●
+
+Verifying vehicle registration
+Car park operators for managing parking compliance
+Service providers and contractors who perform functions on our behalf
+Ensuring vehicles are registered on-site
+Regulatory authorities as required by law
+Potential buyers in the event of a business sale
+
+Car park operators have access to a secure dashboard containing this information. We also disclose
+personal information to third-party providers as necessary to provide our services. We ensure that third
+parties handle your personal information securely and comply with the relevant Australian Privacy
+Principles.
+
+If you make a payment via our website, your information may be shared with secure third-party
+payment providers such as Stripe. OnlyPark does not store your full payment details.
+Where necessary and lawful, we may disclose information to recovery agencies or legal representatives
+in connection with the enforcement of unpaid non-compliance notices. OnlyPark does not issue fines or
+government infringements. Notices are issued under private contractual terms in accordance with site
+signage and state-based legislation.
+7. Data Security
+We take reasonable steps to protect personal information from misuse, interference, loss, unauthorized
+access, modification, or disclosure. Our security measures include:
+●
+●
+●
+
+Secure access controls to the operator dashboard
+Encryption of data during transmission
+Regular security audits and assessments
+
+8. User Rights
+Users have the right to access and correct their personal information. To exercise these rights, users can
+contact us at info@onlypark.com.au
+9. Privacy Policy Updates
+We may update this Privacy Policy from time to time. Any changes will be posted on our website and
+will take effect immediately upon posting.
+10. Contact Us
+If you have any questions or concerns about this Privacy Policy or how we handle your personal
+information, please contact us at:
+OnlyPark Pty Ltd
+Suite 260 | 10 Albert Avenue
+Broadbeach QLD 4218
+info@onlypark.com.au
+
+11. Information Collected from Third Parties
+We may collect personal information about you from third parties. If your consent to such collection is
+required by law, we will first obtain your consent. This may include verification services to protect
+against potential fraud.
+12. Marketing Communications
+We may use and disclose your personal information to send you information about our products or
+services, as well as information that may be of interest to you. If you do not wish to receive these
+communications, you can opt-out by following the unsubscribe instructions included in the relevant
+communication or by contacting us directly. We will not sell your personal information to third parties
+for marketing purposes.
+13. Information Security
+OnlyPark is committed to the highest standards of information security. We use computer safeguards,
+such as firewalls and data encryption, and enforce physical access controls to our buildings and files.
+Access to personal information is authorized only for specific employees who need it to fulfill their job
+responsibilities.
+14. Data Breach Notification
+In the event of any loss, unauthorized access, or disclosure of your personal information that has or is
+likely to result in serious harm, we will investigate and notify you and the Office of the Australian
+Information Commissioner as soon as practicable.
+15. Minors
+Our services are designed for use by individuals of legal driving age. We do not knowingly collect
+personal information from minors. If we discover that we have received personal information from a
+minor, we will promptly delete it.
+16. Acceptance of Policy
+By using our services, you accept the terms and conditions of this Privacy Policy. We reserve the right to
+modify this policy at any time. Your continued use of our services after such changes will constitute your
+acceptance of those changes. Your use of our services is also governed by our Terms of Use and the
+Terms of Entry for Private Car Parks displayed onsite and linked in the footer of our website.
+
+17. Complaints Regarding Breaches of Privacy
+If you believe that your privacy has been compromised, please contact us. We will make every effort to
+resolve your complaint internally. If we do not resolve your complaint to your satisfaction, you may
+lodge a complaint with the Office of the Australian Information Commissioner.
+
+

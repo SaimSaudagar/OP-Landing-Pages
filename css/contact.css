@@ -107,6 +107,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    width: 100vw;
 }
 
 /* Force Inter font on all elements */
@@ -124,6 +125,7 @@ body {
 
 .container {
     width: 90vw;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 2vw;
 }
@@ -132,12 +134,14 @@ body {
 .header {
     background: transparent;
     position: relative;
-    width: 100%;
+    width: 100vw;
     z-index: 1000;
     border-bottom: 0.3px solid;
     border-image-source: linear-gradient(90deg, rgba(255, 81, 0, 0.05) 14.9%, #FF5100 50%, rgba(255, 81, 0, 0.05) 82.21%);
     border-image-slice: 1;
     animation: fadeInUp 1s ease 0.2s both;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar {
@@ -146,6 +150,8 @@ body {
     align-items: center;
     padding: 0.5vw 2vw 0.5vw 2vw;
     height: 5.5vw;
+    max-width: 1440px;
+    width: 100%;
 }
 
 .nav-brand {
@@ -238,6 +244,14 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     margin-top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content-container {
+    max-width: 1440px;
+    width: 100%;
+    position: relative;
 }
 
 .hero.custom-hero {
@@ -376,6 +390,15 @@ main {
     background-color: #121212;
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-section-content {
+    max-width: 1440px;
+    width: 100%;
+    position: relative;
 }
 
 .contact-section-wrapper {
@@ -731,6 +754,9 @@ main {
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;
     margin-top: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 
 .footer-container {
@@ -738,6 +764,7 @@ main {
     grid-template-columns: 2.8fr 1.2fr 1.2fr 1.8fr;
     gap: 3vw;
     width: 90vw;
+    max-width: 1440px;
     margin: 0 auto;
     align-items: flex-start;
 }
@@ -925,4 +952,366 @@ main {
     opacity: 0.4;
     filter: blur(1px);
     animation: glow 4s ease-in-out infinite;
+}
+
+/* Fixed positioning for screens above 1440px */
+@media (min-width: 1440px) {
+    /* Header and Navigation - Match service.css exactly */
+    .header {
+        width: 100vw; /* Full width for background */
+        display: flex;
+        justify-content: center;
+    }
+    
+    .navbar {
+        padding: 6px 24px 6px 24px; /* 0.5vw and 2vw at 1440px */
+        height: 66px; /* 5.5vw at 1440px */
+        max-width: 1440px;
+        width: 100%;
+    }
+    
+    .logo {
+        width: 36px; /* 3vw at 1440px */
+        height: 36px; /* 3vw at 1440px */
+        margin-right: 6px; /* 0.5vw at 1440px */
+    }
+    
+    .brand-text {
+        font-size: 20.4px; /* 1.7vw at 1440px */
+    }
+    
+    .nav-menu {
+        gap: 6px; /* 0.5vw at 1440px */
+    }
+    
+    .nav-link {
+        font-size: 13.2px; /* 1.1vw at 1440px */
+        padding: 6px 12px; /* 0.5vw and 1vw at 1440px */
+    }
+    
+    .hero-responsive-wrapper {
+        height: 676.8px; /* 47vw at 1440px */
+    }
+    
+    .hero-content-container {
+        width: 1440px;
+        padding: 0;
+    }
+    
+    .hero.custom-hero {
+        padding-top: 100.8px; /* 7% at 1440px */
+    }
+    
+    .hero-inner {
+        padding: 43.2px; /* 3% at 1440px */
+        padding-bottom: 0;
+    }
+    
+    .hero-left {
+        width: 70%;
+        padding-top: 14.4px; /* 1vw at 1440px */
+    }
+    
+    .hero-right {
+        width: 30%;
+    }
+    
+    .hero-logo-svg {
+        width: 403.2px; /* 28vw at 1440px */
+        height: 403.2px; /* 28vw at 1440px */
+        margin-bottom: 10%;
+    }
+    
+    .hero-heading {
+        font-size: 63.36px; /* 4.4vw at 1440px */
+    }
+    
+    .hero-subheading {
+        font-size: 23.76px; /* 1.65vw at 1440px */
+        gap: 11.52px; /* 0.8vw at 1440px */
+    }
+    
+    .disclaimer-icon {
+        width: 25.92px; /* 1.8vw at 1440px */
+        height: 25.92px; /* 1.8vw at 1440px */
+    }
+    
+    .hero-description {
+        font-size: 15.84px; /* 1.1vw at 1440px */
+        margin: 7.2px 0 0 0; /* 0.5vw at 1440px */
+        width: 70%;
+        line-height: 20.16px; /* 1.4vw at 1440px */
+    }
+    
+    .underline {
+        text-decoration-thickness: 1.44px; /* 0.1vw at 1440px */
+        text-underline-offset: 2.88px; /* 0.2vw at 1440px */
+    }
+    
+    .contact-section {
+        padding: 0 0 72px 0; /* 5vw at 1440px */
+    }
+    
+    .contact-section-content {
+        width: 1440px;
+        padding: 0;
+    }
+    
+    .contact-section-wrapper {
+        margin: 43.2px; /* 3% at 1440px */
+        padding-top: 7.2px; /* 0.5% at 1440px */
+        padding-bottom: 14.4px; /* 1% at 1440px */
+        border-radius: 28.8px; /* 2vw at 1440px */
+    }
+    
+    .contact-inner {
+        gap: 72px; /* 5vw at 1440px */
+        margin: 43.2px; /* 3% at 1440px */
+    }
+    
+    .contact-form-wrapper {
+        padding-right: 28.8px; /* 2vw at 1440px */
+    }
+    
+    .contact-form-wrapper h2,
+    .contact-form-wrapper h1 {
+        font-size: 36px; /* clamp at 1440px */
+    }
+    
+    .form-group {
+        gap: 0;
+    }
+    
+    .form-group.two-columns {
+        gap: 14.4px; /* 1vw at 1440px */
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 14.4px 21.6px; /* 1vw and 1.5vw at 1440px */
+        font-size: 14.4px; /* 1vw at 1440px */
+    }
+    
+    .form-group textarea {
+        padding: 14.4px 21.6px; /* 1vw and 1.5vw at 1440px */
+        font-size: 14.4px; /* 1vw at 1440px */
+        min-height: 216px; /* 15vw at 1440px */
+    }
+    
+    .submit-button {
+        padding: 14.4px 28.8px; /* 1vw and 2vw at 1440px */
+        border-radius: 14.4px; /* 1vw at 1440px */
+        font-size: 14.4px; /* 1vw at 1440px */
+    }
+    
+    .submit-button:hover {
+        border-radius: 14.4px; /* 1vw at 1440px */
+    }
+    
+    .contact-image-wrapper {
+        padding-right: 43.2px; /* 3% at 1440px */
+    }
+    
+    .form-heading {
+        font-size: 64.8px; /* 4.5vw at 1440px */
+    }
+    
+    .form-description {
+        font-size: 14.4px; /* 1vw at 1440px */
+        margin-bottom: 28.8px; /* 2vw at 1440px */
+        width: 70%;
+    }
+    
+    .contact-content {
+        padding: 28.8px 72px; /* 2vw and 5vw at 1440px */
+    }
+    
+    .contact-grid {
+        gap: 72px; /* 5vw at 1440px */
+    }
+    
+    .get-in-touch {
+        padding-right: 28.8px; /* 2vw at 1440px */
+    }
+    
+    .get-in-touch h2 {
+        font-size: 43.2px; /* 3vw at 1440px */
+        margin-bottom: 21.6px; /* 1.5vw at 1440px */
+    }
+    
+    .get-in-touch p {
+        font-size: 17.28px; /* 1.2vw at 1440px */
+        margin-bottom: 28.8px; /* 2vw at 1440px */
+    }
+    
+    .contact-methods {
+        gap: 28.8px; /* 2vw at 1440px */
+    }
+    
+    .contact-method {
+        border-width: 1.44px; /* 0.1vw at 1440px */
+        padding: 28.8px; /* 2vw at 1440px */
+        border-radius: 7.2px; /* 0.5vw at 1440px */
+    }
+    
+    .method-icon {
+        font-size: 28.8px; /* 2vw at 1440px */
+        margin-bottom: 14.4px; /* 1vw at 1440px */
+    }
+    
+    .method-details h3 {
+        font-size: 18.72px; /* 1.3vw at 1440px */
+        margin-bottom: 7.2px; /* 0.5vw at 1440px */
+    }
+    
+    .method-details p {
+        font-size: 14.4px; /* 1vw at 1440px */
+    }
+    
+    .contact-form {
+        border-width: 1.44px; /* 0.1vw at 1440px */
+        padding: 43.2px; /* 3% at 1440px */
+        border-radius: 7.2px; /* 0.5vw at 1440px */
+    }
+    
+    .contact-form h2 {
+        font-size: 43.2px; /* 3vw at 1440px */
+        margin-bottom: 28.8px; /* 2vw at 1440px */
+    }
+    
+    .form {
+        gap: 21.6px; /* 1.5vw at 1440px */
+    }
+    
+    .form-group {
+        gap: 7.2px; /* 0.5vw at 1440px */
+    }
+    
+    .form-group label {
+        font-size: 17.28px; /* 1.2vw at 1440px */
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 14.4px; /* 1vw at 1440px */
+        border-width: 1.44px; /* 0.1vw at 1440px */
+        border-radius: 7.2px; /* 0.5vw at 1440px */
+        font-size: 15.84px; /* 1.1vw at 1440px */
+    }
+    
+    .form-group textarea {
+        min-height: 144px; /* 10vw at 1440px */
+    }
+    
+    .submit-button {
+        font-size: 14.4px; /* 1vw at 1440px */
+        padding: 14.4px 28.8px; /* 1vw and 2vw at 1440px */
+        border-radius: 7.2px; /* 0.5vw at 1440px */
+        margin-top: 14.4px; /* 1vw at 1440px */
+    }
+    
+    /* Footer - Match service.css exactly */
+    .footer {
+        padding: 60px 0 36px 0; /* 5vw and 3vw at 1440px */
+        font-size: 12px; /* 1vw at 1440px */
+        letter-spacing: 0.12px; /* 0.01vw at 1440px */
+        width: 100vw; /* Keep full width for background */
+        display: flex;
+        justify-content: center;
+    }
+    
+    .footer-container {
+        gap: 36px; /* 3vw at 1440px */
+        width: 1080px; /* 90vw at 1440px */
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    
+    .footer-col {
+        gap: 12px; /* 1vw at 1440px */
+    }
+    
+    .footer-logo-row {
+        gap: 8.4px; /* 0.7vw at 1440px */
+        margin-bottom: 12px; /* 1vw at 1440px */
+    }
+    
+    .footer-logo-svg {
+        width: 26.4px; /* 2.2vw at 1440px */
+        height: 26.4px; /* 2.2vw at 1440px */
+    }
+    
+    .footer-brand-text {
+        font-size: 18px; /* 1.5vw at 1440px */
+        letter-spacing: 0.6px; /* 0.05vw at 1440px */
+    }
+    
+    .footer-info p {
+        margin: 0 0 6px 0; /* 0.5vw at 1440px */
+        font-size: 9.6px; /* 0.8vw at 1440px */
+    }
+    
+    .footer-info h3 {
+        margin: 0 0 6px 0; /* 0.5vw at 1440px */
+        font-size: 12px; /* 1vw at 1440px */
+    }
+    
+    .footer-icon img {
+        width: 13.2px; /* 1.1vw at 1440px */
+        height: 13.2px; /* 1.1vw at 1440px */
+    }
+    
+    .footer-note {
+        font-size: 10.2px; /* 0.85vw at 1440px */
+        margin-top: 6px; /* 0.5vw at 1440px */
+    }
+    
+    .footer-col h4 {
+        font-size: 13.2px; /* 1.1vw at 1440px */
+        margin-bottom: 12px; /* 1vw at 1440px */
+    }
+    
+    .footer-col ul {
+        gap: 8.4px; /* 0.7vw at 1440px */
+    }
+    
+    .footer-col ul li {
+        font-size: 12px; /* 1vw at 1440px */
+    }
+    
+    .footer-icon {
+        font-size: 13.2px; /* 1.1vw at 1440px */
+        margin-right: 6px; /* 0.5vw at 1440px */
+    }
+    
+    .footer-bottom {
+        padding-top: 36px; /* 3vw at 1440px */
+        padding-bottom: 24px; /* 2vw at 1440px */
+        font-size: 11.4px; /* 0.95vw at 1440px */
+    }
+    
+    .footer-bg-text {
+        bottom: -7.2px; /* -0.6vw at 1440px */
+        font-size: 86.4px; /* Fixed size instead of 6vw */
+        width: 100vw; /* Keep full width */
+    }
+    
+    .container {
+        width: 1080px; /* 90vw at 1440px */
+        max-width: 1440px;
+        padding: 0 24px; /* 2vw at 1440px */
+        margin: 0 auto;
+    }
+    
+    .glow-background-services {
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    
+    .glow-svg {
+        width: 1152px; /* 80vw at 1440px */
+        filter: blur(1.44px); /* 1px converted to fixed */
+    }
 }

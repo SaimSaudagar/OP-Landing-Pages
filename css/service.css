@@ -20,6 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    width: 100vw;
 }
 
 /* Force Inter font on all elements */
@@ -148,6 +149,7 @@ html {
 
 .container {
     width: 90vw;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 2vw;
 }
@@ -158,12 +160,14 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 1000;
     border-bottom: 0.3px solid;
     border-image-source: linear-gradient(90deg, rgba(255, 81, 0, 0.05) 14.9%, #FF5100 50%, rgba(255, 81, 0, 0.05) 82.21%);
     border-image-slice: 1;
     animation: fadeInUp 1s ease 0.2s both;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar {
@@ -172,6 +176,8 @@ html {
     align-items: center;
     padding: 0.5vw 2vw 0.5vw 2vw;
     height: 5.5vw;
+    max-width: 1440px;
+    width: 100%;
 }
 
 .nav-brand {
@@ -258,6 +264,14 @@ html {
     background-repeat: no-repeat;
     animation: scaleIn 1.2s ease 0.8s both;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content-container {
+    max-width: 1440px;
+    width: 100%;
+    position: relative;
 }
 
 .hero.custom-hero {
@@ -454,6 +468,16 @@ html {
 .service-tabs-wrapper {
     margin-top: 6.5%;
     position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.service-tabs-content {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 2vw;
+    position: relative;
 }
 
 .glow-background-services {
@@ -507,6 +531,9 @@ html {
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;
     margin-top: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 
 .footer-container {
@@ -514,6 +541,7 @@ html {
     grid-template-columns: 2.8fr 1.2fr 1.2fr 1.8fr;
     gap: 3vw;
     width: 90vw;
+    max-width: 1440px;
     margin: 0 auto;
     align-items: flex-start;
 }
@@ -649,6 +677,15 @@ html {
 .services {
     padding: 80px 0;
     background: #121212;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.services-container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 2vw;
 }
 
 .services-grid {
@@ -792,6 +829,15 @@ html {
 .additional-services {
     padding: 80px 0;
     background: #000000;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.additional-services-container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 2vw;
 }
 
 .additional-services h2 {
@@ -842,6 +888,15 @@ html {
     color: white;
     padding: 80px 0;
     text-align: center;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.cta-section-container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 2vw;
 }
 
 .cta-section h2 {
@@ -1034,6 +1089,16 @@ html {
 .pay-section-wrapper {
     position: relative;
     margin-top: 5vw;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.pay-section-content {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 2vw;
+    position: relative;
 }
 
 .glow-background-pay {
@@ -1089,7 +1154,16 @@ html {
 
 .contact-section {
     position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-section-content {
+    max-width: 1440px;
     width: 100%;
+    padding: 0 2vw;
+    position: relative;
 }
 
 .contact-button-container {
@@ -1166,4 +1240,251 @@ html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+/* Fixed positioning for screens above 1440px */
+@media (min-width: 1440px) {
+    /* Header and Navigation - Match home.css exactly */
+    .header {
+        width: 100vw; /* Full width for background */
+        display: flex;
+        justify-content: center;
+    }
+    
+    .navbar {
+        padding: 6px 24px 6px 24px; /* 0.5vw and 2vw at 1440px */
+        height: 66px; /* 5.5vw at 1440px */
+        max-width: 1440px;
+        width: 100%;
+    }
+    
+    .logo {
+        width: 36px; /* 3vw at 1440px */
+        height: 36px; /* 3vw at 1440px */
+        margin-right: 6px; /* 0.5vw at 1440px */
+    }
+    
+    .brand-text {
+        font-size: 20.4px; /* 1.7vw at 1440px */
+    }
+    
+    .nav-menu {
+        gap: 6px; /* 0.5vw at 1440px */
+    }
+    
+    .nav-link {
+        font-size: 13.2px; /* 1.1vw at 1440px */
+        padding: 6px 12px; /* 0.5vw and 1vw at 1440px */
+    }
+    
+    .hero-responsive-wrapper {
+        height: 630px;
+    }
+    
+    .hero-content-container {
+        width: 1440px;
+        padding: 0;
+    }
+    
+    .hero.custom-hero {
+        padding-top: 140px;
+    }
+    
+    .hero-inner {
+        padding: 12.6px 43.2px 0 43.2px;
+    }
+    
+    .hero-left,
+    .hero-right {
+        height: 380px;
+    }
+    
+    .hero-heading-anim {
+        font-size: 63.36px;
+    }
+    
+    .hero-subheading {
+        font-size: 24.192px;
+        margin: 14.4px 0 0 0;
+    }
+    
+    .hero-description {
+        font-size: 15.84px;
+        margin: 14.4px 0 0 0;
+    }
+    
+    .hero-cta.cta-button {
+        font-size: 18.72px;
+        margin: 12px 0 0 0;
+        width: 259.2px;
+        height: 46.08px;
+    }
+    
+    .services-cta.cta-button {
+        font-size: 18.72px;
+        margin: 14.4px 0 0 0;
+        width: 288px;
+        height: 50.4px;
+    }
+    
+    .service-tabs-wrapper {
+        margin-top: 93.6px;
+    }
+    
+    .service-tab {
+        font-size: 18.72px;
+        padding: 7.488px 23.04px;
+        height: 41.76px;
+    }
+    
+    .service-image-button-container .contact-team-btn {
+        font-size: 20.16px;
+        width: 288px;
+        height: 50.4px;
+        border-radius: 11.52px;
+    }
+    
+    .contact-team-btn {
+        font-size: 20.16px;
+        padding: 17.28px 25.92px;
+        width: 338.4px;
+        height: 64.8px;
+        border-radius: 11.52px;
+    }
+
+    .service-tabs-bar {
+        margin: -1.8vw 0 4.8vw 0;
+    }
+    
+    /* Footer - Match home.css exactly */
+    .footer {
+        padding: 60px 0 36px 0; /* 5vw and 3vw at 1440px */
+        font-size: 12px; /* 1vw at 1440px */
+        letter-spacing: 0.12px; /* 0.01vw at 1440px */
+        width: 100vw; /* Keep full width for background */
+        display: flex;
+        justify-content: center;
+    }
+    
+    .footer-container {
+        gap: 36px; /* 3vw at 1440px */
+        width: 1080px; /* 90vw at 1440px */
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    
+    .footer-col {
+        gap: 12px; /* 1vw at 1440px */
+    }
+    
+    .footer-logo-row {
+        gap: 8.4px; /* 0.7vw at 1440px */
+        margin-bottom: 12px; /* 1vw at 1440px */
+    }
+    
+    .footer-logo-svg {
+        width: 26.4px; /* 2.2vw at 1440px */
+        height: 26.4px; /* 2.2vw at 1440px */
+    }
+    
+    .footer-brand-text {
+        font-size: 18px; /* 1.5vw at 1440px */
+        letter-spacing: 0.6px; /* 0.05vw at 1440px */
+    }
+    
+    .footer-info p {
+        margin: 0 0 6px 0; /* 0.5vw at 1440px */
+        font-size: 9.6px; /* 0.8vw at 1440px */
+    }
+    
+    .footer-info h3 {
+        margin: 0 0 6px 0; /* 0.5vw at 1440px */
+        font-size: 12px; /* 1vw at 1440px */
+    }
+    
+    .footer-icon img {
+        width: 13.2px; /* 1.1vw at 1440px */
+        height: 13.2px; /* 1.1vw at 1440px */
+    }
+    
+    .footer-note {
+        font-size: 10.2px; /* 0.85vw at 1440px */
+        margin-top: 6px; /* 0.5vw at 1440px */
+    }
+    
+    .footer-col h4 {
+        font-size: 13.2px; /* 1.1vw at 1440px */
+        margin-bottom: 12px; /* 1vw at 1440px */
+    }
+    
+    .footer-col ul {
+        gap: 8.4px; /* 0.7vw at 1440px */
+    }
+    
+    .footer-col ul li {
+        font-size: 12px; /* 1vw at 1440px */
+    }
+    
+    .footer-icon {
+        font-size: 13.2px; /* 1.1vw at 1440px */
+        margin-right: 6px; /* 0.5vw at 1440px */
+    }
+    
+    .footer-bottom {
+        padding-top: 36px; /* 3vw at 1440px */
+        padding-bottom: 24px; /* 2vw at 1440px */
+        font-size: 11.4px; /* 0.95vw at 1440px */
+    }
+    
+    .footer-bg-text {
+        bottom: -7.2px; /* -0.6vw at 1440px */
+        font-size: 86.4px; /* Fixed size instead of 6vw */
+        width: 100vw; /* Keep full width */
+    }
+    
+    .container {
+        width: 1080px; /* 90vw at 1440px */
+        max-width: 1440px;
+        padding: 0 24px; /* 2vw at 1440px */
+        margin: 0 auto;
+    }
+    
+    .pay-section-wrapper {
+        margin-top: 72px;
+    }
+    
+    .pay-image {
+        padding-left: 86.4px;
+        padding-right: 86.4px;
+        padding-top: 129.6px;
+    }
+    
+    .contact-image {
+        padding-top: 144px;
+        padding-bottom: 144px;
+    }
+    
+    .contact-button-container {
+        position: absolute;
+        bottom: 45%;
+        right: 15%;
+        z-index: 10;
+    }
+    
+    .service-image-button-container {
+        position: absolute;
+        bottom: 47%;
+        right: 76.5%;
+        z-index: 3;
+    }
+    
+    .service-tabs-content,
+    .pay-section-content,
+    .contact-section-content,
+    .services-container,
+    .additional-services-container,
+    .cta-section-container {
+        width: 1440px;
+        padding: 0 28.8px;
+    }
 }
