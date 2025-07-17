@@ -939,7 +939,7 @@ main {
 
 .glow-background-services {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: -1;
@@ -1306,13 +1306,16 @@ main {
     }
     
     .glow-background-services {
-        top: 30%;
+        top: 50%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
+        width: 100vw;
+        z-index: -1;
     }
     
     .glow-svg {
-        width: 1152px; /* 80vw at 1440px */
+        width: 100vw; /* Keep full viewport width at all screen sizes */
         filter: blur(1.44px); /* 1px converted to fixed */
+        height: auto;
     }
 }
