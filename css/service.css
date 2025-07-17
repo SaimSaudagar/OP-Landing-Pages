@@ -10,6 +10,63 @@ html, body {
     margin: 0;
 }
 
+.learn-more-button-container {
+    position: absolute;
+    bottom: 50.4%;
+    left: 15.1%;
+    z-index: 10;
+}
+
+
+.learn-more-btn {
+    font-size: 0.9vw;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #FF8F00 0%, #FF0D00 50%);
+    background-size: 200% 100%;
+    border: none;
+    border-radius: 0.4em;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 143, 0, 0.08);
+    text-decoration: none;
+    display: inline-block;
+    margin: 1vw 0 0 0;
+    width: 13vw;
+    height: 2.2vw;
+    margin-top: 3vw;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.5s both;
+}
+
+.learn-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.learn-more-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(255, 143, 0, 0.3);
+    background-position: 100% 0;
+}
+
+.learn-more-btn:hover::before {
+    left: 100%;
+}
+
+
+
 body {
     font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif !important;
     line-height: 1.6;
@@ -474,9 +531,9 @@ html {
 }
 
 .service-tabs-content {
-    max-width: 1440px;
+    /* max-width: 1440px; */
     width: 100%;
-    padding: 0 2vw;
+    /* padding: 0 2vw; */
     position: relative;
 }
 
@@ -487,10 +544,11 @@ html {
     transform: translateX(-50%) translateY(-50%);
     z-index: 2;
     pointer-events: none;
+    width: 100vw;
 }
 
 .glow-svg {
-    width: 80vw;
+    width: 100vw;
     height: auto;
     opacity: 0.4;
     filter: blur(1px);
@@ -915,12 +973,13 @@ html {
 
 /* Service Tabs Bar Styles */
 .service-tabs-bar {
+    max-width: 1440px;
     display: flex;
     flex-wrap: wrap;
     column-gap: 1vw;
     row-gap: 1.5vw;
     justify-content: center;
-    margin: -0.8vw 0 0.8vw 0;
+    margin: 0 auto 2vw auto;
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;position: relative;
     z-index: 5;
@@ -1017,6 +1076,25 @@ html {
     position: relative;
     width: 100%;
     margin-top: 0;
+    background-image: url('../assets/service/scan_bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.scan-image {
+    position: relative;
+    z-index: 6;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.5s both;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+    margin-bottom: 2vw;
+}
+
+.scan-image:hover {
+    transform: scale(1.02);
 }
 
 #service-image-container {
@@ -1133,6 +1211,10 @@ html {
 @media (max-width: 768px) {
     .desktop-only { display: none !important; }
     .mobile-only { display: block !important; }
+
+    .service-content-wrapper {
+        background-image: url('../assets/service/scan_bg.png');
+    }
 }
 
 /* Start of Selection */
@@ -1326,6 +1408,35 @@ html {
         width: 288px;
         height: 50.4px;
     }
+
+    .service-content-wrapper {
+        width: 100vw; /* Keep full width for background */
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .service-content-wrapper .scan-image {
+        max-width: 1440px;
+        width: 100%;
+        position: relative;
+    }
+
+    .learn-more-btn {
+        font-size: 16.8px; /* 1.4vw at 1440px */
+        margin: 12px 0 0 0; /* 1vw at 1440px */
+        width: 250px; /* 20vw at 1440px */
+        height: 44px; /* 3vw at 1440px */
+        margin-top: 36px; /* 3vw at 1440px */
+    }
+    
+    .learn-more-button-container {
+        position: absolute;
+        top: 40.5%;
+        left: 9.6%;
+        z-index: 10;
+        transform: translateX(150px);
+    }
     
     .service-tabs-wrapper {
         margin-top: 93.6px;
@@ -1353,7 +1464,7 @@ html {
     }
 
     .service-tabs-bar {
-        margin: -1.8vw 0 4.8vw 0;
+        margin: 0 auto 2vw auto;
     }
     
     /* Footer - Match home.css exactly */
@@ -1478,7 +1589,7 @@ html {
         z-index: 3;
     }
     
-    .service-tabs-content,
+    
     .pay-section-content,
     .contact-section-content,
     .services-container,

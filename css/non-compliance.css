@@ -623,6 +623,8 @@ html {
     transition: left 0.5s ease;
 }
 
+
+
 .enforcement-cta:hover {
     filter: brightness(1.1);
     box-shadow: 0 0.4vw 2vw 0 rgba(255, 81, 0, 0.16);
@@ -633,6 +635,7 @@ html {
 .enforcement-cta:hover::before {
     left: 100%;
 }
+
 
 
 .services-grid {
@@ -988,7 +991,7 @@ html {
     top: 0;
     left: 80%;
     transform: translateX(-50%) translateY(-30%); /* Adjust Y as needed */
-    width: 100%;
+    width: 100vw;
     z-index: 0; /* Behind FAQ content */
     pointer-events: none;
 }

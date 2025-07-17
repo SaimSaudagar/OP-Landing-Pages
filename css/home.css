@@ -755,7 +755,7 @@ body::-webkit-scrollbar {
 .about-section-wrapper {
     position: relative;
     width: 100%;
-    overflow: visible;
+    margin-top: 0;
     background-image: url('../assets/home/about-bg.svg');
     background-size: cover;
     background-position: center;
@@ -818,6 +818,7 @@ body::-webkit-scrollbar {
     transform: translateX(-50%) translateY(-50%);
     z-index: -1;
     pointer-events: none;
+    width: 100vw;
 }
 
 .glow-background-services-2 {
@@ -827,6 +828,7 @@ body::-webkit-scrollbar {
     transform: translateX(-50%) translateY(-50%);
     z-index: -1;
     pointer-events: none;
+    width: 100vw;
 }
 
 .service-logo-background {
@@ -843,7 +845,7 @@ body::-webkit-scrollbar {
 }
 
 .glow-svg {
-    width: 80vw;
+    width: 100vw;
     height: auto;
     opacity: 0.4;
     filter: blur(1px);
@@ -1892,7 +1894,7 @@ body::-webkit-scrollbar {
     
     /* Glow background elements */
     .glow-svg {
-        width: 80vw; /* Keep responsive width */
+        width: 100vw; /* Keep responsive width */
     }
     
     .glow-background-partners {
