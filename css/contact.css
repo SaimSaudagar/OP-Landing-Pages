@@ -132,8 +132,10 @@ body {
 
 /* Header */
 .header {
-    background: transparent;
-    position: relative;
+    background: #121212;
+    position: sticky;
+    top: 0;
+    left: 0;
     width: 100vw;
     z-index: 1000;
     border-bottom: 0.3px solid;
@@ -142,6 +144,24 @@ body {
     animation: fadeInUp 1s ease 0.2s both;
     display: flex;
     justify-content: center;
+}
+
+
+.hero-heading-gradient-text {
+    font-size: inherit;
+    line-height: 1.05;
+
+ 
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(40%);
+    background: linear-gradient(90deg, #FF5100 0%, #FF0D00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 .navbar {
@@ -335,7 +355,7 @@ main {
 }
 
 .hero-subheading {
-    font-size: 1.65vw;
+    font-size: 1.5vw;
     font-family: 'Inter', sans-serif;
     font-weight: 800;
     color: #FF5100;
@@ -364,7 +384,7 @@ main {
 }
 
 .hero-description {
-    font-size: 1.1vw;
+    font-size: 1vw;
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     color: #fff;
@@ -379,7 +399,7 @@ main {
 }
 
 .hero-description-2 {
-    font-size: 1.1vw;
+    font-size: 1vw;
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     color: #fff;
@@ -1040,7 +1060,7 @@ main {
     }
     
     .hero-subheading {
-        font-size: 23.76px; /* 1.65vw at 1440px */
+        font-size: 21px; /* 1.65vw at 1440px */
         gap: 11.52px; /* 0.8vw at 1440px */
     }
     
@@ -1050,14 +1070,14 @@ main {
     }
     
     .hero-description {
-        font-size: 15.84px; /* 1.1vw at 1440px */
+        font-size: 14.4px; /* 1.1vw at 1440px */
         margin: 7.2px 0 0 0; /* 0.5vw at 1440px */
         width: 66%;
         line-height: 1; /* 1.4vw at 1440px */
     }
 
     .hero-description-2 {
-        font-size: 15.84px; /* 1.1vw at 1440px */
+        font-size: 14.4px; /* 1.1vw at 1440px */
         margin: 7.2px 0 0 0; /* 0.5vw at 1440px */
         width: 75%;
         line-height: 1; /* 1.4vw at 1440px */

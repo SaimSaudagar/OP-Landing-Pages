@@ -54,6 +54,7 @@ body::-webkit-scrollbar {
     flex-direction: column;
     flex: 1;
     min-height: 0;
+    margin-top: -5.5vw;
 }
 /* Page load animation */
 @keyframes pageLoad {
@@ -168,8 +169,8 @@ body::-webkit-scrollbar {
 
 /* Header and Navigation */
 .header {
-    background: transparent;
-    position: absolute;
+    background: #121212;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;

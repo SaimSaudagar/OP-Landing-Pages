@@ -213,8 +213,8 @@ html {
 
 /* Header and Navigation */
 .header {
-    background: transparent;
-    position: absolute;
+    background: #121212;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100vw;
@@ -344,6 +344,8 @@ html {
     margin: 0;
 }
 
+
+
 .hero.custom-hero {
     background: transparent;
     padding-top: 10%;
@@ -384,6 +386,7 @@ html {
     align-items: flex-end;
     justify-content: center;
     animation: fadeInRight 1.2s ease 1.2s both;
+    margin-top: 2.5vw;
 }
 
 .hero-logo-svg {
@@ -423,13 +426,11 @@ html {
 .hero-heading-gradient-text {
     font-size: inherit;
     line-height: 1.05;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    opacity: 0;
+
+ 
     transition: opacity 0.3s, transform 0.3s;
     transform: translateY(40%);
-    background: linear-gradient(78.33deg, #FF8F00 15.54%, #FF5100 69.44%);
+    background: linear-gradient(90deg, #FF5100 0%, #FF0D00 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -439,11 +440,11 @@ html {
     text-decoration: none;
 }
 
-.hero-heading-gradient-text.active {
+/* .hero-heading-gradient-text.active {
     opacity: 1;
     position: static;
     transform: translateY(0);
-}
+} */
 
 .hero-subheading {
     font-size: 1.68vw;

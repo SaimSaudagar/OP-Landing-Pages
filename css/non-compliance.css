@@ -186,8 +186,10 @@ html {
 
 /* Header and Navigation */
 .header {
-    background: transparent;
-    position: relative;
+    background: #121212;
+    position: sticky;
+    top: 0;
+    left: 0;
     width: 100vw;
     z-index: 1000;
     border-bottom: 0.3px solid;
@@ -371,6 +373,23 @@ html {
     width: 120%;
     text-decoration: none;
     animation: fadeInUp 1s ease 1.2s both;
+}
+
+.hero-heading-gradient-text {
+    font-size: inherit;
+    line-height: 1.05;
+
+ 
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(40%);
+    background: linear-gradient(90deg, #FF5100 0%, #FF0D00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 .hero-left h2 {
