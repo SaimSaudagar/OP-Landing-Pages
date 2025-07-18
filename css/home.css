@@ -1673,7 +1673,7 @@ body::-webkit-scrollbar {
     }
     
     .services-image-switcher.ops-active {
-        top: 18vw; /* -25vw at 1440px */
+        top: -18vw; /* -25vw at 1440px */
     }
     
     .learn-more-btn {

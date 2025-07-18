@@ -265,7 +265,6 @@ main {
     background: transparent;
     padding: 0;
     margin: 0;
-    padding-top: 7%;
     opacity: 0;
     animation: scaleIn 1.2s ease 0.8s both;
 }
@@ -374,7 +373,7 @@ main {
     width: 70%;
     opacity: 0;
     animation: fadeInUp 1s ease 1.8s both;
-    line-height: 1.4vw;
+    line-height: 1;
 }
 
 .underline {
@@ -753,7 +752,6 @@ main {
     letter-spacing: 0.01vw;
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;
-    margin-top: auto;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -939,12 +937,13 @@ main {
 
 .glow-background-services {
     position: absolute;
-    top: 50%;
+    bottom: -50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%);
     z-index: -1;
     pointer-events: none;
     width: 100vw;
+    clip-path: inset(0 0 10% 0);
 }
 
 .glow-svg {
@@ -999,10 +998,6 @@ main {
         padding: 0;
     }
     
-    .hero.custom-hero {
-        padding-top: 100.8px; /* 7% at 1440px */
-    }
-    
     .hero-inner {
         padding: 43.2px; /* 3% at 1440px */
         padding-bottom: 0;
@@ -1041,7 +1036,7 @@ main {
         font-size: 15.84px; /* 1.1vw at 1440px */
         margin: 7.2px 0 0 0; /* 0.5vw at 1440px */
         width: 70%;
-        line-height: 20.16px; /* 1.4vw at 1440px */
+        line-height: 1; /* 1.4vw at 1440px */
     }
     
     .underline {
@@ -1306,11 +1301,12 @@ main {
     }
     
     .glow-background-services {
-        top: 50%;
+        bottom: -50%;
         left: 50%;
-        transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%);
         width: 100vw;
         z-index: -1;
+        clip-path: inset(0 0 20% 0);
     }
     
     .glow-svg {
