@@ -472,6 +472,9 @@ const tabImageMap = {
     }
 };
 
+/**
+ * Updates the service image for the first tab section
+ */
 function updateServiceImage(tabKey) {
     const container = document.getElementById('service-image-container');
     if (!container) return;
@@ -480,25 +483,61 @@ function updateServiceImage(tabKey) {
     container.innerHTML = `<img src="${imgSrc}" alt="${tabKey}"/>`;
 }
 
+/**
+ * Updates the service image for the second tab section
+ */
+function updateServiceImage2(tabKey) {
+    const container = document.getElementById('service-image-container-2');
+    if (!container) return;
+    const isMobile = window.innerWidth <= 768;
+    const imgSrc = isMobile ? tabImageMap[tabKey].png : tabImageMap[tabKey].svg;
+    container.innerHTML = `<img src="${imgSrc}" alt="${tabKey}"/>`;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Handle first set of tabs
     const tabs = document.querySelectorAll('.service-tab');
     tabs.forEach(tab => {
         tab.addEventListener('click', function() {
+            // Remove selected class from all tabs in this section
             tabs.forEach(t => t.classList.remove('selected'));
             this.classList.add('selected');
             updateServiceImage(this.getAttribute('data-tab'));
         });
     });
-    // Show initial image
+
+    // Handle second set of tabs
+    const tabs2 = document.querySelectorAll('.service-tab-2');
+    tabs2.forEach(tab => {
+        tab.addEventListener('click', function() {
+            // Remove selected class from all tabs in this section
+            tabs2.forEach(t => t.classList.remove('selected'));
+            this.classList.add('selected');
+            updateServiceImage2(this.getAttribute('data-tab'));
+        });
+    });
+
+    // Show initial images for both sections
     const selected = document.querySelector('.service-tab.selected');
     if (selected) {
         updateServiceImage(selected.getAttribute('data-tab'));
     }
-    // Update image on resize
+
+    const selected2 = document.querySelector('.service-tab-2.selected');
+    if (selected2) {
+        updateServiceImage2(selected2.getAttribute('data-tab'));
+    }
+
+    // Update images on resize for both sections
     window.addEventListener('resize', function() {
         const selected = document.querySelector('.service-tab.selected');
         if (selected) {
             updateServiceImage(selected.getAttribute('data-tab'));
+        }
+
+        const selected2 = document.querySelector('.service-tab-2.selected');
+        if (selected2) {
+            updateServiceImage2(selected2.getAttribute('data-tab'));
         }
     });
 }); 
