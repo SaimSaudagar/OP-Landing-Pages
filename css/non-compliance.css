@@ -147,7 +147,7 @@ html {
 }
 
 .important-info-container {
-    width: 69vw;
+    width: 60vw;
     max-width: 1440px;
     padding: 3%;
     padding-bottom: 0;
@@ -172,7 +172,7 @@ html {
     width: 100%;
     max-width: 1440px;
     padding: 3%;
-    padding-top: 3%;
+    padding-top: 5%;
     padding-bottom: 0;
     margin: 0 auto;
 }
@@ -294,6 +294,7 @@ html {
     animation: scaleIn 1.2s ease 0.8s both;
     display: flex;
     justify-content: center;
+    height: 35vw;
 }
 
 .hero-content-container {
@@ -399,8 +400,8 @@ html {
 }
 
 .hero-logo-svg {
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
     object-fit: contain;
     display: block;
     opacity: 0.7;
@@ -415,7 +416,7 @@ html {
 
 .hero-section.custom-hero {
     background: transparent;
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
 .hero-left h2 {
@@ -525,13 +526,13 @@ html {
 
 .info-list li {
     font-style: normal;
-    font-size: 1.4vw;
-    line-height: 2vw;
+    font-size: 1.2vw;
+    line-height: 1.5vw;
     letter-spacing: 0%;
     color: rgba(255, 255, 255);
     padding-left: 2vw;
     position: relative;
-    font-weight: 400;
+    font-weight: 300;
 }
 .info-list li::before {
     content: "•";
@@ -545,15 +546,20 @@ html {
     position: relative;
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;
+    margin-top: 5vw;
+    background-image: url('../assets/home/about-bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .enforcement-overview h2 {
     font-weight: 600;
     font-style: normal;
-    font-size: 3.2vw;
+    font-size: 4vw;
     line-height: 3.1vw;
     letter-spacing: 0%;
-    margin-bottom: 3vw;
+    margin-bottom: 1vw;
     background: linear-gradient(90.09deg, #FF8F00 0%, #FF0D00 25%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -585,7 +591,7 @@ html {
     font-size: 1.1vw;
     line-height: 100%;
     letter-spacing: 0%;
-    margin-bottom: 1.5vw;
+    margin-bottom: 1vw;
     max-width: 46%;
 } 
 
@@ -642,7 +648,8 @@ html {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3vw;
-    margin-top: 3vw;
+    margin-top: 2vw;
+    padding-bottom: 3vw;
     opacity: 0;
     animation: fadeInUp 1s ease 0.8s both;
 }
@@ -808,6 +815,114 @@ html {
 @media (max-width: 768px) {
     .desktop-only { display: none !important; }
     .mobile-only { display: block !important; }
+    
+    .enforcement-overview {
+        background-image: url('../assets/home/about-bg.png');
+    }
+}
+
+/* Contact Section Styles from home.css */
+.contact-image {
+    padding-bottom: 10%;
+    width: 95%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.contact-section {
+    position: relative;
+    width: 100%;
+}
+
+.contact-logo {
+    height: 90vh;
+    width: auto;
+}
+
+.contact-button-container {
+    position: absolute;
+    bottom: 45%;
+    right: 15%;
+    z-index: 10;
+}
+
+.contact-team-btn {
+    display: inline-block;
+    background: linear-gradient(86.19deg, #FF8F00 0%, #FF0D00 25%);
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.4vw;
+    padding: 1.2vw 1.8vw;
+    width: 23.5vw;
+    height: 4.5vw;
+    border-radius: 0.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6vw;
+}
+
+.contact-team-btn:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 143, 0, 0.3);
+    background: linear-gradient(86.19deg, #FF9F20 3.12%, #FF1D10 96.88%);
+}
+
+.contact-team-btn {
+    display: inline-block;
+    background: linear-gradient(86.19deg, #FF8F00 0%, #FF0D00 25%);
+    background-size: 200% 100%;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.4vw;
+    padding: 1.2vw 1.8vw;
+    width: 23.5vw;
+    height: 4.5vw;
+    border-radius: 0.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6vw;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.5s both;
+}
+
+.contact-team-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.contact-team-btn:hover::before {
+    left: 100%;
+    background-position: 100% 0;
+}
+
+.service-logo-background {
+    position: absolute;
+    top: 15%;
+    right: 0%;
+    transform: translateX(15%) translateY(-50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.service-logo-bg-svg {
+    width: 30vw;
 }
 
 /* Footer */
@@ -1183,7 +1298,7 @@ html {
     }
 
     .info-list {
-        width: 67%;
+        width: 66%;
     }
     
     .faq-section {
@@ -1374,5 +1489,47 @@ html {
     
     .glow-svg {
         filter: blur(144px); /* 100px converted to fixed */
+    }
+    
+    /* Contact Section Media Query Styles */
+    .contact-section {
+        width: 100vw; /* Keep full width for background */
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .contact-image {
+        max-width: 1440px;
+        width: 100%;
+        position: relative;
+    }
+    
+    .contact-logo {
+        height: 400px; /* Fixed height instead of 90vh */
+        width: auto;
+    }
+    
+    .contact-team-btn {
+        font-size: 16.8px; /* 1.4vw at 1440px */
+        padding: 14.4px 21.6px; /* 1.2vw and 1.8vw at 1440px */
+        width: 282px; /* 23.5vw at 1440px */
+        height: 54px; /* 4.5vw at 1440px */
+        border-radius: 9.6px; /* 0.8vw at 1440px */
+        gap: 7.2px; /* 0.6vw at 1440px */
+    }
+    
+    .contact-button-container {
+        position: absolute;
+        bottom: 50%;
+        left: 45%;
+        z-index: 10;
+        transform: translateX(calc(720px - 216px - 141px)); /* Center of 1440px (720px) minus 15% of 1440px (216px) minus half button width (141px) */
+    }
+    
+    .service-logo-background {
+        top: 15%; /* percentage stays same */
+        right: 0%; /* percentage stays same */
+        transform: translateX(15%) translateY(-50%); /* percentage stays same */
     }
 }

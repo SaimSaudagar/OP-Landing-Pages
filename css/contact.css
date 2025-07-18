@@ -235,7 +235,7 @@ main {
 /* Hero Section */
 .hero-responsive-wrapper {
     width: 100vw;
-    height: 47vw;
+    height: 35vw;
     aspect-ratio: 16/7;
     position: relative;
     overflow: hidden;
@@ -322,7 +322,7 @@ main {
 }
 
 .hero-heading {
-    font-size: 4.4vw;
+    font-size: 4vw;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     color: #EBEBEB;
@@ -347,6 +347,7 @@ main {
     display: flex;
     align-items: center;
     gap: 0.8vw;
+    padding-top: 1vw !important;
 }
 
 .disclaimer-icon {
@@ -374,6 +375,22 @@ main {
     opacity: 0;
     animation: fadeInUp 1s ease 1.8s both;
     line-height: 1;
+    padding-top: 0.5vw;
+}
+
+.hero-description-2 {
+    font-size: 1.1vw;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    background: none;
+    margin: 0.5vw 0 0 0;
+    padding: 0;
+    width: 70%;
+    opacity: 0;
+    animation: fadeInUp 1s ease 1.8s both;
+    line-height: 1;
+    padding-top: 0.5vw;
 }
 
 .underline {
@@ -1035,7 +1052,14 @@ main {
     .hero-description {
         font-size: 15.84px; /* 1.1vw at 1440px */
         margin: 7.2px 0 0 0; /* 0.5vw at 1440px */
-        width: 70%;
+        width: 66%;
+        line-height: 1; /* 1.4vw at 1440px */
+    }
+
+    .hero-description-2 {
+        font-size: 15.84px; /* 1.1vw at 1440px */
+        margin: 7.2px 0 0 0; /* 0.5vw at 1440px */
+        width: 75%;
         line-height: 1; /* 1.4vw at 1440px */
     }
     
@@ -1306,7 +1330,7 @@ main {
         transform: translateX(-50%);
         width: 100vw;
         z-index: -1;
-        clip-path: inset(0 0 20% 0);
+        clip-path: inset(0 0 10% 0);
     }
     
     .glow-svg {

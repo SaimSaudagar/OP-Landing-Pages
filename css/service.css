@@ -523,7 +523,7 @@ html {
 }
 
 .service-tabs-wrapper {
-    margin-top: 6.5%;
+    margin-top: 2%;
     position: relative;
     width: 100vw;
     display: flex;
@@ -993,11 +993,12 @@ html {
     flex-wrap: wrap;
     column-gap: 1vw;
     row-gap: 1.5vw;
-    justify-content: center;
+    justify-content: left;
     margin: 0 auto 2vw auto;
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;position: relative;
     z-index: 5;
+    padding-left: 2vw;
 }
 
 .service-tabs-bar-2 {
@@ -1006,11 +1007,12 @@ html {
     flex-wrap: wrap;
     column-gap: 1vw;
     row-gap: 1.5vw;
-    justify-content: center;
+    justify-content: left;
     margin: 0 auto 2vw auto;
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;position: relative;
     z-index: 5;
+    padding-left: 2vw;
 }
 
 .service-tab {
@@ -1263,14 +1265,16 @@ html {
 .service-image-button-container {
     position: absolute;
     bottom: 47%;
-    right: 76.5%;
+    left: 50%;
+    transform: translateX(-85%);
     z-index: 3;
 }
 
 .service-image-button-container-2 {
     position: absolute;
     bottom: 47%;
-    right: 76.5%;
+    left: 50%;
+    transform: translateX(-85%);
     z-index: 3;
 }
 
@@ -1350,9 +1354,9 @@ html {
 .pay-image {
     width: 100%;
     height: auto;
-    padding-left: 6vw;
-    padding-right: 6vw;
-    padding-top: 9vw;
+    padding-left: 12vw;
+    padding-right: 12vw;
+    padding-top: 0vw;
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;
     transition: transform 0.3s ease;
@@ -1545,7 +1549,7 @@ html {
     
     .hero-left,
     .hero-right {
-        height: 380px;
+        height: 390px;
     }
     
     .hero-heading-anim {
@@ -1560,6 +1564,7 @@ html {
     .hero-description {
         font-size: 15.84px;
         margin: 14.4px 0 0 0;
+        width: 67%;
     }
     
     .hero-cta.cta-button {
@@ -1790,7 +1795,8 @@ html {
     .service-image-button-container-2 {
         position: absolute;
         bottom: 47%;
-        right: 68.5%;
+        left: 50%;
+        transform: translateX(-235%);
         z-index: 3;
     }
     
