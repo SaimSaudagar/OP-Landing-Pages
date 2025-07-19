@@ -655,9 +655,15 @@ body::-webkit-scrollbar {
     transition: left 0.5s ease;
 }
 
+.contact-team-btn:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 143, 0, 0.3);
+    background: linear-gradient(86.19deg, #FF9F20 3.12%, #FF1D10 96.88%);
+    background-position: 100% 0;
+}
+
 .contact-team-btn:hover::before {
     left: 100%;
-    background-position: 100% 0;
 }
 /* End of Selection */
 
@@ -1788,6 +1794,9 @@ body::-webkit-scrollbar {
         max-width: 1440px;
         width: 100%;
         position: relative;
+        padding: 0 63px;
+        padding-top: 144px;
+        padding-bottom: 144px;
     }
     
     .contact-logo {
@@ -1796,20 +1805,18 @@ body::-webkit-scrollbar {
     }
     
     .contact-team-btn {
-        font-size: 16.8px; /* 1.4vw at 1440px */
-        padding: 14.4px 21.6px; /* 1.2vw and 1.8vw at 1440px */
-        width: 282px; /* 23.5vw at 1440px */
-        height: 54px; /* 4.5vw at 1440px */
-        border-radius: 9.6px; /* 0.8vw at 1440px */
-        gap: 7.2px; /* 0.6vw at 1440px */
+        font-size: 20.16px;
+        padding: 17.28px 25.92px;
+        width: 338.4px;
+        height: 64.8px;
+        border-radius: 11.52px;
     }
     
     .contact-button-container {
         position: absolute;
-        bottom: 50%;
-        left: 45%;
+        bottom: 45%;
+        right: 25.5%;
         z-index: 10;
-        transform: translateX(calc(720px - 216px - 141px)); /* Center of 1440px (720px) minus 15% of 1440px (216px) minus half button width (141px) */
     }
     
     /* All section wrapper images */
