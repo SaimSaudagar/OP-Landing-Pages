@@ -326,7 +326,7 @@ html {
     position: relative;
     padding: 0;
     gap: 0;
-    padding: 2% 3% 0 3%;
+    padding: 0% 3% 0 3%;
 }
 
 .hero-content {
@@ -355,7 +355,7 @@ html {
 }
 
 .hero-right {
-    width: auto;
+    width: 44%;
     height: 100%;
     align-items: flex-end;
     justify-content: center;
@@ -862,7 +862,7 @@ html {
 }
 
 .contact-logo {
-    height: 90vh;
+    height: 35vh;
     width: auto;
 }
 

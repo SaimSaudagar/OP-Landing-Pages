@@ -54,7 +54,6 @@ body::-webkit-scrollbar {
     flex-direction: column;
     flex: 1;
     min-height: 0;
-    margin-top: -5.5vw;
 }
 /* Page load animation */
 @keyframes pageLoad {
@@ -269,14 +268,22 @@ body::-webkit-scrollbar {
     position: relative;
     overflow: visible;
     animation: scaleIn 1.2s ease 0.8s both;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content-container {
+    max-width: 1440px;
+    width: 100%;
+    position: relative;
 }
 
 .hero-video {
     position: absolute;
-    top: 5.5vw;
+    top: 0;
     left: 0;
     width: 102%;
-    height: 85%;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
 }
@@ -285,17 +292,18 @@ body::-webkit-scrollbar {
 .hero-responsive-wrapper::before {
     content: '';
     position: absolute;
-    top: 5.5vw;
+    top: 0;
     left: 0;
     width: 102%;
-    height: 85%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 0;
     pointer-events: none;
 }
 
 .hero.custom-hero {
-    position: relative;
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -314,7 +322,7 @@ body::-webkit-scrollbar {
     position: relative;
     padding: 0;
     gap: 0;
-    padding: 2% 3% 0 3%;
+    padding: 0% 3% 0 3%;
 }
 
 .hero-left, .hero-right {
@@ -333,7 +341,7 @@ body::-webkit-scrollbar {
 }
 
 .hero-right {
-    width: auto;
+    width: 44%;
     height: 100%;
 }
 
@@ -344,12 +352,12 @@ body::-webkit-scrollbar {
 }
 
 .hero-logo-svg {
-    width: 100%;
-    height: 95%;
+    width: 85%;
+    height: 85%;
     object-fit: contain;
     display: block;
     opacity: 0.7;
-    transform: translateY(-15px) !important;
+    transform: translateY(-2vw) !important;
     transition: transform 0.3s ease;
 }
 
@@ -359,7 +367,7 @@ body::-webkit-scrollbar {
 }
 
 .hero-heading-anim {
-    font-size: 4vw;
+    font-size: 4.4vw;
     line-height: 1.05;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
@@ -403,13 +411,13 @@ body::-webkit-scrollbar {
 }
 
 .hero-subheading {
-    font-size: 1.5vw;
+    font-size: 1.68vw;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     color: #FF5100;
     margin: 1vw 0 0 0;
     padding: 0;
-    width: 65%;
+    width: 70%;
     text-decoration: none;
     animation: fadeInUp 1s ease 1.4s both;
     line-height: normal;
@@ -420,9 +428,14 @@ body::-webkit-scrollbar {
     font-family: 'Inter', sans-serif;
     color: #fff;
     background: none;
+    border-radius: 0;
+    line-height: normal;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.1vw;
     margin: 1vw 0 0 0;
     padding: 0;
-    width: 61%;
+    width: 71%;
 }
 
 .hero-cta.cta-button {
@@ -441,9 +454,9 @@ body::-webkit-scrollbar {
     box-shadow: 0 2px 8px rgba(255, 143, 0, 0.08);
     text-decoration: none;
     display: inline-block;
-    margin: 3.5vw 0 0 0;
-    width: 19vw;
-    height: 3.3vw;
+    margin: 2vw 0 0 0;
+    width: 18vw;
+    height: 3.2vw;
     animation: fadeInUp 1s ease 1.8s both;
     position: relative;
     overflow: hidden;
@@ -522,7 +535,8 @@ body::-webkit-scrollbar {
     width: auto;
     max-width: 100%;
     height: auto;
-    padding-bottom: 4%;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;
     transition: transform 0.3s ease;
@@ -1052,7 +1066,7 @@ body::-webkit-scrollbar {
 }
 .hero.custom-hero {
     background: transparent;
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
 .hero-subheading {
@@ -1330,7 +1344,7 @@ body::-webkit-scrollbar {
 
 .services-image-switcher.ops-active {
     position: relative;
-    top: -25vw;
+    top: -30vw;
 }
 
 
@@ -1463,6 +1477,11 @@ body::-webkit-scrollbar {
     body {
         overflow-x: hidden;
     }
+
+    .parking-image {
+        padding-top: 0;
+        padding-bottom: 50px;
+    }
     
     /* Container and layout constraints */
     .container {
@@ -1519,23 +1538,31 @@ body::-webkit-scrollbar {
         margin: 0 auto;
         position: relative;
         overflow: hidden; /* Prevent any movement */
+        display: flex;
+        justify-content: center;
+    }
+    
+    .hero-content-container {
+        max-width: 1440px;
+        width: 100%;
+        position: relative;
     }
     
     .hero-video {
-        top: 66px; /* 5.5vw at 1440px */
+        top: 0; /* Position relative to hero-responsive-wrapper */
         width: 100vw; /* Keep full width */
-        height: 535px; /* Fixed height for video */
+        height: 550px; /* Full height of hero-responsive-wrapper */
     }
     
     .hero-responsive-wrapper::before {
-        top: 66px; /* 5.5vw at 1440px */
+        top: 0; /* Position relative to hero-responsive-wrapper */
         width: 100vw; /* Keep full width */
-        height: 535px; /* Fixed height for overlay */
+        height: 550px; /* Full height of hero-responsive-wrapper */
     }
     
     /* Hero content container constraint */
     .hero.custom-hero {
-        padding-top: 144px !important; /* Fixed padding instead of 10% */
+        padding-top: 70px !important; /* Fixed padding instead of 10% */
         position: relative;
         overflow: hidden; /* Prevent movement */
     }
@@ -1585,7 +1612,8 @@ body::-webkit-scrollbar {
     /* Hero SVG Logo */
     .hero-logo-svg {
         width: 100%;
-        height: 95%;
+        height: 100%;
+        padding-top: 40px;
     }
     
     .hero-left {
