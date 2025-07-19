@@ -575,7 +575,7 @@ html {
 .enforcement-overview h2 {
     font-weight: 600;
     font-style: normal;
-    font-size: 4vw;
+    font-size: 4.4vw;
     line-height: 3.1vw;
     letter-spacing: 0%;
     margin-bottom: 1vw;
@@ -721,6 +721,12 @@ html {
 .service-card h3 {
     font-size: 1.3vw;
     margin-bottom: 1vw;
+    background: linear-gradient(90.09deg, #FF8F00 0.08%, #FF0D00 60.01%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
 }
 
 .service-card p {
@@ -1199,7 +1205,7 @@ html {
     }
     
     .hero-inner {
-        padding: 12.6px 43.2px 0 43.2px;
+        padding: 0 43.2px 0 43.2px;
     }
     
     .hero-left h1 {
@@ -1223,6 +1229,7 @@ html {
     
     .hero-logo-svg {
         transform: translateY(-57.6px); /* -4vw at 1440px */
+        padding-top: 12.6px;
     }
     
     .action-cards {
@@ -1266,7 +1273,7 @@ html {
     }
     
     .enforcement-overview h2 {
-        font-size: 46.08px; /* 3.2vw at 1440px */
+        font-size: 64px; /* 3.2vw at 1440px */
         line-height: 44.64px; /* 3.1vw at 1440px */
         margin-bottom: 43.2px; /* 3vw at 1440px */
     }
@@ -1477,7 +1484,7 @@ html {
         padding-top: 43.2px; /* 3% at 1440px */
         padding-bottom: 0;
     }
-    
+
     .container-faq {
         padding: 0 216px 0 216px; /* 15vw at 1440px */
     }
