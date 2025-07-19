@@ -1610,6 +1610,21 @@ html {
         background-repeat: no-repeat;
     }
 
+    .service-logo-background {
+        top: 15%; /* percentage stays same */
+        right: 0%; /* percentage stays same */
+        transform: translateX(15%) translateY(-50%); /* percentage stays same */
+    }
+
+    .service-logo-bg-svg {
+        width: 360px; /* 30vw at 1440px */
+    }
+
+    .contact-logo {
+        height: 400px; /* Fixed height instead of 90vh */
+        width: auto;
+    }
+
     .service-content-wrapper-2 .scan-image {
         max-width: 1440px;
         width: 100%;
@@ -1799,6 +1814,13 @@ html {
         left: 50%;
         transform: translateX(-235%);
         z-index: 3;
+    }
+
+    .contact-section {
+        width: 100vw; /* Keep full width for background */
+        display: flex;
+        justify-content: center;
+        position: relative;
     }
     
     
