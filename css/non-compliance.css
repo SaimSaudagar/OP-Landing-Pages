@@ -866,10 +866,17 @@ html {
     width: auto;
 }
 
+.contact-section-content {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 2vw;
+    position: relative;
+}
+
 .contact-button-container {
     position: absolute;
-    bottom: 45%;
-    right: 15%;
+    bottom: 57%;
+    right: 12%;
     z-index: 10;
 }
 
@@ -1276,7 +1283,7 @@ html {
     
     .enforcement-overview h2 {
         font-size: 64px; /* 3.2vw at 1440px */
-        line-height: 44.64px; /* 3.1vw at 1440px */
+        line-height: 60px; /* 3.1vw at 1440px */
         margin-bottom: 43.2px; /* 3vw at 1440px */
     }
     
@@ -1527,6 +1534,11 @@ html {
         position: relative;
     }
     
+    .contact-section-content {
+        width: 1440px;
+        padding: 0 28.8px;
+    }
+    
     .contact-image {
         max-width: 1440px;
         width: 100%;
@@ -1551,8 +1563,9 @@ html {
     
     .contact-button-container {
         position: absolute;
-        bottom: 45%;
-        right: 25.5%;
+        bottom: 47%;
+        right: 15%;
+        transform: translateX(10%);
         z-index: 10;
     }
     

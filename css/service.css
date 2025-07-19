@@ -1435,8 +1435,8 @@ html {
 
 .contact-button-container {
     position: absolute;
-    bottom: 45%;
-    right: 15%;
+    bottom: 57%;
+    right: 12%;
     z-index: 10;
 }
 
@@ -1690,6 +1690,7 @@ html {
         width: 288px;
         height: 50.4px;
         border-radius: 11.52px;
+        margin-bottom: 50px;
     }
     
     .contact-team-btn,
@@ -1819,8 +1820,9 @@ html {
     
     .contact-button-container {
         position: absolute;
-        bottom: 45%;
+        bottom: 47%;
         right: 15%;
+        transform: translateX(10%);
         z-index: 10;
     }
     
