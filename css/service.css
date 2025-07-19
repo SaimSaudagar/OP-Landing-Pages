@@ -1409,6 +1409,24 @@ html {
     justify-content: center;
 }
 
+.service-logo-background {
+    position: absolute;
+    top: 15%;
+    right: 0%;
+    transform: translateX(15%) translateY(-50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.service-logo-bg-svg {
+    width: 30vw;
+}
+
+.contact-logo {
+    height: 90vh;
+    width: auto;
+}
+
 .contact-section-content {
     max-width: 1440px;
     width: 100%;
@@ -1541,7 +1559,7 @@ html {
     }
     
     .hero.custom-hero {
-        padding-top: 140px;
+        padding-top: 70px;
     }
     
     .hero-inner {
@@ -1554,17 +1572,17 @@ html {
     }
     
     .hero-heading-anim {
-        font-size: 63.36px;
+        font-size: 52.8px;
     }
     
     .hero-subheading {
-        font-size: 24.192px;
-        margin: 14.4px 0 0 0;
+        font-size: 21px;
+        margin: 10px 0 0 0;
     }
     
     .hero-description {
-        font-size: 15.84px;
-        margin: 14.4px 0 0 0;
+        font-size: 14.4px;
+        margin: 10px 0 0 0;
         width: 67%;
     }
     

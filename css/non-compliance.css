@@ -1192,7 +1192,7 @@ html {
     }
     
     .hero-responsive-wrapper {
-        height: 630px;
+        height: 500px;
     }
     
     .hero-content-container {
@@ -1201,7 +1201,7 @@ html {
     }
     
     .hero-section.custom-hero {
-        padding-top: 140px; /* Match service.css */
+        padding-top: 70px; /* Match service.css */
     }
     
     .hero-inner {
@@ -1209,27 +1209,29 @@ html {
     }
     
     .hero-left h1 {
-        font-size: 63.36px; /* 4.4vw at 1440px */
+        font-size: 52.8px; /* 4.4vw at 1440px */
         width: 120%;
     }
     
     .hero-left h2 {
-        font-size: 23.76px; /* 1.65vw at 1440px */
-        margin: 21.6px 0 0 0; /* 1.5vw at 1440px */
+        font-size: 21px;
+        margin: 10px 0 0 0;
         width: 80%;
     }
     
     .hero-description {
-        font-size: 15.84px; /* 1.1vw at 1440px */
-        margin: 1.44px 0 0 0; /* 0.1vw at 1440px */
+        font-size: 14.4px; /* 1.1vw at 1440px */
+        margin: 10px 0 0 0; /* 0.1vw at 1440px */
         width: 75%;
         line-height: 21.6px; /* 1.5vw at 1440px */
-        margin-bottom: 7.2px; /* 0.5vw at 1440px */
+        margin-bottom: 10px; /* 0.5vw at 1440px */
     }
     
     .hero-logo-svg {
-        transform: translateY(-57.6px); /* -4vw at 1440px */
-        padding-top: 12.6px;
+        transform: translateY(-45px) !important; /* -4vw at 1440px */
+        padding-top: 20px;
+        width: 380px;
+        height: 380px;
     }
     
     .action-cards {

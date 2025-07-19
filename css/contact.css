@@ -1050,9 +1050,9 @@ main {
     }
     
     .hero-logo-svg {
-        width: 403.2px; /* 28vw at 1440px */
-        height: 403.2px; /* 28vw at 1440px */
-        margin-bottom: 10%;
+        width: 380px;
+        height: 380px;
+        margin-bottom: 36%;
     }
     
     .hero-heading {
