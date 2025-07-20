@@ -357,7 +357,7 @@ body::-webkit-scrollbar {
     object-fit: contain;
     display: block;
     opacity: 0.7;
-    transform: translateY(-2vw) !important;
+    transform: translateY(-30px) !important;
     transition: transform 0.3s ease;
 }
 
@@ -599,7 +599,7 @@ body::-webkit-scrollbar {
 }
 
 .contact-logo {
-    height: 90vh;
+    height: 35vh;
     width: auto;
 }
 
@@ -612,7 +612,7 @@ body::-webkit-scrollbar {
 
 .contact-button-container {
     position: absolute;
-    bottom: 57%;
+    bottom: 48%;
     right: 12%;
     z-index: 10;
 }

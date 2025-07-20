@@ -52,18 +52,33 @@ function initializePageLoadAnimation() {
     });
 }
 
-// Parallax scrolling effect
+// Parallax scrolling effect - optimized for smooth scrolling
 function initializeParallaxEffect() {
     const parallaxElements = document.querySelectorAll('.glow-svg');
     
-    window.addEventListener('scroll', () => {
+    if (parallaxElements.length === 0) return;
+    
+    let ticking = false;
+    
+    function updateParallax() {
         const scrolled = window.pageYOffset;
         const parallax = scrolled * 0.2;
         
         parallaxElements.forEach(element => {
             element.style.transform = `translateY(${parallax}px)`;
         });
-    });
+        
+        ticking = false;
+    }
+    
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }
+    
+    window.addEventListener('scroll', requestTick, { passive: true });
 }
 
 // Enhanced scroll animations
@@ -275,7 +290,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.header');
     const scrollThreshold = 50; // Threshold for background change
     
-    window.addEventListener('scroll', function() {
+    let headerTicking = false;
+    
+    function updateHeader() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
         // Change background based on scroll position
@@ -290,7 +307,18 @@ document.addEventListener('DOMContentLoaded', function() {
             header.style.backdropFilter = 'none';
             header.style.transition = 'background 0.3s ease, backdrop-filter 0.3s ease';
         }
-    });
+        
+        headerTicking = false;
+    }
+    
+    function requestHeaderTick() {
+        if (!headerTicking) {
+            requestAnimationFrame(updateHeader);
+            headerTicking = true;
+        }
+    }
+    
+    window.addEventListener('scroll', requestHeaderTick, { passive: true });
 });
 
 // Service card hover effects

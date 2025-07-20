@@ -8,6 +8,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll from animations */
 }
 
 body {
@@ -15,16 +16,29 @@ body {
     line-height: 1.6;
     color: #fff;
     background-color: #121212;
-    overflow-x: hidden; /* Prevent horizontal scroll from animations */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 /* Force Inter font on all elements */
 * {
     font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* Optimize scrolling performance */
+* {
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Optimize animations for better performance */
+.glow-svg,
+.hero-logo-svg,
+.enforcement-logo-bg,
+.service-logo-bg-svg {
+    will-change: transform;
+    transform: translateZ(0); /* Force hardware acceleration */
 }
 
 /* Page container for flexbox layout */
@@ -33,12 +47,18 @@ body {
     flex-direction: column;
     flex: 1;
     min-height: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Smooth scrolling for the entire page */
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    scroll-padding-top: 80px; /* Account for sticky header */
+}
+
+/* Ensure smooth scrolling works on all browsers */
+body {
+    scroll-behavior: smooth;
 }
 
 /* Page load animation */
@@ -104,10 +124,10 @@ html {
 /* Floating animation for background elements */
 @keyframes float {
     0%, 100% {
-        transform: translateY(0px);
+        transform: translateY(0px) translateZ(0);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-20px) translateZ(0);
     }
 }
 
@@ -139,10 +159,12 @@ html {
     0%, 100% {
         filter: blur(1px) brightness(1);
         opacity: 0.4;
+        transform: translateZ(0);
     }
     50% {
         filter: blur(2px) brightness(1.2);
         opacity: 0.6;
+        transform: translateZ(0);
     }
 }
 
@@ -151,6 +173,8 @@ html {
     max-width: 1440px;
     padding: 3%;
     padding-bottom: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .container {
@@ -172,7 +196,7 @@ html {
     width: 100%;
     max-width: 1440px;
     padding: 3%;
-    padding-top: 5%;
+    padding-top: 3%;
     padding-bottom: 0;
     margin: 0 auto;
 }
@@ -198,6 +222,8 @@ html {
     animation: fadeInUp 1s ease 0.2s both;
     display: flex;
     justify-content: center;
+    will-change: background, backdrop-filter;
+    transform: translateZ(0); /* Force hardware acceleration */
 }
 
 .navbar {
@@ -382,7 +408,7 @@ html {
  
     transition: opacity 0.3s, transform 0.3s;
     transform: translateY(40%);
-    background: linear-gradient(90deg, #FF5100 0%, #FF0D00 100%);
+    background: linear-gradient(78.33deg, #FF8F00 15.54%, #FF5100 69.44%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -524,6 +550,7 @@ html {
 
 /* Important Information */
 .important-info {
+    position: relative;
     margin: 1vw 0;
     opacity: 0;
     animation: fadeInUp 1s ease 0.5s both;
@@ -576,7 +603,7 @@ html {
     font-weight: 600;
     font-style: normal;
     font-size: 4.4vw;
-    line-height: 3.1vw;
+    line-height: 1  ;
     letter-spacing: 0%;
     margin-bottom: 1vw;
     background: linear-gradient(90.09deg, #FF8F00 0%, #FF0D00 25%);
@@ -1120,8 +1147,14 @@ html {
     top: -100%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 5;
+    z-index: 0;
     pointer-events: none;
+}
+
+.important-info .glow-background {
+    top: -50%;
+    left: 90%;
+    z-index: -1;
 }
 
 .glow-background-partners {
@@ -1153,6 +1186,12 @@ html {
     height: auto;
     opacity: 0.2;
     filter: blur(100px);
+}
+
+.important-info .glow-svg {
+    opacity: 0.4;
+    filter: blur(1px);
+    animation: glow 4s ease-in-out infinite;
 }
 
 .last-container {
@@ -1505,8 +1544,8 @@ html {
     }
     
     .glow-background {
-        top: -100%;
-        left: 50%;
+        top: -250% !important;
+        left: 100%;
         transform: translateX(-50%);
     }
     
@@ -1544,8 +1583,6 @@ html {
         width: 100%;
         position: relative;
         padding: 0 63px;
-        padding-top: 144px;
-        padding-bottom: 144px;
     }
     
     .contact-logo {

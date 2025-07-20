@@ -150,11 +150,9 @@ body {
 .hero-heading-gradient-text {
     font-size: inherit;
     line-height: 1.05;
-
- 
     transition: opacity 0.3s, transform 0.3s;
     transform: translateY(40%);
-    background: linear-gradient(90deg, #FF5100 0%, #FF0D00 100%);
+    background: linear-gradient(78.33deg, #FF8F00 15.54%, #FF5100 69.44%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

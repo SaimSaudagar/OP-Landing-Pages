@@ -426,10 +426,9 @@ html {
     font-size: inherit;
     line-height: 1.05;
 
- 
     transition: opacity 0.3s, transform 0.3s;
     transform: translateY(40%);
-    background: linear-gradient(90deg, #FF5100 0%, #FF0D00 100%);
+    background: linear-gradient(78.33deg, #FF8F00 15.54%, #FF5100 69.44%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1171,7 +1170,7 @@ html {
     position: relative;
     z-index: 1;
     display: block;
-    padding: 0.47vw 0.99vw;
+    padding: 0.47vw 0.8vw;
     background: linear-gradient(90deg, #FF8F00 0%, #FF5100 50%, #FF0D00 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1182,7 +1181,7 @@ html {
     position: relative;
     z-index: 1;
     display: block;
-    padding: 0.47vw 0.99vw;
+    padding: 0.47vw 0.8vw;
     background: linear-gradient(90deg, #FF8F00 0%, #FF5100 50%, #FF0D00 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1435,7 +1434,7 @@ html {
 
 .contact-button-container {
     position: absolute;
-    bottom: 57%;
+    bottom: 46%;
     right: 12%;
     z-index: 10;
 }
@@ -1665,7 +1664,7 @@ html {
     }
     
     .service-tabs-wrapper {
-        margin-top: 93.6px;
+        margin-top: -93.6px;
     }
 
     .service-tabs-wrapper-2 {
