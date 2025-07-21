@@ -5,7 +5,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
 }
@@ -105,6 +106,7 @@ html {
         opacity: 0;
         transform: translateY(30px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -117,6 +119,7 @@ html {
         opacity: 0;
         transform: translateX(-50px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -129,6 +132,7 @@ html {
         opacity: 0;
         transform: translateX(50px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -141,6 +145,7 @@ html {
         opacity: 0;
         transform: translateY(50px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -153,6 +158,7 @@ html {
         opacity: 0;
         transform: scale(0.8);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
@@ -161,9 +167,12 @@ html {
 
 /* Floating animation for background elements */
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-20px);
     }
@@ -171,9 +180,12 @@ html {
 
 /* Pulse animation */
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.05);
     }
@@ -184,9 +196,11 @@ html {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
@@ -194,10 +208,13 @@ html {
 
 /* Glow animation */
 @keyframes glow {
-    0%, 100% {
+
+    0%,
+    100% {
         filter: blur(1px) brightness(1);
         opacity: 0.4;
     }
+
     50% {
         filter: blur(2px) brightness(1.2);
         opacity: 0.6;
@@ -273,6 +290,7 @@ html {
     list-style: none;
     animation: fadeInRight 1s ease 0.6s both;
 }
+
 .nav-link {
     font-size: 1.1vw;
     color: #fff;
@@ -362,7 +380,8 @@ html {
     padding: 0% 3% 0 3%;
 }
 
-.hero-left, .hero-right {
+.hero-left,
+.hero-right {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -721,7 +740,7 @@ html {
     padding-top: 2vw;
     color: #aaa;
     font-size: 0.95vw;
- 
+
 }
 
 /* Service Page Specific Styles */
@@ -772,7 +791,7 @@ html {
     border-radius: 20px;
     padding: 2.5rem;
     text-align: center;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     position: relative;
     border: 2px solid #333;
@@ -995,7 +1014,8 @@ html {
     justify-content: left;
     margin: 0 auto 2vw auto;
     opacity: 0;
-    animation: fadeInUp 1s ease 0.5s both;position: relative;
+    animation: fadeInUp 1s ease 0.5s both;
+    position: relative;
     z-index: 5;
     padding-left: 2vw;
 }
@@ -1009,7 +1029,8 @@ html {
     justify-content: left;
     margin: 0 auto 2vw auto;
     opacity: 0;
-    animation: fadeInUp 1s ease 0.5s both;position: relative;
+    animation: fadeInUp 1s ease 0.5s both;
+    position: relative;
     z-index: 5;
     padding-left: 2vw;
 }
@@ -1122,7 +1143,7 @@ html {
     .service-tab-2.selected {
         padding: 1.5px;
     }
-    
+
     .service-tab.selected::before {
         top: 1px;
         left: 1px;
@@ -1148,7 +1169,7 @@ html {
     .service-tab-2.selected {
         padding: 1px;
     }
-    
+
     .service-tab.selected::before {
         top: 1px;
         left: 1px;
@@ -1189,7 +1210,8 @@ html {
 }
 
 .service-content-wrapper {
-    width: 100vw; /* Keep full width for background */
+    width: 100vw;
+    /* Keep full width for background */
     display: flex;
     justify-content: center;
     position: relative;
@@ -1200,7 +1222,8 @@ html {
 }
 
 .service-content-wrapper-2 {
-    width: 100vw; /* Keep full width for background */
+    width: 100vw;
+    /* Keep full width for background */
     display: flex;
     justify-content: center;
     position: relative;
@@ -1368,11 +1391,22 @@ html {
 }
 
 /* Desktop and Mobile Image Display */
-.desktop-only { display: block !important; }
-.mobile-only { display: none !important; }
+.desktop-only {
+    display: block !important;
+}
+
+.mobile-only {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
-    .desktop-only { display: none !important; }
-    .mobile-only { display: block !important; }
+    .desktop-only {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: block !important;
+    }
 
     .service-content-wrapper {
         background-image: url('../assets/service/scan_bg.svg');
@@ -1493,10 +1527,13 @@ html {
     position: relative;
     left: 0;
     right: 0;
-    bottom: -0.6vw; /* Adjust so it sits just under the footer, or 0 for very bottom */
-    z-index: -1; /* Lower than footer */
+    bottom: -0.6vw;
+    /* Adjust so it sits just under the footer, or 0 for very bottom */
+    z-index: -1;
+    /* Lower than footer */
     text-align: center;
-    font-size: 6vw; /* Responsive size */
+    font-size: 6vw;
+    /* Responsive size */
     font-weight: 800;
     color: #ff5100;
     opacity: 0.5;
@@ -1514,83 +1551,94 @@ html {
 
 /* Fixed positioning for screens above 1440px */
 @media (min-width: 1440px) {
+
     /* Header and Navigation - Match home.css exactly */
     .header {
-        width: 100vw; /* Full width for background */
+        width: 100vw;
+        /* Full width for background */
         display: flex;
         justify-content: center;
     }
-    
+
     .navbar {
-        padding: 6px 24px 6px 24px; /* 0.5vw and 2vw at 1440px */
-        height: 66px; /* 5.5vw at 1440px */
+        padding: 6px 24px 6px 24px;
+        /* 0.5vw and 2vw at 1440px */
+        height: 66px;
+        /* 5.5vw at 1440px */
         max-width: 1440px;
         width: 100%;
     }
-    
+
     .logo {
-        width: 36px; /* 3vw at 1440px */
-        height: 36px; /* 3vw at 1440px */
-        margin-right: 6px; /* 0.5vw at 1440px */
+        width: 36px;
+        /* 3vw at 1440px */
+        height: 36px;
+        /* 3vw at 1440px */
+        margin-right: 6px;
+        /* 0.5vw at 1440px */
     }
-    
+
     .brand-text {
-        font-size: 20.4px; /* 1.7vw at 1440px */
+        font-size: 20.4px;
+        /* 1.7vw at 1440px */
     }
-    
+
     .nav-menu {
-        gap: 6px; /* 0.5vw at 1440px */
+        gap: 6px;
+        /* 0.5vw at 1440px */
     }
-    
+
     .nav-link {
-        font-size: 13.2px; /* 1.1vw at 1440px */
-        padding: 6px 12px; /* 0.5vw and 1vw at 1440px */
+        font-size: 13.2px;
+        /* 1.1vw at 1440px */
+        padding: 6px 12px;
+        /* 0.5vw and 1vw at 1440px */
     }
-    
+
     .hero-responsive-wrapper {
         height: 630px;
     }
-    
+
     .hero-content-container {
         width: 1440px;
         padding: 0;
     }
-    
+
     .hero.custom-hero {
         padding-top: 70px;
     }
-    
+
     .hero-inner {
         padding: 12.6px 43.2px 0 43.2px;
     }
-    
+
     .hero-left,
     .hero-right {
         height: 390px;
     }
-    
+
     .hero-heading-anim {
         font-size: 52.8px;
     }
-    
+
     .hero-subheading {
         font-size: 21px;
         margin: 10px 0 0 0;
     }
-    
+
     .hero-description {
         font-size: 14.4px;
         margin: 10px 0 0 0;
         width: 67%;
     }
-    
+
     .hero-cta.cta-button {
         font-size: 18.72px;
         margin: 12px 0 0 0;
         width: 259.2px;
         height: 46.08px;
     }
-    
+
     .services-cta.cta-button {
         font-size: 18.72px;
         margin: 14.4px 0 0 0;
@@ -1599,7 +1647,8 @@ html {
     }
 
     .service-content-wrapper {
-        width: 100vw; /* Keep full width for background */
+        width: 100vw;
+        /* Keep full width for background */
         display: flex;
         justify-content: center;
         position: relative;
@@ -1616,7 +1665,8 @@ html {
     }
 
     .service-content-wrapper-2 {
-        width: 100vw; /* Keep full width for background */
+        width: 100vw;
+        /* Keep full width for background */
         display: flex;
         justify-content: center;
         position: relative;
@@ -1627,17 +1677,22 @@ html {
     }
 
     .service-logo-background {
-        top: 15%; /* percentage stays same */
-        right: 0%; /* percentage stays same */
-        transform: translateX(15%) translateY(-50%); /* percentage stays same */
+        top: 15%;
+        /* percentage stays same */
+        right: 0%;
+        /* percentage stays same */
+        transform: translateX(15%) translateY(-50%);
+        /* percentage stays same */
     }
 
     .service-logo-bg-svg {
-        width: 360px; /* 30vw at 1440px */
+        width: 360px;
+        /* 30vw at 1440px */
     }
 
     .contact-logo {
-        height: 400px; /* Fixed height instead of 90vh */
+        height: 400px;
+        /* Fixed height instead of 90vh */
         width: auto;
     }
 
@@ -1648,13 +1703,18 @@ html {
     }
 
     .learn-more-btn {
-        font-size: 16.8px; /* 1.4vw at 1440px */
-        margin: 12px 0 0 0; /* 1vw at 1440px */
-        width: 250px; /* 20vw at 1440px */
-        height: 44px; /* 3vw at 1440px */
-        margin-top: 36px; /* 3vw at 1440px */
+        font-size: 16.8px;
+        /* 1.4vw at 1440px */
+        margin: 12px 0 0 0;
+        /* 1vw at 1440px */
+        width: 250px;
+        /* 20vw at 1440px */
+        height: 44px;
+        /* 3vw at 1440px */
+        margin-top: 36px;
+        /* 3vw at 1440px */
     }
-    
+
     .learn-more-button-container {
         position: absolute;
         top: 40.5%;
@@ -1662,7 +1722,7 @@ html {
         z-index: 10;
         transform: translateX(150px);
     }
-    
+
     .service-tabs-wrapper {
         margin-top: -93.6px;
     }
@@ -1670,7 +1730,7 @@ html {
     .service-tabs-wrapper-2 {
         margin-top: 93.6px;
     }
-    
+
     .service-tab {
         font-size: 18.72px;
         padding: 7.488px 23.04px;
@@ -1682,7 +1742,7 @@ html {
         padding: 7.488px 23.04px;
         height: 41.76px;
     }
-    
+
     .service-image-button-container .contact-team-btn,
     .service-image-button-container-2 .contact-team-btn-2 {
         font-size: 20.16px;
@@ -1691,7 +1751,7 @@ html {
         border-radius: 11.52px;
         margin-bottom: 50px;
     }
-    
+
     .contact-team-btn,
     .contact-team-btn-2 {
         font-size: 20.16px;
@@ -1708,115 +1768,150 @@ html {
     .service-tabs-bar-2 {
         margin: 0 auto 2vw auto;
     }
-    
+
     /* Footer - Match home.css exactly */
     .footer {
-        padding: 60px 0 36px 0; /* 5vw and 3vw at 1440px */
-        font-size: 12px; /* 1vw at 1440px */
-        letter-spacing: 0.12px; /* 0.01vw at 1440px */
-        width: 100vw; /* Keep full width for background */
+        padding: 60px 0 36px 0;
+        /* 5vw and 3vw at 1440px */
+        font-size: 12px;
+        /* 1vw at 1440px */
+        letter-spacing: 0.12px;
+        /* 0.01vw at 1440px */
+        width: 100vw;
+        /* Keep full width for background */
         display: flex;
         justify-content: center;
     }
-    
+
     .footer-container {
-        gap: 36px; /* 3vw at 1440px */
-        width: 1080px; /* 90vw at 1440px */
+        gap: 36px;
+        /* 3vw at 1440px */
+        width: 1080px;
+        /* 90vw at 1440px */
         max-width: 1440px;
         margin: 0 auto;
     }
-    
+
     .footer-col {
-        gap: 12px; /* 1vw at 1440px */
+        gap: 12px;
+        /* 1vw at 1440px */
     }
-    
+
     .footer-logo-row {
-        gap: 8.4px; /* 0.7vw at 1440px */
-        margin-bottom: 12px; /* 1vw at 1440px */
+        gap: 8.4px;
+        /* 0.7vw at 1440px */
+        margin-bottom: 12px;
+        /* 1vw at 1440px */
     }
-    
+
     .footer-logo-svg {
-        width: 26.4px; /* 2.2vw at 1440px */
-        height: 26.4px; /* 2.2vw at 1440px */
+        width: 26.4px;
+        /* 2.2vw at 1440px */
+        height: 26.4px;
+        /* 2.2vw at 1440px */
     }
-    
+
     .footer-brand-text {
-        font-size: 18px; /* 1.5vw at 1440px */
-        letter-spacing: 0.6px; /* 0.05vw at 1440px */
+        font-size: 18px;
+        /* 1.5vw at 1440px */
+        letter-spacing: 0.6px;
+        /* 0.05vw at 1440px */
     }
-    
+
     .footer-info p {
-        margin: 0 0 6px 0; /* 0.5vw at 1440px */
-        font-size: 9.6px; /* 0.8vw at 1440px */
+        margin: 0 0 6px 0;
+        /* 0.5vw at 1440px */
+        font-size: 9.6px;
+        /* 0.8vw at 1440px */
     }
-    
+
     .footer-info h3 {
-        margin: 0 0 6px 0; /* 0.5vw at 1440px */
-        font-size: 12px; /* 1vw at 1440px */
+        margin: 0 0 6px 0;
+        /* 0.5vw at 1440px */
+        font-size: 12px;
+        /* 1vw at 1440px */
     }
-    
+
     .footer-icon img {
-        width: 13.2px; /* 1.1vw at 1440px */
-        height: 13.2px; /* 1.1vw at 1440px */
+        width: 13.2px;
+        /* 1.1vw at 1440px */
+        height: 13.2px;
+        /* 1.1vw at 1440px */
     }
-    
+
     .footer-note {
-        font-size: 10.2px; /* 0.85vw at 1440px */
-        margin-top: 6px; /* 0.5vw at 1440px */
+        font-size: 10.2px;
+        /* 0.85vw at 1440px */
+        margin-top: 6px;
+        /* 0.5vw at 1440px */
     }
-    
+
     .footer-col h4 {
-        font-size: 13.2px; /* 1.1vw at 1440px */
-        margin-bottom: 12px; /* 1vw at 1440px */
+        font-size: 13.2px;
+        /* 1.1vw at 1440px */
+        margin-bottom: 12px;
+        /* 1vw at 1440px */
     }
-    
+
     .footer-col ul {
-        gap: 8.4px; /* 0.7vw at 1440px */
+        gap: 8.4px;
+        /* 0.7vw at 1440px */
     }
-    
+
     .footer-col ul li {
-        font-size: 12px; /* 1vw at 1440px */
+        font-size: 12px;
+        /* 1vw at 1440px */
     }
-    
+
     .footer-icon {
-        font-size: 13.2px; /* 1.1vw at 1440px */
-        margin-right: 6px; /* 0.5vw at 1440px */
+        font-size: 13.2px;
+        /* 1.1vw at 1440px */
+        margin-right: 6px;
+        /* 0.5vw at 1440px */
     }
-    
+
     .footer-bottom {
-        padding-top: 36px; /* 3vw at 1440px */
-        padding-bottom: 24px; /* 2vw at 1440px */
-        font-size: 11.4px; /* 0.95vw at 1440px */
+        padding-top: 36px;
+        /* 3vw at 1440px */
+        padding-bottom: 24px;
+        /* 2vw at 1440px */
+        font-size: 11.4px;
+        /* 0.95vw at 1440px */
     }
-    
+
     .footer-bg-text {
-        bottom: -7.2px; /* -0.6vw at 1440px */
-        font-size: 86.4px; /* Fixed size instead of 6vw */
-        width: 100vw; /* Keep full width */
+        bottom: -7.2px;
+        /* -0.6vw at 1440px */
+        font-size: 86.4px;
+        /* Fixed size instead of 6vw */
+        width: 100vw;
+        /* Keep full width */
     }
-    
+
     .container {
-        width: 1080px; /* 90vw at 1440px */
+        width: 1080px;
+        /* 90vw at 1440px */
         max-width: 1440px;
-        padding: 0 24px; /* 2vw at 1440px */
+        padding: 0 24px;
+        /* 2vw at 1440px */
         margin: 0 auto;
     }
-    
+
     .pay-section-wrapper {
         margin-top: 72px;
     }
-    
+
     .pay-image {
         padding-left: 86.4px;
         padding-right: 86.4px;
         padding-top: 129.6px;
     }
-    
+
     .contact-image {
         padding-top: 144px;
         padding-bottom: 144px;
     }
-    
+
     .contact-button-container {
         position: absolute;
         bottom: 47%;
@@ -1824,7 +1919,7 @@ html {
         transform: translateX(10%);
         z-index: 10;
     }
-    
+
     .service-image-button-container,
     .service-image-button-container-2 {
         position: absolute;
@@ -1835,13 +1930,14 @@ html {
     }
 
     .contact-section {
-        width: 100vw; /* Keep full width for background */
+        width: 100vw;
+        /* Keep full width for background */
         display: flex;
         justify-content: center;
         position: relative;
     }
-    
-    
+
+
     .pay-section-content,
     .contact-section-content,
     .services-container,

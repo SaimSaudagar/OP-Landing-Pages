@@ -2,7 +2,7 @@
 function setActiveNavigation() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === currentPage) {
@@ -17,7 +17,7 @@ function initializeMobileNavigation() {
     const navMenu = document.querySelector('.nav-menu');
 
     if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function () {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
@@ -31,7 +31,7 @@ function initializeMobileNavigation() {
         });
 
         // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
@@ -43,8 +43,8 @@ function initializeMobileNavigation() {
 // Page load animation
 function initializePageLoadAnimation() {
     document.body.style.opacity = '0';
-    
-    window.addEventListener('load', function() {
+
+    window.addEventListener('load', function () {
         setTimeout(() => {
             document.body.style.transition = 'opacity 0.5s ease';
             document.body.style.opacity = '1';
@@ -55,29 +55,29 @@ function initializePageLoadAnimation() {
 // Parallax scrolling effect - optimized for smooth scrolling
 function initializeParallaxEffect() {
     const parallaxElements = document.querySelectorAll('.glow-svg');
-    
+
     if (parallaxElements.length === 0) return;
-    
+
     let ticking = false;
-    
+
     function updateParallax() {
         const scrolled = window.pageYOffset;
         const parallax = scrolled * 0.2;
-        
+
         parallaxElements.forEach(element => {
             element.style.transform = `translateY(${parallax}px)`;
         });
-        
+
         ticking = false;
     }
-    
+
     function requestTick() {
         if (!ticking) {
             requestAnimationFrame(updateParallax);
             ticking = true;
         }
     }
-    
+
     window.addEventListener('scroll', requestTick, { passive: true });
 }
 
@@ -89,7 +89,7 @@ function initializeAdvancedScrollAnimations() {
     };
 
     // Staggered animation for multiple elements
-    const staggeredObserver = new IntersectionObserver(function(entries) {
+    const staggeredObserver = new IntersectionObserver(function (entries) {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
                 setTimeout(() => {
@@ -126,22 +126,22 @@ function initializeAdvancedScrollAnimations() {
 // Button ripple effect
 function initializeButtonRippleEffect() {
     const buttons = document.querySelectorAll('.cta-button, .contact-team-btn, .learn-more-btn, .service-btn');
-    
+
     buttons.forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             const ripple = document.createElement('span');
             const rect = this.getBoundingClientRect();
             const size = Math.max(rect.width, rect.height);
             const x = e.clientX - rect.left - size / 2;
             const y = e.clientY - rect.top - size / 2;
-            
+
             ripple.style.width = ripple.style.height = size + 'px';
             ripple.style.left = x + 'px';
             ripple.style.top = y + 'px';
             ripple.classList.add('ripple-effect');
-            
+
             this.appendChild(ripple);
-            
+
             setTimeout(() => {
                 ripple.remove();
             }, 600);
@@ -170,7 +170,7 @@ function initializeButtonRippleEffect() {
 }
 
 // Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     setActiveNavigation();
     initializeMobileNavigation();
     initializePageLoadAnimation();
@@ -180,19 +180,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Smooth scrolling for anchor links
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const links = document.querySelectorAll('a[href^="#"]');
-    
+
     links.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 const headerHeight = document.querySelector('.header').offsetHeight;
                 const targetPosition = targetElement.offsetTop - headerHeight;
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
@@ -203,41 +203,41 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Form submission handling
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.querySelector('.form');
-    
+
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Get form data
             const formData = new FormData(this);
             const formObject = {};
-            
+
             formData.forEach((value, key) => {
                 formObject[key] = value;
             });
-            
+
             // Simple validation
             if (!formObject.name || !formObject.email || !formObject.message) {
                 alert('Please fill in all required fields.');
                 return;
             }
-            
+
             // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(formObject.email)) {
                 alert('Please enter a valid email address.');
                 return;
             }
-            
+
             // Simulate form submission
             const submitButton = this.querySelector('.submit-button');
             const originalText = submitButton.textContent;
-            
+
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
-            
+
             // Simulate API call
             setTimeout(() => {
                 alert('Thank you for your message! We will get back to you soon.');
@@ -250,23 +250,23 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Enhanced scroll animations for images and sections
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver(function(entries) {
+    const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
-                
+
                 // Add special effects for different element types
                 if (entry.target.classList.contains('glow-svg')) {
                     entry.target.style.filter = 'blur(1px) brightness(1.2)';
                 }
-                
+
                 observer.unobserve(entry.target);
             }
         });
@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Observe elements for animation
     const animateElements = document.querySelectorAll('.feature-card, .service-card, .compliance-card, .additional-item, .faq-item, .contact-method, .parking-image, .about-image, .why-image, .appeal-image, .partners-image, .contact-image, .services-section');
-    
+
     animateElements.forEach((el, index) => {
         if (!el.style.opacity) { // Only set if not already set by CSS animations
             el.style.opacity = '0';
@@ -286,15 +286,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Header scroll effect - transparent when at top, solid when scrolling
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('.header');
     const scrollThreshold = 50; // Threshold for background change
-    
+
     let headerTicking = false;
-    
+
     function updateHeader() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
+
         // Change background based on scroll position
         if (scrollTop > scrollThreshold) {
             // Scrolled down - make header solid
@@ -307,39 +307,39 @@ document.addEventListener('DOMContentLoaded', function() {
             header.style.backdropFilter = 'none';
             header.style.transition = 'background 0.3s ease, backdrop-filter 0.3s ease';
         }
-        
+
         headerTicking = false;
     }
-    
+
     function requestHeaderTick() {
         if (!headerTicking) {
             requestAnimationFrame(updateHeader);
             headerTicking = true;
         }
     }
-    
+
     window.addEventListener('scroll', requestHeaderTick, { passive: true });
 });
 
 // Service card hover effects
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const serviceCards = document.querySelectorAll('.service-card');
-    
+
     serviceCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             this.style.transform = 'translateY(-10px) scale(1.02)';
         });
-        
-        card.addEventListener('mouseleave', function() {
+
+        card.addEventListener('mouseleave', function () {
             this.style.transform = 'translateY(0) scale(1)';
         });
     });
 });
 
 // Statistics counter animation
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const statNumbers = document.querySelectorAll('.stat-number');
-    
+
     const animateCounter = (element, target) => {
         let current = 0;
         const increment = target / 50;
@@ -352,8 +352,8 @@ document.addEventListener('DOMContentLoaded', function() {
             element.textContent = Math.floor(current) + (element.textContent.includes('%') ? '%' : '');
         }, 30);
     };
-    
-    const observer = new IntersectionObserver(function(entries) {
+
+    const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const target = parseInt(entry.target.textContent);
@@ -362,25 +362,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, { threshold: 0.5 });
-    
+
     statNumbers.forEach(stat => {
         observer.observe(stat);
     });
 });
 
 // FAQ accordion functionality (if needed)
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const faqItems = document.querySelectorAll('.faq-item');
-    
+
     faqItems.forEach(item => {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', function () {
             // Remove active class from other items
             faqItems.forEach(otherItem => {
                 if (otherItem !== this) {
                     otherItem.classList.remove('active');
                 }
             });
-            
+
             // Toggle active class on clicked item
             this.classList.toggle('active');
         });
@@ -388,7 +388,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Loading animation
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Hide loading screen if it exists
     const loadingScreen = document.querySelector('.loading-screen');
     if (loadingScreen) {
@@ -402,11 +402,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Error handling for images
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const images = document.querySelectorAll('img');
-    
+
     images.forEach(img => {
-        img.addEventListener('error', function() {
+        img.addEventListener('error', function () {
             this.style.display = 'none';
         });
     });
@@ -427,37 +427,37 @@ function animateHeroWords() {
 document.addEventListener('DOMContentLoaded', animateHeroWords);
 
 // Enhanced hero word animation with smooth transitions
-document.addEventListener('DOMContentLoaded', function() {
-  const words = document.querySelectorAll('.hero-heading-gradient-wrapper .hero-heading-gradient-text');
-  let current = 0;
-  
-  if (words.length === 0) return;
-  
-  function showWord(idx) {
-    words.forEach((el, i) => {
-      if (i === idx) {
-        el.classList.add('active');
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-      } else {
-        el.classList.remove('active');
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-      }
+document.addEventListener('DOMContentLoaded', function () {
+    const words = document.querySelectorAll('.hero-heading-gradient-wrapper .hero-heading-gradient-text');
+    let current = 0;
+
+    if (words.length === 0) return;
+
+    function showWord(idx) {
+        words.forEach((el, i) => {
+            if (i === idx) {
+                el.classList.add('active');
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            } else {
+                el.classList.remove('active');
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+            }
+        });
+    }
+
+    // Initialize all words with transitions
+    words.forEach(word => {
+        word.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     });
-  }
-  
-  // Initialize all words with transitions
-  words.forEach(word => {
-    word.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  });
-  
-  showWord(current);
-  
-  setInterval(() => {
-    current = (current + 1) % words.length;
+
     showWord(current);
-  }, 3000); // Increased duration for better readability
+
+    setInterval(() => {
+        current = (current + 1) % words.length;
+        showWord(current);
+    }, 3000); // Increased duration for better readability
 });
 
 // Service Tabs Bar Logic
@@ -522,11 +522,11 @@ function updateServiceImage2(tabKey) {
     container.innerHTML = `<img src="${imgSrc}" alt="${tabKey}"/>`;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Handle first set of tabs
     const tabs = document.querySelectorAll('.service-tab');
     tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
+        tab.addEventListener('click', function () {
             // Remove selected class from all tabs in this section
             tabs.forEach(t => t.classList.remove('selected'));
             this.classList.add('selected');
@@ -537,7 +537,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle second set of tabs
     const tabs2 = document.querySelectorAll('.service-tab-2');
     tabs2.forEach(tab => {
-        tab.addEventListener('click', function() {
+        tab.addEventListener('click', function () {
             // Remove selected class from all tabs in this section
             tabs2.forEach(t => t.classList.remove('selected'));
             this.classList.add('selected');
@@ -557,7 +557,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Update images on resize for both sections
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', function () {
         const selected = document.querySelector('.service-tab.selected');
         if (selected) {
             updateServiceImage(selected.getAttribute('data-tab'));
