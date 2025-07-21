@@ -1406,9 +1406,9 @@ body {
     .enforcement-overview h2 {
         font-size: 64px;
         /* 3.2vw at 1440px */
-        line-height: 60px;
+        line-height: 64px;
         /* 3.1vw at 1440px */
-        margin-bottom: 43.2px;
+        margin-bottom: 21px;
         /* 3vw at 1440px */
     }
 
@@ -1422,7 +1422,7 @@ body {
     .enforcement-description {
         font-size: 15.84px;
         /* 1.1vw at 1440px */
-        margin-bottom: 21.6px;
+        margin-bottom: 12px;
         /* 1.5vw at 1440px */
     }
 
