@@ -484,8 +484,8 @@ html {
     border-radius: 0;
     line-height: normal;
     font-style: normal;
-    font-weight: 300;
-    font-size: 1.1vw;
+    font-weight: 400;
+    font-size: 1vw;
     margin: 1vw 0 0 0;
     padding: 0;
     width: 71%;
@@ -1623,12 +1623,12 @@ html {
 
     .hero-subheading {
         font-size: 21px;
-        margin: 10px 0 0 0;
+        margin: 12px 0 0 0;
     }
 
     .hero-description {
         font-size: 14.4px;
-        margin: 10px 0 0 0;
+        margin: 12px 0 0 0;
         width: 67%;
     }
 

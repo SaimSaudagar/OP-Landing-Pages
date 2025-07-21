@@ -358,6 +358,7 @@ main {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     color: #EBEBEB;
+    line-height: 1.05;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -367,9 +368,9 @@ main {
 }
 
 .hero-subheading {
-    font-size: 1.5vw;
+    font-size: 1.6vw;
     font-family: 'Inter', sans-serif;
-    font-weight: 800;
+    font-weight: 700;
     color: #FF5100;
     padding: 0;
     width: 80%;
@@ -378,8 +379,6 @@ main {
     animation: fadeInUp 1s ease 1.6s both;
     display: flex;
     align-items: center;
-    gap: 0.8vw;
-    padding-top: 1vw !important;
 }
 
 .disclaimer-icon {
@@ -398,31 +397,31 @@ main {
 .hero-description {
     font-size: 1vw;
     font-family: 'Inter', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     color: #fff;
     background: none;
-    margin: 0.5vw 0 0 0;
+    margin: 1vw 0 0 0;
     padding: 0;
     width: 70%;
     opacity: 0;
     animation: fadeInUp 1s ease 1.8s both;
-    line-height: 1;
-    padding-top: 0.5vw;
+    line-height: normal;
+
 }
 
 .hero-description-2 {
     font-size: 1vw;
     font-family: 'Inter', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     color: #fff;
     background: none;
-    margin: 0.5vw 0 0 0;
+    margin: 1vw 0 0 0;
     padding: 0;
     width: 70%;
     opacity: 0;
     animation: fadeInUp 1s ease 1.8s both;
-    line-height: 1;
-    padding-top: 0.5vw;
+    line-height: normal;
+    
 }
 
 .underline {
@@ -1208,14 +1207,14 @@ main {
     }
 
     .hero-heading {
-        font-size: 63.36px;
+        font-size: 52.8px;
         /* 4.4vw at 1440px */
     }
 
     .hero-subheading {
         font-size: 21px;
         /* 1.65vw at 1440px */
-        gap: 11.52px;
+        padding: 12px 0 0 0;
         /* 0.8vw at 1440px */
     }
 
@@ -1229,20 +1228,19 @@ main {
     .hero-description {
         font-size: 14.4px;
         /* 1.1vw at 1440px */
-        margin: 7.2px 0 0 0;
+        margin: 12px 0 0 0;
         /* 0.5vw at 1440px */
         width: 66%;
-        line-height: 1;
+      
         /* 1.4vw at 1440px */
     }
 
     .hero-description-2 {
         font-size: 14.4px;
         /* 1.1vw at 1440px */
-        margin: 7.2px 0 0 0;
+        margin: 12px 0 0 0;
         /* 0.5vw at 1440px */
         width: 75%;
-        line-height: 1;
         /* 1.4vw at 1440px */
     }
 

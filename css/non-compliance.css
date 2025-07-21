@@ -443,9 +443,10 @@ body {
 }
 
 .hero-left h2 {
-    font-size: 1.65vw;
+    font-size: 1.6vw;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
+    line-height: normal;
     color: #FF5100;
     margin: 1.5vw 0 0 0;
     padding: 0;
@@ -455,17 +456,17 @@ body {
 }
 
 .hero-description {
-    font-size: 1.1vw;
+    font-size: 1vw;
     font-family: 'Inter', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     color: #fff;
     background: none;
-    margin: 0.1vw 0 0 0;
+    margin: 1vw 0 0 0;
     padding: 0;
     width: 75%;
     animation: fadeInUp 1s ease 1.6s both;
-    line-height: 1.5vw;
-    margin-bottom: 0.5vw;
+    line-height: normal;
+
 }
 
 .hero-logo-svg {
@@ -1324,19 +1325,17 @@ body {
 
     .hero-left h2 {
         font-size: 21px;
-        margin: 10px 0 0 0;
+        margin: 12px 0 0 0;
         width: 80%;
     }
 
     .hero-description {
         font-size: 14.4px;
         /* 1.1vw at 1440px */
-        margin: 10px 0 0 0;
+        margin: 12px 0 0 0;
         /* 0.1vw at 1440px */
         width: 75%;
-        line-height: 21.6px;
         /* 1.5vw at 1440px */
-        margin-bottom: 10px;
         /* 0.5vw at 1440px */
     }
 
