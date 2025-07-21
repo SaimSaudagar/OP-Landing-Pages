@@ -548,6 +548,11 @@ body {
     width: 90%;
 }
 
+.action-card {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Important Information */
 .important-info {
     position: relative;
