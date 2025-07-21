@@ -1175,7 +1175,7 @@ main {
     }
 
     .hero-responsive-wrapper {
-        height: 676.8px;
+        height: 450px;
         /* 47vw at 1440px */
     }
 
@@ -1203,7 +1203,7 @@ main {
     .hero-logo-svg {
         width: 380px;
         height: 380px;
-        margin-bottom: 36%;
+        margin-bottom: 0;
     }
 
     .hero-heading {
