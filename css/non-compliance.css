@@ -514,6 +514,13 @@ body {
     animation: fadeInUp 1s ease 0.5s both;
 }
 
+.underline {
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    text-decoration-thickness: 0.1vw;
+    text-underline-offset: 0.1vw;
+}
+
 .action-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 1vw;
@@ -587,7 +594,7 @@ body {
 }
 
 .important-info h2 {
-    font-weight: 700;
+    font-weight: 500;
     font-style: italic;
     font-size: 1.7vw;
     line-height: 100%;
@@ -1674,7 +1681,7 @@ body {
 
     .important-info-container {
         width: 1440px;
-        padding: 0 43.2px;
+        padding: 50px 43.2px;
         /* 3% at 1440px */
         padding-bottom: 0;
         margin: 0 auto;
