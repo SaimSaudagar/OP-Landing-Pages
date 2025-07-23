@@ -1534,7 +1534,7 @@ body::-webkit-scrollbar {
     line-height: normal;
     width: 43vw;
     color: #fff;
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
     animation: fadeInUp 1s ease 0.2s both;
     /* padding-top: 0.5vw; */
     font-weight: 300;
@@ -1868,7 +1868,7 @@ body::-webkit-scrollbar {
     .partners-description {
         font-size: 16px; /* 1.8vw at 1440px */
         width: 700px; /* 70vw at 1440px */
-        margin-bottom: 25px; /* 1vw at 1440px */
+        margin-bottom: 12px; /* 1vw at 1440px */
     }
     
     .partners-slider {
