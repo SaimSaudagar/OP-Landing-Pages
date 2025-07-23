@@ -466,7 +466,8 @@ html {
 .hero-subheading {
     font-size: 1.68vw;
     font-family: 'Inter', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
+    font-style: italic;
     color: #FF5100;
     margin: 1vw 0 0 0;
     padding: 0;
@@ -497,7 +498,7 @@ html {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     color: #fff;
-    background: linear-gradient(90deg, #FF8F00 0%, #FF5100 50%);
+    background: linear-gradient(86.19deg, #FF8F00 0%, #FF0D00 25%);
     background-size: 200% 100%;
     border: none;
     border-radius: 0.4em;

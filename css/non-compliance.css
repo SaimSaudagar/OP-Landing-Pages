@@ -445,7 +445,8 @@ body {
 .hero-left h2 {
     font-size: 1.6vw;
     font-family: 'Inter', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
+    font-style: italic;
     line-height: normal;
     color: #FF5100;
     margin: 1.5vw 0 0 0;
@@ -609,13 +610,14 @@ body {
 
 .info-list li {
     font-style: normal;
-    font-size: 1.2vw;
-    line-height: 1.5vw;
+    font-size: 1vw;
+    line-height: normal;
     letter-spacing: 0%;
     color: rgba(255, 255, 255);
     padding-left: 2vw;
+    margin: 0 0 1vw 0;
     position: relative;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .info-list li::before {
@@ -1402,9 +1404,10 @@ body {
     }
 
     .info-list li {
-        font-size: 20.16px;
+        font-size: 14.4px;
         /* 1.4vw at 1440px */
-        line-height: 28.8px;
+        margin: 0 0 12px 0;
+        /* line-height: 28.8px; */
         /* 2vw at 1440px */
         padding-left: 28.8px;
         /* 2vw at 1440px */

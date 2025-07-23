@@ -413,8 +413,9 @@ body::-webkit-scrollbar {
 .hero-subheading {
     font-size: 1.68vw;
     font-family: 'Inter', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     color: #FF5100;
+    font-style: italic;
     margin: 1vw 0 0 0;
     padding: 0;
     width: 70%;
@@ -1202,7 +1203,7 @@ body::-webkit-scrollbar {
 .services-heading {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: 3.2vw;
+    font-size: 4.4vw;
     line-height: 1.1;
     letter-spacing: 0;
     background: linear-gradient(90.09deg, #FF8F00 0.08%, #FF0D00 60.01%);

@@ -370,8 +370,9 @@ main {
 .hero-subheading {
     font-size: 1.6vw;
     font-family: 'Inter', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     color: #FF5100;
+    font-style: italic;
     padding: 0;
     width: 80%;
     text-decoration: none;
