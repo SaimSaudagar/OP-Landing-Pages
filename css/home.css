@@ -1126,7 +1126,7 @@ body::-webkit-scrollbar {
   position: relative;
   left: 0;
   right: 0;
-  bottom: -0.6vw; /* Adjust so it sits just under the footer, or 0 for very bottom */
+  bottom: 0.5vw; /* Adjust so it sits just under the footer, or 0 for very bottom */
   z-index: -1; /* Lower than footer */
   text-align: center;
   font-size: 6vw; /* Responsive size */
@@ -1135,7 +1135,7 @@ body::-webkit-scrollbar {
   opacity: 0.5;
   pointer-events: none;
   user-select: none;
-  line-height: 1;
+  line-height: auto;
   white-space: nowrap;
   width: 100vw;
   /* Gradient text color as requested */
@@ -2070,7 +2070,8 @@ body::-webkit-scrollbar {
     }
     
     .footer-bg-text {
-        bottom: -7.2px; /* -0.6vw at 1440px */
+        /* bottom: -7.2px;  */
+        /* -0.6vw at 1440px */
         font-size: 86.4px; /* Fixed size instead of 6vw */
         width: 100vw; /* Keep full width */
     }

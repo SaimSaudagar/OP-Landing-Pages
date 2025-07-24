@@ -1071,7 +1071,7 @@ main {
     position: relative;
     left: 0;
     right: 0;
-    bottom: -1vw;
+    bottom: 0.5vw;
     /* Adjust so it sits just under the footer, or 0 for very bottom */
     z-index: -1;
     /* Lower than footer */
@@ -1083,7 +1083,7 @@ main {
     opacity: 0.1;
     pointer-events: none;
     user-select: none;
-    line-height: 1;
+    line-height: auto;
     white-space: nowrap;
     width: 100vw;
     /* Optional: gradient text */
@@ -1583,7 +1583,7 @@ main {
     }
 
     .footer-bg-text {
-        bottom: -7.2px;
+        /* bottom: -7.2px; */
         /* -0.6vw at 1440px */
         font-size: 86.4px;
         /* Fixed size instead of 6vw */
