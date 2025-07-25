@@ -1253,6 +1253,7 @@ html {
     max-width: 1440px;
     width: 100%;
     height: auto;
+    min-height: 1300px;
     position: relative;
     z-index: 2;
     opacity: 1;
@@ -1264,6 +1265,7 @@ html {
     width: 100%;
     height: auto;
     position: relative;
+    min-height: 1300px;
     z-index: 2;
     opacity: 1;
     margin-top: -8vw;
@@ -1273,6 +1275,7 @@ html {
     max-width: 1440px;
     width: 100%;
     height: auto;
+    min-height: 1300px;
     display: block;
     padding-top: 5vw;
 }
@@ -1281,6 +1284,7 @@ html {
     max-width: 1440px;
     width: 100%;
     height: auto;
+    min-height: 1300px;
     display: block;
     padding-top: 3vw;
 }
@@ -1797,6 +1801,8 @@ html {
         gap: 12px;
         /* 1vw at 1440px */
     }
+
+    
 
     .footer-logo-row {
         gap: 8.4px;
