@@ -307,6 +307,7 @@ main {
     font-size: 2.24vw;
     font-weight: 600;
     color: #FF5100;
+    text-align: center;
 }
 
 .content-text-important {
@@ -609,7 +610,9 @@ main {
     .content-section {
         max-width: 1440px;
         margin: 0 auto;
-        padding:79px 88px;
+        padding:79px 0;
+        width: calc(100% - 176px);
+        box-sizing: border-box;
     }
 
     .content-wrapper {
