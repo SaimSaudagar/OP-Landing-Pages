@@ -908,7 +908,7 @@ body::-webkit-scrollbar {
 @media (max-width: 768px) {
     .desktop-only { display: none !important; }
     .mobile-only { display: block !important; }
-    
+
     .about-section-wrapper {
         background-image: url('../assets/home/about-bg.png');
     }
@@ -1266,7 +1266,7 @@ body::-webkit-scrollbar {
     .service-btn.selected {
         padding: 1.5px;
     }
-    
+
     .service-btn.selected::before {
         top: 1.5px;
         left: 1.5px;
@@ -1280,7 +1280,7 @@ body::-webkit-scrollbar {
     .service-btn.selected {
         padding: 1px;
     }
-    
+
     .service-btn.selected::before {
         top: 1px;
         left: 1px;
@@ -1443,7 +1443,7 @@ body::-webkit-scrollbar {
     overflow: hidden;
     padding: 0;                /* background handles the spacing */
   }
-  
+
   .partners-bg {
     position: absolute;
     top: 0;
@@ -1453,7 +1453,7 @@ body::-webkit-scrollbar {
     height: auto;
     z-index: 0;
   }
-  
+
   .partners-overlay {
     position: relative;
     z-index: 1;
@@ -1462,7 +1462,7 @@ body::-webkit-scrollbar {
     margin-left: 3vw;
     margin-right: 3vw;
   }
-  
+
   .partners-heading {
     font-size: 4vw;
     background: linear-gradient(90.09deg, #FF8F00 0.08%, #FF0D00 30.01%);
@@ -1472,7 +1472,7 @@ body::-webkit-scrollbar {
     color: transparent;
     animation: fadeInUp 1s ease both;
   }
-  
+
   .partners-subheading {
     font-size: 1.5vw;
     color: #FF5100;
@@ -1481,7 +1481,7 @@ body::-webkit-scrollbar {
     font-style: italic;
     margin-top: -0.7vw;
   }
-  
+
   .partners-slider {
     overflow: hidden;
     padding-bottom: 1vw;
@@ -1491,14 +1491,14 @@ body::-webkit-scrollbar {
     margin-right: -3vw;
     width: 100%;
   }
-  
+
   .partners-track {
     display: flex;
     gap: 2vw;
     animation: scroll-partners 20s linear infinite;
     width: max-content;
   }
-  
+
   @keyframes scroll-partners {
     0% {
       transform: translateX(0);
@@ -1507,7 +1507,7 @@ body::-webkit-scrollbar {
       transform: translateX(-50%);
     }
   }
-  
+
   .partner-item {
     flex: 0 0 auto;
     background: #2A2A2A;
@@ -1522,7 +1522,7 @@ body::-webkit-scrollbar {
   .partner-item:hover {
     transform: translateY(-5px) scale(1.02);
   }
-  
+
   .partner-item img {
     max-height: 4vw;
     width: auto;
@@ -1539,7 +1539,7 @@ body::-webkit-scrollbar {
     /* padding-top: 0.5vw; */
     font-weight: 300;
   }
-  
+
   /* mobile / desktop helpers (you've got these already) */
   /* .desktop-only { display: block !important; }
   .mobile-only { display: none !important; }
@@ -1562,7 +1562,7 @@ body::-webkit-scrollbar {
         padding-top: 0;
         padding-bottom: 50px;
     }
-    
+
     /* Container and layout constraints */
     .container {
         width: 1080px; /* 90vw at 1440px */
@@ -1570,47 +1570,47 @@ body::-webkit-scrollbar {
         padding: 0 24px; /* 2vw at 1440px */
         margin: 0 auto;
     }
-    
+
     .container-partners {
         margin: 0 36px 0 36px; /* 3vw at 1440px */
         padding: 0 60px; /* 5vw at 1440px */
         max-width: 1440px;
         width: 100%;
     }
-    
+
     /* Header and Navigation */
     .header {
         width: 100vw; /* Full width for background */
         display: flex;
         justify-content: center;
     }
-    
+
     .navbar {
         padding: 6px 24px 6px 24px; /* 0.5vw and 2vw at 1440px */
         height: 66px; /* 5.5vw at 1440px */
         max-width: 1440px;
         width: 100%;
     }
-    
+
     .logo {
         width: 36px; /* 3vw at 1440px */
         height: 36px; /* 3vw at 1440px */
         margin-right: 6px; /* 0.5vw at 1440px */
     }
-    
+
     .brand-text {
         font-size: 20.4px; /* 1.7vw at 1440px */
     }
-    
+
     .nav-menu {
         gap: 6px; /* 0.5vw at 1440px */
     }
-    
+
     .nav-link {
         font-size: 13.2px; /* 1.1vw at 1440px */
         padding: 6px 12px; /* 0.5vw and 1vw at 1440px */
     }
-    
+
     /* Hero Section */
     .hero-responsive-wrapper {
         width: 100vw; /* Keep full width for background */
@@ -1621,32 +1621,32 @@ body::-webkit-scrollbar {
         display: flex;
         justify-content: center;
     }
-    
+
     .hero-content-container {
         max-width: 1440px;
         width: 100%;
         position: relative;
     }
-    
+
     .hero-video {
         top: 0; /* Position relative to hero-responsive-wrapper */
         width: 100vw; /* Keep full width */
         height: 550px; /* Full height of hero-responsive-wrapper */
     }
-    
+
     .hero-responsive-wrapper::before {
         top: 0; /* Position relative to hero-responsive-wrapper */
         width: 100vw; /* Keep full width */
         height: 550px; /* Full height of hero-responsive-wrapper */
     }
-    
+
     /* Hero content container constraint */
     .hero.custom-hero {
         padding-top: 70px !important; /* Fixed padding instead of 10% */
         position: relative;
         overflow: hidden; /* Prevent movement */
     }
-    
+
     .hero-inner {
         display: flex !important;
         width: 100% !important;
@@ -1660,43 +1660,43 @@ body::-webkit-scrollbar {
         gap: 48px !important; /* Add space between hero-left and hero-right */
         justify-content: space-between !important; /* Push right part to far right */
     }
-    
+
     .hero-heading-anim {
         font-size: 52.8px; /* 4.4vw at 1440px */
     }
-    
+
     .hero-subheading {
         font-size: 21px; /* 1.75vw at 1440px */
         margin: 12px 0 0 0; /* 1vw at 1440px */
     }
-    
+
     .hero-description {
         font-size: 14.4px; /* 1.2vw at 1440px */
         margin: 12px 0 0 0; /* 1vw at 1440px */
         width: 65%;
     }
-    
+
     .hero-cta.cta-button {
         font-size: 18.72px;
         margin: 12px 0 0 0;
         width: 259.2px;
         height: 46.08px;
     }
-    
+
     .services-cta.cta-button {
         font-size: 15.6px; /* 1.3vw at 1440px */
         margin: 12px 0 0 0; /* 1vw at 1440px */
         width: 240px; /* 20vw at 1440px */
         height: 42px; /* 3.5vw at 1440px */
     }
-    
+
     /* Hero SVG Logo */
     .hero-logo-svg {
         width: 100%;
         height: 100%;
         padding-top: 35px;
     }
-    
+
     .hero-left {
         display: flex !important;
         flex-direction: column !important;
@@ -1708,7 +1708,7 @@ body::-webkit-scrollbar {
         padding: 0 !important;
         margin: 0 !important;
     }
-    
+
     .hero-right {
         display: flex !important;
         flex-direction: column !important;
@@ -1722,7 +1722,7 @@ body::-webkit-scrollbar {
         padding: 0 !important;
         margin: 0 !important;
     }
-    
+
     /* Services Section */
     .services-section {
         min-height: 504px; /* Fixed height instead of 35vw */
@@ -1731,7 +1731,7 @@ body::-webkit-scrollbar {
         display: flex;
         justify-content: center;
     }
-    
+
     .services-inner {
         width: 100vw; /* 90vw at 1440px */
         gap: 48px; /* 4vw at 1440px */
@@ -1739,19 +1739,19 @@ body::-webkit-scrollbar {
         max-width: 1440px;
         margin: 0 auto;
     }
-    
+
     .services-left {
         gap: 24px; /* 2vw at 1440px */
     }
-    
+
     .services-heading {
         font-size: 64px; /* 3.2vw at 1440px */
     }
-    
+
     .services-buttons {
         gap: 12px; /* 1vw at 1440px */
     }
-    
+
     .service-btn {
         width: 192px; /* 16vw at 1440px */
         height: 36px; /* 3vw at 1440px */
@@ -1761,23 +1761,23 @@ body::-webkit-scrollbar {
         padding: 8.4px 4.8px; /* 0.7vw and 0.4vw at 1440px */
         border-width: 0.96px; /* 0.08vw at 1440px */
     }
-    
+
     .service-btn:not(.selected) {
         border: 1.56px solid #fff; /* 0.13vw at 1440px */
     }
-    
+
     .service-btn.selected {
         border-radius: 7.2px; /* 0.6vw at 1440px */
     }
-    
+
     .service-btn.selected::before {
         border-radius: 5.76px; /* calc(0.6vw - 2px) at 1440px */
     }
-    
+
     .service-btn.selected span {
         padding: 8.4px 3.24px; /* 0.7vw and 0.27vw at 1440px */
     }
-    
+
     .explore-btn {
         width: 192px; /* 16vw at 1440px */
         height: 36px; /* 3vw at 1440px */
@@ -1786,41 +1786,41 @@ body::-webkit-scrollbar {
         border-radius: 8.4px; /* 0.7vw at 1440px */
         border-width: 2.4px; /* 0.2vw at 1440px */
     }
-    
+
     .service-logo-svg {
         width: 360px; /* 30vw at 1440px */
         height: 240px; /* 20vw at 1440px */
     }
-    
+
     .service-logo-bg-svg {
         width: 360px; /* 30vw at 1440px */
     }
-    
+
     .services-image-switcher {
         margin-top: 48px; /* 4vw at 1440px */
         max-width: 1440px; /* Constrain the switcher container */
     }
-    
+
     .services-image-switcher img,
     .services-switch-img {
         max-width: 1440px; /* Constrain all images in switcher */
         width: 100%;
         height: auto;
     }
-    
+
     .services-image-switcher.ops-active {
-        top: -18vw; /* -25vw at 1440px */
+        top: -25vw; /* -25vw at 1440px */
     }
-    
+
     .learn-more-btn {
         margin: 12px 0 0 0;
         font-size: 20.16px;
         width: 288px;
         height: 50.4px;
         margin-top: 36px;
-        
+
     }
-    
+
     .learn-more-button-container {
         position: absolute;
         bottom: 30%;
@@ -1828,49 +1828,49 @@ body::-webkit-scrollbar {
         z-index: 10;
         transform: translateX(-25px);
     }
-    
+
     .about-section-wrapper {
         width: 100vw; /* Keep full width for background */
         display: flex;
         justify-content: center;
         position: relative;
     }
-    
+
     .about-section-wrapper .about-image {
         max-width: 1440px;
         width: 100%;
         position: relative;
     }
-    
+
     /* Partners Section */
     .partners-section {
         width: 100vw; /* Keep full width for background */
         display: flex;
         justify-content: center;
     }
-    
+
     .partners-overlay {
         max-width: 1440px;
         width: 100%;
         padding: 48px 36px 96px 36px; /* 4vw 3vw 8vw 3vw at 1440px */
     }
-    
+
     .partners-heading {
         font-size: 54px; /* 4.5vw at 1440px */
     }
-    
+
     .partners-subheading {
         font-size: 24px; /* 1.8vw at 1440px */
         margin-bottom: 12px; /* 1vw at 1440px */
         margin-top: -8.4px; /* -0.7vw at 1440px */
     }
-    
+
     .partners-description {
         font-size: 16px; /* 1.8vw at 1440px */
         width: 700px; /* 70vw at 1440px */
         margin-bottom: 12px; /* 1vw at 1440px */
     }
-    
+
     .partners-slider {
         padding-bottom: 12px; /* 1vw at 1440px */
         padding-top: 48px; /* 4vw at 1440px */
@@ -1878,20 +1878,20 @@ body::-webkit-scrollbar {
         margin-left: calc(-50vw + 50%);
         margin-right: calc(-50vw + 50%);
     }
-    
+
     .partners-track {
         gap: 24px; /* 2vw at 1440px */
     }
-    
+
     .partner-item {
         border-radius: 36px; /* 3vw at 1440px */
         padding: 6px 36px; /* 0.5vw and 3vw at 1440px */
     }
-    
+
     .partner-item img {
         max-height: 48px; /* 4vw at 1440px */
     }
-    
+
     /* Contact Section */
     .contact-section {
         width: 100vw; /* Keep full width for background */
@@ -1899,12 +1899,12 @@ body::-webkit-scrollbar {
         justify-content: center;
         position: relative;
     }
-    
+
     .contact-section-content {
         width: 1440px;
         padding: 0 28.8px;
     }
-    
+
     .contact-image {
         max-width: 1440px;
         width: 100%;
@@ -1913,12 +1913,12 @@ body::-webkit-scrollbar {
         padding-top: 144px;
         padding-bottom: 144px;
     }
-    
+
     .contact-logo {
         height: 400px; /* Fixed height instead of 90vh */
         width: auto;
     }
-    
+
     .contact-team-btn {
         font-size: 20.16px;
         padding: 17.28px 25.92px;
@@ -1926,7 +1926,7 @@ body::-webkit-scrollbar {
         height: 64.8px;
         border-radius: 11.52px;
     }
-    
+
     .contact-button-container {
         position: absolute;
         bottom: 47%;
@@ -1934,7 +1934,7 @@ body::-webkit-scrollbar {
         transform: translateX(10%);
         z-index: 10;
     }
-    
+
     /* Appeal Section */
     .appeal-section {
         width: 100vw;
@@ -1942,12 +1942,12 @@ body::-webkit-scrollbar {
         justify-content: center;
         position: relative;
     }
-    
+
     .appeal-section-content {
         width: 1440px;
         padding: 0 28.8px;
     }
-    
+
     .appeal-button-container-left {
         position: absolute;
         bottom: 32%;
@@ -1955,7 +1955,7 @@ body::-webkit-scrollbar {
         transform: translateX(-10%);
         z-index: 10;
     }
-    
+
     .appeal-button-container-right {
         position: absolute;
         bottom: 32%;
@@ -1963,7 +1963,7 @@ body::-webkit-scrollbar {
         transform: translateX(10%);
         z-index: 10;
     }
-    
+
     .appeal-btn {
         font-size: 16px;
         padding: 12px 18px;
@@ -1971,7 +1971,7 @@ body::-webkit-scrollbar {
         height: 45px;
         border-radius: 8px;
     }
-    
+
     /* All section wrapper images */
     .about-section-wrapper,
     .partners-section-wrapper {
@@ -1981,14 +1981,14 @@ body::-webkit-scrollbar {
         position: relative;
         padding: 100px;
     }
-    
+
     .about-section-wrapper .about-image,
     .partners-section-wrapper .partners-image {
         max-width: 1440px;
         width: 100%;
         position: relative;
     }
-    
+
     /* Footer */
     .footer {
         padding: 60px 0 36px 0; /* 5vw and 3vw at 1440px */
@@ -1998,101 +1998,101 @@ body::-webkit-scrollbar {
         display: flex;
         justify-content: center;
     }
-    
+
     .footer-container {
         gap: 36px; /* 3vw at 1440px */
         width: 1080px; /* 90vw at 1440px */
         max-width: 1440px;
         margin: 0 auto;
     }
-    
+
     .footer-col {
         gap: 12px; /* 1vw at 1440px */
     }
-    
+
     .footer-logo-row {
         gap: 8.4px; /* 0.7vw at 1440px */
         margin-bottom: 12px; /* 1vw at 1440px */
     }
-    
+
     .footer-logo-svg {
         width: 26.4px; /* 2.2vw at 1440px */
         height: 26.4px; /* 2.2vw at 1440px */
     }
-    
+
     .footer-brand-text {
         font-size: 18px; /* 1.5vw at 1440px */
         letter-spacing: 0.6px; /* 0.05vw at 1440px */
     }
-    
+
     .footer-info p {
         margin: 0 0 6px 0; /* 0.5vw at 1440px */
         font-size: 9.6px; /* 0.8vw at 1440px */
     }
-    
+
     .footer-info h3 {
         margin: 0 0 6px 0; /* 0.5vw at 1440px */
         font-size: 12px; /* 1vw at 1440px */
     }
-    
+
     .footer-icon img {
         width: 13.2px; /* 1.1vw at 1440px */
         height: 13.2px; /* 1.1vw at 1440px */
     }
-    
+
     .footer-note {
         font-size: 10.2px; /* 0.85vw at 1440px */
         margin-top: 6px; /* 0.5vw at 1440px */
     }
-    
+
     .footer-col h4 {
         font-size: 13.2px; /* 1.1vw at 1440px */
         margin-bottom: 12px; /* 1vw at 1440px */
     }
-    
+
     .footer-col ul {
         gap: 8.4px; /* 0.7vw at 1440px */
     }
-    
+
     .footer-col ul li {
         font-size: 12px; /* 1vw at 1440px */
     }
-    
+
     .footer-icon {
         font-size: 13.2px; /* 1.1vw at 1440px */
         margin-right: 6px; /* 0.5vw at 1440px */
     }
-    
+
     .footer-bottom {
         padding-top: 36px; /* 3vw at 1440px */
         padding-bottom: 24px; /* 2vw at 1440px */
         font-size: 11.4px; /* 0.95vw at 1440px */
     }
-    
+
     .footer-bg-text {
         /* bottom: -7.2px;  */
         /* -0.6vw at 1440px */
         font-size: 86.4px; /* Fixed size instead of 6vw */
         width: 100vw; /* Keep full width */
     }
-    
+
     /* Glow background elements */
     .glow-svg {
         width: 100vw; /* Keep responsive width */
     }
-    
+
     .glow-background-partners {
         top: -144%; /* -120% stays percentage */
     }
-    
+
     .glow-background-services {
         top: -100%;
     }
-    
+
     .glow-background-services-2 {
         top: 100%; /* percentage stays same */
     }
-    
+
     .service-logo-background {
         top: 15%; /* percentage stays same */
         right: 0%; /* percentage stays same */
